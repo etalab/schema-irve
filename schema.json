@@ -1,11 +1,14 @@
 {
-    "title": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
-    "author": "Alexandre Bulté pour Etalab <info[arobas]data[point]gouv[point]fr>",
+    "title": "Schéma IRVE",
+    "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
+    "author": "Alexandre Bulté pour Etalab",
+    "contact": "validation@data.gouv.fr",
     "contributor": "Charles Nepote",
+    "version": "1.0.0",
     "created": "2018-06-29",
     "updated": "2018-09-10",
-    "homepage": "https://github.com/etalab/schema.data.gouv.fr/tree/master/irve",
-    "example": "https://github.com/etalab/schema.data.gouv.fr/blob/master/irve/exemple-valide.csv",
+    "homepage": "https://github.com/etalab/schema-irve",
+    "example": "https://github.com/etalab/schema-irve/blob/master/exemple-valide.csv",
     "fields": [
         {
             "name": "n_amenageur",
