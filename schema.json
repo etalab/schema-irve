@@ -1,14 +1,16 @@
 {
-    "title": "Schéma IRVE",
+    "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+    "title": "Infrastructures de recharge de véhicules électriques",
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "author": "Alexandre Bulté pour Etalab",
     "contact": "validation@data.gouv.fr",
-    "contributor": "Charles Nepote",
-    "version": "1.0.0",
+    "contributor": "Charles Nepote, Pierre Dittgen, Johan Richer",
+    "version": "1.0.1",
     "created": "2018-06-29",
-    "updated": "2018-09-10",
+    "updated": "2019-05-06",
     "homepage": "https://github.com/etalab/schema-irve",
-    "example": "https://github.com/etalab/schema-irve/blob/master/exemple-valide.csv",
+    "uri": "https://github.com/etalab/schema-irve/raw/v1.0.1/schema.json",
+    "example": "https://github.com/etalab/schema-irve/raw/v1.0.1/exemple-valide.csv",
     "fields": [
         {
             "name": "n_amenageur",
@@ -112,7 +114,7 @@
         },
         {
             "name": "puiss_max",
-            "description": "La puissance maximale délivrée à chaque point de recharge, exprimée en kW, en fonction du contrat d'abonnement de puissance de la station et du type de connecteur.",
+            "description": "La puissance maximale délivrée à chaque point de recharge, exprimée en kW, en fonction du contrat d'abonnement de puissance de la station et du type de connecteur",
             "example": "22.00",
             "type": "number",
             "constraints": {
@@ -139,7 +141,7 @@
         },
         {
             "name": "accessibilité",
-            "description": "Amplitude d'ouverture de la station.",
+            "description": "Amplitude d'ouverture de la station",
             "example": "24/24 7/7 jours",
             "type": "string",
             "constraints": {
