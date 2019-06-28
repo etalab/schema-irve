@@ -1,4 +1,4 @@
-# Infrastructures de recharge de véhicules électriques
+# Infrastructures de recharge pour véhicules électriques
 
 Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques
 
