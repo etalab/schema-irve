@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3
+
+- Suppression du caractère obligatoire de certains champs :
+    - `n_station`
+    - `acces_recharge`
+    - `accessibilité`
+    - `false`
+
 ## 1.0.2
 
 Changements internes :

@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://github.com/etalab/schema-irve/raw/v1.0.2/schema.json",
+    "path": "https://github.com/etalab/schema-irve/raw/v1.0.3/schema.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://github.com/etalab/schema-irve/raw/v1.0.2/exemple-valide.csv"
+            "path": "https://github.com/etalab/schema-irve/raw/v1.0.3/exemple-valide.csv"
         }
     ],
     "sources": [
@@ -31,8 +31,8 @@
         }
     ],
     "created": "2018-06-29",
-    "lastModified": "2019-06-28",
-    "version": "1.0.2",
+    "lastModified": "2020-04-17",
+    "version": "1.0.3",
     "contributors": [
         {
             "title": "Alexandre Bulté",
@@ -101,7 +101,7 @@
             "example": "Picpus, Belleville, Villiers",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -183,7 +183,7 @@
             "example": "Payant, Gratuit, Sur abonnement",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -192,7 +192,7 @@
             "example": "24/24 7/7 jours",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -201,7 +201,7 @@
             "example": "Recharge uniquement disponible pendant les horaires d'ouverture du Centre Commercial XY",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
