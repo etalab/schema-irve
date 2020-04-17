@@ -6,7 +6,7 @@
     - `n_station`
     - `acces_recharge`
     - `accessibilité`
-    - `false`
+    - `observations`
 
 ## 1.0.2
 
