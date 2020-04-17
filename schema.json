@@ -101,7 +101,7 @@
             "example": "Picpus, Belleville, Villiers",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
@@ -183,7 +183,7 @@
             "example": "Payant, Gratuit, Sur abonnement",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
@@ -192,7 +192,7 @@
             "example": "24/24 7/7 jours",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {

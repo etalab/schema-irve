@@ -66,7 +66,7 @@ Ce modèle de données repose sur les 17 champs suivants correspondant aux colon
 - description : le nom de la station
 - type : chaîne de caractères
 - exemple : `Picpus, Belleville, Villiers`
-- valeur optionnelle
+- valeur obligatoire
 
 ### `ad_station`
 
@@ -139,7 +139,7 @@ Ce modèle de données repose sur les 17 champs suivants correspondant aux colon
 - description : Modalités d'accès à la recharge
 - type : chaîne de caractères
 - exemple : `Payant, Gratuit, Sur abonnement`
-- valeur optionnelle
+- valeur obligatoire
 
 ### `accessibilité`
 
@@ -147,7 +147,7 @@ Ce modèle de données repose sur les 17 champs suivants correspondant aux colon
 - description : Amplitude d'ouverture de la station
 - type : chaîne de caractères
 - exemple : `24/24 7/7 jours`
-- valeur optionnelle
+- valeur obligatoire
 
 ### `observations`
 

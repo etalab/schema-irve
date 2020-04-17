@@ -2,11 +2,7 @@
 
 ## 1.0.3
 
-- Suppression du caractère obligatoire de certains champs :
-    - `n_station`
-    - `acces_recharge`
-    - `accessibilité`
-    - `observations`
+- Suppression du caractère obligatoire du champ `observations`
 
 ## 1.0.2
 
