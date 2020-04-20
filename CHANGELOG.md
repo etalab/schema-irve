@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Suppression du caractère obligatoire du champ `observations`
+
 ## 1.0.2
 
 Changements internes :
