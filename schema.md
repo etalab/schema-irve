@@ -7,8 +7,8 @@ Spécification du fichier d'échange relatif aux données concernant la localisa
 - page d'accueil : https://github.com/etalab/schema-irve
 - URL du schéma : https://github.com/etalab/schema-irve/raw/v1.0.3/schema.json
 - version : 1.0.3
-- date de création : 28/06/2018
-- date de dernière modification : 16/04/2020
+- date de création : 29/06/2018
+- date de dernière modification : 17/04/2020
 - concerne le pays : FR
 - valeurs manquantes représentées par : `[""]`
 - contributeurs :
