@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://github.com/etalab/schema-irve/raw/v1.0.3/schema.json",
+    "path": "https://github.com/etalab/schema-irve/raw/v2.0.0/schema.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://github.com/etalab/schema-irve/raw/v1.0.3/exemple-valide.csv"
+            "path": "https://github.com/etalab/schema-irve/raw/v2.0.0/exemple-valide.csv"
         }
     ],
     "sources": [
@@ -31,8 +31,8 @@
         }
     ],
     "created": "2018-06-29",
-    "lastModified": "2020-04-17",
-    "version": "1.0.3",
+    "lastModified": "2021-02-10",
+    "version": "2.0.0",
     "contributors": [
         {
             "title": "Alexandre Bulté",
@@ -56,30 +56,70 @@
             "email": "johan.richer@jailbreak.paris",
             "organisation": "Jailbreak",
             "role": "contributor"
+        },
+        {
+            "title": "Geoffrey Aldebert",
+            "email": "geoffrey.aldebert@data.gouv.fr",
+            "organisation": "Etalab",
+            "role": "contributor"
+        },
+        {
+            "title": "Julien Barreteau",
+            "email": "julien.barreteau@developpement-durable.gouv.fr",
+            "organisation": "DGEC",
+            "role": "contributor"
         }
     ],
     "fields": [
         {
-            "name": "n_amenageur",
+            "name": "nom_amenageur",
             "description": "Le nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures",
             "example": "Société X, Entité Y",
             "type": "string",
-            "constraints": {
-                "required": true
+            "constraints":{
+                "required":false
             }
         },
         {
-            "name": "n_operateur",
-            "description": "Le nom de l'opérateur qui opère le réseau d'infrastructure (l'aménageur ou un tiers auquel a été confié la responsabilité par délégation)",
+            "name": "siren_amenageur",
+            "description": "Le numero SIREN de l'aménageur.",
+            "example": "130025265",
+            "type": "string",
+            "constraints":{
+                "required":true,
+                "pattern": "^\\d{9}$"
+            }
+        },
+        {
+            "name": "contact_amenageur",
+            "description": "Adresse courriel de l'aménageur. Favoriser les adresses génériques de contact.",
+            "example": "contact@societe-amenageur.com",
+            "format": "email",
+            "constraints": {
+              "required": true
+            }
+        },
+        {
+            "name": "nom_operateur",
+            "description": "Le nom de l'opérateur qui opère le réseau d'infrastructure (l'aménageur ou un tiers auquel a été confié la responsabilité par délégation).",
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "name": "n_enseigne",
-            "description": "Le nom commercial du réseau",
+            "name": "contact_operateur",
+            "description": "Adresse courriel de l'opérateur. Favoriser les adresses génériques de contact.",
+            "example": "contact@societe-operateur.com",
+            "format": "email",
+            "constraints": {
+              "required": true
+            }
+        },
+        {
+            "name": "nom_enseigne",
+            "description": "Le nom commercial du réseau.",
             "example": "Réseau de recharge ABC",
             "type": "string",
             "constraints": {
@@ -88,16 +128,17 @@
         },
         {
             "name": "id_station",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017",
-            "example": "FR*A68*P68021*A",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017.",
+            "example": "FRA68P68021001",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": true,
+                "pattern": "^FR[A-Z0-9]{9}[0-9]{3}$"
             }
         },
         {
-            "name": "n_station",
-            "description": "le nom de la station",
+            "name": "nom_station",
+            "description": "Le nom de la station.",
             "example": "Picpus, Belleville, Villiers",
             "type": "string",
             "constraints": {
@@ -105,8 +146,23 @@
             }
         },
         {
-            "name": "ad_station",
-            "description": "L'adresse complète de la station : [numéro] [rue], [code postal] [ville]",
+            "name": "implantation_station",
+            "description": "Le type d'implantation de la station. A choisir parmi la liste de valeur suivante : \"Parking public\", \"Parking privé à usage public\", \"Parking privé réservé à la clientèle\", \"Station\"",
+            "example": "Parking public",
+            "type": "string",
+            "constraints":{
+                "required":true,
+                "enum":[
+                    "Parking public",
+                    "Parking privé à usage public",
+                    "Parking privé réservé à la clientèle",
+                    "Station"
+                ]
+            }
+        },
+        {
+            "name": "adresse_station",
+            "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville]",
             "example": "1 avenue de la Paix, 75001 Paris",
             "type": "string",
             "constraints": {
@@ -114,7 +170,7 @@
             }
         },
         {
-            "name": "code_insee",
+            "name": "code_insee_commune",
             "description": "Le code INSEE de la commune d'implantation",
             "example": "06088, 2B002 (pour une commune corse)",
             "type": "string",
@@ -124,18 +180,9 @@
             }
         },
         {
-            "name": "Xlongitude",
-            "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84",
-            "example": "7.48710500",
-            "type": "number",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "Ylatitude",
-            "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée le système de coordonnées WGS84",
-            "example": "47.63495500",
+            "name": "coordonneesXY",
+            "description": "La latitude et la longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lat,lon]",
+            "example": "[48.345345,7.48710500]",
             "type": "number",
             "constraints": {
                 "required": true
@@ -145,52 +192,210 @@
             "name": "nbre_pdc",
             "description": "Le nombre de points de recharge sur la station",
             "example": "1, 10",
-            "type": "integer",
+            "type": "number",
             "constraints": {
-                "required": true
+                "required": true,
+                "minimum": 0
             }
         },
         {
             "name": "id_pdc",
             "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017",
-            "example": "FR*A68*E68021*A*B1*D",
+            "example": "FRA68P680210015",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": true,
+                "pattern": "^FR[A-Z0-9]{9}[0-9]{4}$"
             }
         },
         {
-            "name": "puiss_max",
+            "name": "puissance_nominale",
             "description": "La puissance maximale délivrée à chaque point de recharge, exprimée en kW, en fonction du contrat d'abonnement de puissance de la station et du type de connecteur",
             "example": "22.00",
             "type": "number",
             "constraints": {
-                "required": true
+                "required": true,
+                "minimum": 0
             }
         },
         {
-            "name": "type_prise",
-            "description": "Les types de prises ou de connecteurs disponibles sur chaque point de charge",
-            "example": "E/F, T2",
-            "type": "string",
+            "name": "prise_type_ef",
+            "description": "Disponibilité d'une prise de type E/F sur le point de recharge.",
+            "example": false,
+            "type": "boolean",
             "constraints": {
                 "required": true
             }
         },
         {
-            "name": "acces_recharge",
-            "description": "Modalités d'accès à la recharge",
-            "example": "Payant, Gratuit, Sur abonnement",
-            "type": "string",
+            "name": "prise_type_2",
+            "description": "Disponibilité d'une prise de type 2 sur le point de recharge.",
+            "example": false,
+            "type": "boolean",
             "constraints": {
                 "required": true
             }
         },
         {
-            "name": "accessibilité",
-            "description": "Amplitude d'ouverture de la station",
-            "example": "24/24 7/7 jours",
+            "name": "prise_type_combo_ccs",
+            "description": "Disponibilité d'une prise de type Combo / CCS sur le point de recharge.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "prise_type_chademo",
+            "description": "Disponibilité d'une prise de type Chademo sur le point de recharge.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "prise_type_autre",
+            "description": "Disponibilité d'une prise de type Autre sur le point de recharge.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "gratuit",
+            "description": "Gratuité de la recharge.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "paiement_acte",
+            "description": "Possibilité de paiement à l'acte (sans identification ni abonnement).",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "paiement_cb",
+            "description": "Possibilité de paiement par carte bancaire.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "paiement_autre",
+            "description": "Possibilité de paiement par un autre moyen (qui peut être préciser dans le champs \"observation\".",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "tarification",
+            "description": "Tarification(s) pratiquée(s).",
+            "example": false,
             "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "condition_acces",
+            "description": "Eventuelles conditions d’accès à la station, hors gabarit (à expliciter sur \"accès réservé\"). A choisir parmi la liste de valeur suivante : \"Accès libre\", \"Accès réservé\", \"Accès sur réseau autoroutier payant\"",
+            "example": "Accès libre",
+            "type": "string",
+            "constraints":{
+                "required":true,
+                "enum":[
+                    "Accès libre",
+                    "Accès réservé",
+                    "Accès sur réseau autoroutier payant"
+                ]
+            }
+        },
+        {
+            "name": "reservation",
+            "description": "Possibilité de réservation à l'avance d'un point de recharge.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "horaires",
+            "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00, Mo-Fr 14:00-18:00, Th 08:00-18:00.",
+            "example": false,
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "pattern": "todo"
+            }
+        },
+        {
+            "name": "accessibilite_pmr",
+            "description": "Accessibilité du point de recharge aux personnes à mobilité réduite.",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "restriction_gabarit",
+            "description": "Restrictions d’accès liées au gabarit des véhicules.",
+            "example": "Hauteur maximale 2m",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "station_deux_roues",
+            "description": "La station est-elle réservée aux véhicules à deux roues ?",
+            "example": false,
+            "type": "boolean",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "raccordement",
+            "description": "Type de raccordement de la station au réseau de distribution d'électricité : direct (point de livraison exclusivement dédié à la station) ou indirect.",
+            "example": "Direct",
+            "type": "string",
+            "constraints":{
+                "required":true,
+                "enum":[
+                    "Direct",
+                    "Indirect"
+                ]
+            }
+        },
+        {
+            "name": "num_pdl",
+            "description": "Numéro du point de livraison d'électricité, y compris en cas de raccordement indirect",
+            "example": "12345678912345",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "date_mise_en_service",
+            "description": "Date de mise en service de la station",
+            "example": "2018-08-08, 2015-12-30",
+            "type": "date",
+            "format": "%Y-%m-%d",
             "constraints": {
                 "required": true
             }
@@ -209,7 +414,7 @@
             "description": "Date de mise à jour des données",
             "example": "2018/08/08, 2015/12/30",
             "type": "date",
-            "format": "%Y/%m/%d",
+            "format": "%Y-%m-%d",
             "constraints": {
                 "required": true
             }
