@@ -73,7 +73,7 @@
     "fields": [
         {
             "name": "nom_amenageur",
-            "description": "Le nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures",
+            "description": "La dénomination sociale de nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte via le site annuaire-entreprises.data.gouv.fr",
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints":{
@@ -101,7 +101,7 @@
         },
         {
             "name": "nom_operateur",
-            "description": "Le nom de l'opérateur qui opère le réseau d'infrastructure (l'aménageur ou un tiers auquel a été confié la responsabilité par délégation).",
+            "description": "La dénomination sociale de l'opérateur qui opère le réseau d'infrastructure (l'aménageur ou un tiers auquel a été confié la responsabilité par délégation). Vous pouvez accéder à cette dénomination exacte via le site annuaire-entreprises.data.gouv.fr",
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints": {
@@ -127,13 +127,22 @@
             }
         },
         {
-            "name": "id_station",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017.",
+            "name": "id_station_itinerance",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68P68021001",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "^FR[A-Z0-9]{9}[0-9]{3}$"
+                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{9}[0-9]{3}$|Non concerné))+$"
+            }
+        },
+        {
+            "name": "id_station_local",
+            "description": "Identifiant utilisé localement. Si vous souhaitez récupérer un identifiant unique, vous pouvez vous rendre sur https://heidi.app.etalab.studio",
+            "example": "FRA68P68021001",
+            "type": "string",
+            "constraints": {
+                "required": false
             }
         },
         {
@@ -183,7 +192,7 @@
             "name": "coordonneesXY",
             "description": "La latitude et la longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lat,lon]",
             "example": "[48.345345,7.48710500]",
-            "type": "number",
+            "type": "geopoint",
             "constraints": {
                 "required": true
             }
@@ -199,13 +208,22 @@
             }
         },
         {
-            "name": "id_pdc",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017",
+            "name": "id_pdc_itinerance",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68P680210015",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "^FR[A-Z0-9]{9}[0-9]{4}$"
+                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{9}[0-9]{4}$|Non concerné))+$"
+            }
+        },
+        {
+            "name": "id_pdc_local",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Si vous souhaitez récupérer un identifiant unique, vous pouvez vous rendre sur https://heidi.app.etalab.studio.",
+            "example": "FRA68P680210015",
+            "type": "string",
+            "constraints": {
+                "required": false
             }
         },
         {
@@ -301,7 +319,7 @@
         },
         {
             "name": "tarification",
-            "description": "Tarification(s) pratiquée(s).",
+            "description": "Toutes informations pouvant être apportées concernant les tarification(s) pratiquée(s).",
             "example": false,
             "type": "string",
             "constraints": {
