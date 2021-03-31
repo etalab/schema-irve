@@ -73,7 +73,7 @@
     "fields": [
         {
             "name": "nom_amenageur",
-            "description": "La dénomination sociale de nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte via le site annuaire-entreprises.data.gouv.fr",
+            "description": "La dénomination sociale du nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints":{
@@ -82,7 +82,7 @@
         },
         {
             "name": "siren_amenageur",
-            "description": "Le numero SIREN de l'aménageur.",
+            "description": "Le numero SIREN de l'aménageur issue de la base SIRENE des entreprises. Vous pouvez récupérer cet identifiant sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "130025265",
             "type": "string",
             "constraints":{
@@ -101,7 +101,7 @@
         },
         {
             "name": "nom_operateur",
-            "description": "La dénomination sociale de l'opérateur qui opère le réseau d'infrastructure (l'aménageur ou un tiers auquel a été confié la responsabilité par délégation). Vous pouvez accéder à cette dénomination exacte via le site annuaire-entreprises.data.gouv.fr",
+            "description": "La dénomination sociale de l'opérateur. L'opérateur est la personne qui exploite l'infrastructure de recharger pour le compte d'un aménageur dans le cadre d'un contrat ou pour son propre compte s'il est l'aménageur. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints": {
@@ -128,17 +128,17 @@
         },
         {
             "name": "id_station_itinerance",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68P68021001",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{9}[0-9]{3}$|Non concerné))+$"
+                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{4,33}$|Non concerné))+$"
             }
         },
         {
             "name": "id_station_local",
-            "description": "Identifiant utilisé localement. Si vous souhaitez récupérer un identifiant unique, vous pouvez vous rendre sur https://heidi.app.etalab.studio",
+            "description": "Identifiant de la station utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio.",
             "example": "FRA68P68021001",
             "type": "string",
             "constraints": {
@@ -156,23 +156,24 @@
         },
         {
             "name": "implantation_station",
-            "description": "Le type d'implantation de la station. A choisir parmi la liste de valeur suivante : \"Parking public\", \"Parking privé à usage public\", \"Parking privé réservé à la clientèle\", \"Station\"",
+            "description": "Le type d'implantation de la station. \nPour une station sur voirie, sélectionner \"Voirie\". \nPour un parking public, (en ouvrage, en enclos, etc.), sélectionner \"Parking public\". Ces parkings sont généralement en gestion directe ou déléguée de la collectivité territoriale. \nPour un parking privé à usage public / parking ouvert (ex: zone commerciale), sélectionner \"Parking privé à usage public\". \nPour un parking réservé à la clientèle, aux usagers, sélectionnez \"Parking privé réservé à la clientèle\" (il s'agit d'un choix de l'aménageur public ou privé sur l'utilisation de son parking. Ex: hôtel, commerce, éventuellement certains bâtiments publics). \nPour une station dédiée à la recharge rapide dont la durée d'utilisation est généralement limitée à la recharge principalement rapide et dont la première fonction de la station est la recharge et non le stationnement, sélectionner \"Station dédiée à la recharge rapide\" (ex : aires de service sur axes routiers, stations services, etc.).",
             "example": "Parking public",
             "type": "string",
             "constraints":{
                 "required":true,
                 "enum":[
+                    "Voirie",
                     "Parking public",
                     "Parking privé à usage public",
                     "Parking privé réservé à la clientèle",
-                    "Station"
+                    "Station dédiée à la recharge rapide"
                 ]
             }
         },
         {
             "name": "adresse_station",
-            "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville]",
-            "example": "1 avenue de la Paix, 75001 Paris",
+            "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville].",
+            "example": "1 avenue de la Paix 75001 Paris",
             "type": "string",
             "constraints": {
                 "required": true
@@ -180,7 +181,7 @@
         },
         {
             "name": "code_insee_commune",
-            "description": "Le code INSEE de la commune d'implantation",
+            "description": "Le code INSEE de la commune d'implantation.",
             "example": "06088, 2B002 (pour une commune corse)",
             "type": "string",
             "constraints": {
@@ -190,16 +191,17 @@
         },
         {
             "name": "coordonneesXY",
-            "description": "La latitude et la longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lat,lon]",
+            "description": "La latitude et la longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lat,lon].",
             "example": "[48.345345,7.48710500]",
             "type": "geopoint",
+            "format": "array",
             "constraints": {
                 "required": true
             }
         },
         {
             "name": "nbre_pdc",
-            "description": "Le nombre de points de recharge sur la station",
+            "description": "Le nombre de points de recharge sur la station.",
             "example": "1, 10",
             "type": "number",
             "constraints": {
@@ -209,17 +211,17 @@
         },
         {
             "name": "id_pdc_itinerance",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68P680210015",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{9}[0-9]{4}$|Non concerné))+$"
+                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{4,33}$|Non concerné))+$"
             }
         },
         {
             "name": "id_pdc_local",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Si vous souhaitez récupérer un identifiant unique, vous pouvez vous rendre sur https://heidi.app.etalab.studio.",
+            "description": "Identifiant du point de recharge utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio.",
             "example": "FRA68P680210015",
             "type": "string",
             "constraints": {
@@ -228,7 +230,7 @@
         },
         {
             "name": "puissance_nominale",
-            "description": "La puissance maximale délivrée à chaque point de recharge, exprimée en kW, en fonction du contrat d'abonnement de puissance de la station et du type de connecteur",
+            "description": "Puissance maximale que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
             "example": "22.00",
             "type": "number",
             "constraints": {
@@ -301,7 +303,7 @@
         },
         {
             "name": "paiement_cb",
-            "description": "Possibilité de paiement par carte bancaire.",
+            "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB).",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -328,15 +330,14 @@
         },
         {
             "name": "condition_acces",
-            "description": "Eventuelles conditions d’accès à la station, hors gabarit (à expliciter sur \"accès réservé\"). A choisir parmi la liste de valeur suivante : \"Accès libre\", \"Accès réservé\", \"Accès sur réseau autoroutier payant\"",
+            "description": "Eventuelles conditions d’accès à la station, hors gabarit. Dans le cas d'un accès libre sans contrainte matérielle physique (ex : absence de barrière), indiquer \"Accès libre\". \nDans le cas d'un accès limité / réservé qui nécessite une identification ou passage d'une barrière, indiquer \"Accès réservé\" (ce type d'accès inclut les IRVE sur le réseau autoroutier payant - passage péage).",
             "example": "Accès libre",
             "type": "string",
             "constraints":{
                 "required":true,
                 "enum":[
                     "Accès libre",
-                    "Accès réservé",
-                    "Accès sur réseau autoroutier payant"
+                    "Accès réservé"
                 ]
             }
         },
@@ -361,16 +362,21 @@
         },
         {
             "name": "accessibilite_pmr",
-            "description": "Accessibilité du point de recharge aux personnes à mobilité réduite.",
+            "description": "Accessibilité du point de recharge aux personnes à mobilité réduite. Dans le cas d'un point de recharge signalisé et réservé PMR, indiquer \"Réservé PMR\". \nDans le cas d'une point de recharge non réservé PMR mais accessible PMR, indiquer \"Accessible mais non réservé PMR\". \nDans le cas d'un point de recharge non accessible PMR, indiquer \"Non accessible\"",
             "example": false,
-            "type": "boolean",
-            "constraints": {
-                "required": true
+            "type": "string",
+            "constraints":{
+                "required":true,
+                "enum":[
+                    "\"Réservé PMR\"",
+                    "Accessible mais non réservé PMR",
+                    "Non accessible"
+                ]
             }
         },
         {
             "name": "restriction_gabarit",
-            "description": "Restrictions d’accès liées au gabarit des véhicules.",
+            "description": "Toutes informations relatives aux restrictions d’accès liées au gabarit des véhicules.",
             "example": "Hauteur maximale 2m",
             "type": "string",
             "constraints": {
@@ -401,11 +407,11 @@
         },
         {
             "name": "num_pdl",
-            "description": "Numéro du point de livraison d'électricité, y compris en cas de raccordement indirect",
+            "description": "Numéro du point de livraison d'électricité, y compris en cas de raccordement indirect. Dans le cas d'un territoire desservi par ENEDIS, ce numéro doit compoter 14 chiffres.",
             "example": "12345678912345",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
@@ -420,7 +426,7 @@
         },
         {
             "name": "observations",
-            "description": "Champ destiné à préciser les modalités d'accès à la recharge, l'accessibilité, le tarif, les horaires d'ouverture, …",
+            "description": "Champ destiné à préciser les modalités d'accès à la recharge, l'accessibilité, le tarif, les horaires d'ouverture, ...",
             "example": "Recharge uniquement disponible pendant les horaires d'ouverture du Centre Commercial XY",
             "type": "string",
             "constraints": {
@@ -440,6 +446,5 @@
     ],
     "missingValues": [
         ""
-    ],
-    "primaryKey": "id_pdc"
+    ]
 }
