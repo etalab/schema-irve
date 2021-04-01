@@ -120,6 +120,15 @@
             }
         },
         {
+            "name": "telephone",
+            "description": "Numéro de téléphone permettant de contacter l'opérateur.",
+            "example": "0111111111",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+        },
+        {
             "name": "nom_enseigne",
             "description": "Le nom commercial du réseau.",
             "example": "Réseau de recharge ABC",
