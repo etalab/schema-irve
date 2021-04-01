@@ -94,6 +94,7 @@
             "name": "contact_amenageur",
             "description": "Adresse courriel de l'aménageur. Favoriser les adresses génériques de contact.",
             "example": "contact@societe-amenageur.com",
+            "type": "string",
             "format": "email",
             "constraints": {
               "required": true
@@ -112,6 +113,7 @@
             "name": "contact_operateur",
             "description": "Adresse courriel de l'opérateur. Favoriser les adresses génériques de contact.",
             "example": "contact@societe-operateur.com",
+            "type": "string",
             "format": "email",
             "constraints": {
               "required": true
@@ -368,7 +370,7 @@
             "constraints":{
                 "required":true,
                 "enum":[
-                    "\"Réservé PMR\"",
+                    "Réservé PMR",
                     "Accessible mais non réservé PMR",
                     "Non accessible"
                 ]
