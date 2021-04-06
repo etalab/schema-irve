@@ -73,7 +73,7 @@
     "fields": [
         {
             "name": "nom_amenageur",
-            "description": "La dénomination sociale du nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
+            "description": "La dénomination sociale du nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr. Ce champs n'est pas obligatoire car il sera automatiquement renseigné lors de la constitution du fichier global de consolidation des IRVE.",
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints":{
@@ -92,7 +92,7 @@
         },
         {
             "name": "contact_amenageur",
-            "description": "Adresse courriel de l'aménageur. Favoriser les adresses génériques de contact.",
+            "description": "Adresse courriel de l'aménageur. Favoriser les adresses génériques de contact. Cette adresse sera utilisée par les services de l'Etat en cas d'anomalie ou de besoin de mise à jour des données.",
             "example": "contact@societe-amenageur.com",
             "type": "string",
             "format": "email",
@@ -120,7 +120,7 @@
             }
         },
         {
-            "name": "telephone",
+            "name": "telephone_operateur",
             "description": "Numéro de téléphone permettant de contacter l'opérateur.",
             "example": "0111111111",
             "type": "string",
@@ -149,8 +149,8 @@
         },
         {
             "name": "id_station_local",
-            "description": "Identifiant de la station utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio.",
-            "example": "FRA68P68021001",
+            "description": "Identifiant de la station utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio. En cas de station qui n'est pas ouverte à l'itinérance, cet identifiant est indispensable.",
+            "example": "01F2KMMRZVQ5FQY882PCJQAPQ0",
             "type": "string",
             "constraints": {
                 "required": false
@@ -232,8 +232,8 @@
         },
         {
             "name": "id_pdc_local",
-            "description": "Identifiant du point de recharge utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio.",
-            "example": "FRA68P680210015",
+            "description": "Identifiant du point de recharge utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio. En cas de point de recharge qui n'est pas ouvert à l'itinérance, cet identifiant est indispensable.",
+            "example": "01F2KNFARDSJG7KEH1YHG4033M",
             "type": "string",
             "constraints": {
                 "required": false
@@ -251,7 +251,7 @@
         },
         {
             "name": "prise_type_ef",
-            "description": "Disponibilité d'une prise de type E/F sur le point de recharge.",
+            "description": "Disponibilité d'une prise de type E/F sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -260,7 +260,7 @@
         },
         {
             "name": "prise_type_2",
-            "description": "Disponibilité d'une prise de type 2 sur le point de recharge.",
+            "description": "Disponibilité d'une prise de type 2 sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -269,7 +269,7 @@
         },
         {
             "name": "prise_type_combo_ccs",
-            "description": "Disponibilité d'une prise de type Combo / CCS sur le point de recharge.",
+            "description": "Disponibilité d'une prise de type Combo / CCS sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -278,7 +278,7 @@
         },
         {
             "name": "prise_type_chademo",
-            "description": "Disponibilité d'une prise de type Chademo sur le point de recharge.",
+            "description": "Disponibilité d'une prise de type Chademo sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -287,7 +287,7 @@
         },
         {
             "name": "prise_type_autre",
-            "description": "Disponibilité d'une prise de type Autre sur le point de recharge.",
+            "description": "Disponibilité d'une prise d'un autre type sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux. Le ou les types de prises sont à préciser dans le champs \"observations\".",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -296,7 +296,7 @@
         },
         {
             "name": "gratuit",
-            "description": "Gratuité de la recharge.",
+            "description": "Gratuité de la recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -305,7 +305,7 @@
         },
         {
             "name": "paiement_acte",
-            "description": "Possibilité de paiement à l'acte (sans identification ni abonnement).",
+            "description": "Possibilité de paiement à l'acte (sans identification ni abonnement). Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -314,7 +314,7 @@
         },
         {
             "name": "paiement_cb",
-            "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB).",
+            "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB). Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -323,7 +323,7 @@
         },
         {
             "name": "paiement_autre",
-            "description": "Possibilité de paiement par un autre moyen (qui peut être préciser dans le champs \"observation\".",
+            "description": "Possibilité de paiement par un autre moyen (qui peut être préciser dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -333,7 +333,7 @@
         {
             "name": "tarification",
             "description": "Toutes informations pouvant être apportées concernant les tarification(s) pratiquée(s).",
-            "example": false,
+            "example": "0,40€ / kwh pour les non abonnés.",
             "type": "string",
             "constraints": {
                 "required": false
@@ -354,7 +354,7 @@
         },
         {
             "name": "reservation",
-            "description": "Possibilité de réservation à l'avance d'un point de recharge.",
+            "description": "Possibilité de réservation à l'avance d'un point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -363,12 +363,12 @@
         },
         {
             "name": "horaires",
-            "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00, Mo-Fr 14:00-18:00, Th 08:00-18:00.",
-            "example": false,
+            "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00.",
+            "example": "Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00",
             "type": "string",
             "constraints": {
-                "required": false,
-                "pattern": "todo"
+                "required": true,
+                "pattern": "(.*?)((\\d{1,2}:\\d{2})-(\\d{1,2}:\\d{2})|24/7)"
             }
         },
         {
@@ -381,7 +381,8 @@
                 "enum":[
                     "Réservé PMR",
                     "Accessible mais non réservé PMR",
-                    "Non accessible"
+                    "Non accessible",
+                    "Accessibilité inconnue"
                 ]
             }
         },
@@ -391,12 +392,12 @@
             "example": "Hauteur maximale 2m",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
             "name": "station_deux_roues",
-            "description": "La station est-elle réservée aux véhicules à deux roues ?",
+            "description": "La station est-elle réservée aux véhicules à deux roues ? Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
