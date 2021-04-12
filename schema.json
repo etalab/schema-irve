@@ -214,7 +214,7 @@
             "name": "nbre_pdc",
             "description": "Le nombre de points de recharge sur la station.",
             "example": "1, 10",
-            "type": "number",
+            "type": "integer",
             "constraints": {
                 "required": true,
                 "minimum": 0
@@ -241,7 +241,7 @@
         },
         {
             "name": "puissance_nominale",
-            "description": "Puissance maximale que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
+            "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
             "example": "22.00",
             "type": "number",
             "constraints": {
