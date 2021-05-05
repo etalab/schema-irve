@@ -363,7 +363,7 @@
         },
         {
             "name": "horaires",
-            "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00.",
+            "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00.",
             "example": "Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00",
             "type": "string",
             "constraints": {
