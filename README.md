@@ -31,7 +31,7 @@ Pour faciliter le remplissage des données, Etalab met à disposition un génér
 - d'un formulaire
 - d'un tableur (encore en expérimentation)
 
-Une fois vos données chargés ou remplis, un formulaire vous proposera de les publier sur data.gouv.fr.
+Une fois vos données chargées ou remplies, un formulaire vous proposera de les publier sur data.gouv.fr.
 
 
 ## Consolidation
