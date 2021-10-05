@@ -1,5 +1,9 @@
 # Changements
 
+## 2.0.2
+
+- Correction des valeurs d'exemple pour les champs de dates (`date_mise_en_service` et `date_maj`)
+
 ## 2.0.1
 
 - Mise à jour du texte et de liens relatifs à la procédure de consolidation réalisée par Etalab

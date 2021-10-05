@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://github.com/etalab/schema-irve/raw/v2.0.0/schema.json",
+    "path": "https://github.com/etalab/schema-irve/raw/v2.0.2/schema.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://github.com/etalab/schema-irve/raw/v2.0.0/exemple-valide.csv"
+            "path": "https://github.com/etalab/schema-irve/raw/v2.0.2/exemple-valide.csv"
         }
     ],
     "sources": [
@@ -31,8 +31,8 @@
         }
     ],
     "created": "2018-06-29",
-    "lastModified": "2021-10-04",
-    "version": "2.0.1",
+    "lastModified": "2021-10-05",
+    "version": "2.0.2",
     "contributors": [
         {
             "title": "Alexandre Bulté",
@@ -429,7 +429,7 @@
         {
             "name": "date_mise_en_service",
             "description": "Date de mise en service de la station",
-            "example": "2018-08-08, 2015-12-30",
+            "example": "2021-12-30",
             "type": "date",
             "format": "%Y-%m-%d",
             "constraints": {
@@ -448,7 +448,7 @@
         {
             "name": "date_maj",
             "description": "Date de mise à jour des données",
-            "example": "2018/08/08, 2015/12/30",
+            "example": "2021-12-30",
             "type": "date",
             "format": "%Y-%m-%d",
             "constraints": {
