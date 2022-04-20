@@ -1,4 +1,7 @@
 # Changements
+## 2.0.3
+
+- Ajout d'une vérification des coordonnées géographiques pour le champ `coordonneesXY` du schéma
 
 ## 2.0.2
 
