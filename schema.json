@@ -460,7 +460,7 @@
     {
         "name":"french_gps_coordinates",
         "params":{
-            "column":"coordonneesxy"
+            "column":"coordonneesXY"
         }
     }
 ],
