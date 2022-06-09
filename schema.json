@@ -193,7 +193,7 @@
         {
             "name": "code_insee_commune",
             "description": "Le code INSEE de la commune d'implantation.",
-            "example": "06088, 2B002 (pour une commune corse)",
+            "example": "06088",
             "type": "string",
             "constraints": {
                 "pattern": "^([013-9]\\d|2[AB1-9])\\d{3}$",
@@ -213,7 +213,7 @@
         {
             "name": "nbre_pdc",
             "description": "Le nombre de points de recharge sur la station.",
-            "example": "1, 10",
+            "example": "10",
             "type": "integer",
             "constraints": {
                 "required": true,
@@ -374,7 +374,7 @@
         {
             "name": "accessibilite_pmr",
             "description": "Accessibilité du point de recharge aux personnes à mobilité réduite. Dans le cas d'un point de recharge signalisé et réservé PMR, indiquer \"Réservé PMR\". \nDans le cas d'une point de recharge non réservé PMR mais accessible PMR, indiquer \"Accessible mais non réservé PMR\". \nDans le cas d'un point de recharge non accessible PMR, indiquer \"Non accessible\"",
-            "example": false,
+            "example": "Réservé PMR",
             "type": "string",
             "constraints": {
                 "required": true,
