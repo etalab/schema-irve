@@ -456,6 +456,14 @@
             }
         }
     ],
+    "custom_checks":[
+        {
+            "name": "french-gps-coordinates",
+            "params":{
+                "column":"coordonneesXY"
+            }
+        }
+    ],
     "missingValues": [
         ""
     ]
