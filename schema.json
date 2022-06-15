@@ -341,7 +341,7 @@
         },
         {
             "name": "condition_acces",
-            "description": "Eventuelles conditions d’accès à la station, hors gabarit. Dans le cas d'un accès libre sans contrainte matérielle physique (ex : absence de barrière), indiquer \"Accès libre\". \nDans le cas d'un accès limité / réservé qui nécessite une identification ou passage d'une barrière, indiquer \"Accès réservé\" (ce type d'accès inclut les IRVE sur le réseau autoroutier payant - passage péage).",
+            "description": "Eventuelles conditions d’accès à la station, hors gabarit. Dans le cas d'un accès libre sans contrainte matérielle physique (ex : absence de barrière) ni restriction d'usager (ex : borne accessible pour n'importe quel type et modèle de voiture électrique), indiquer \"Accès libre\". \nDans le cas d'un accès limité / réservé qui nécessite une identification ou passage d'une barrière, indiquer \"Accès réservé\" (ce type d'accès inclut les IRVE sur le réseau autoroutier payant - passage péage).",
             "example": "Accès libre",
             "type": "string",
             "constraints": {
