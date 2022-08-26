@@ -1,5 +1,14 @@
 # Changements
 
+## 2.0.3
+
+- Correction des valeurs d'exemple pour les champs suivants :
+  - `code_insee_commune`
+  - `nbre_pdc`
+  - `accessibilite_pmr`
+  - `date_mise_en_service`
+  - `date_maj`
+
 ## 2.0.2
 
 - Correction des valeurs d'exemple pour les champs de dates (`date_mise_en_service` et `date_maj`)

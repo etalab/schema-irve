@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://github.com/etalab/schema-irve/raw/v2.0.2/schema.json",
+    "path": "https://github.com/etalab/schema-irve/raw/v2.0.3/schema.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://github.com/etalab/schema-irve/raw/v2.0.2/exemple-valide.csv"
+            "path": "https://github.com/etalab/schema-irve/raw/v2.0.3/exemple-valide.csv"
         }
     ],
     "sources": [
@@ -31,8 +31,8 @@
         }
     ],
     "created": "2018-06-29",
-    "lastModified": "2021-10-05",
-    "version": "2.0.2",
+    "lastModified": "2022-08-26",
+    "version": "2.0.3",
     "contributors": [
         {
             "title": "Alexandre Bulté",
@@ -67,6 +67,12 @@
             "title": "Julien Barreteau",
             "email": "julien.barreteau@developpement-durable.gouv.fr",
             "organisation": "DGEC",
+            "role": "contributor"
+        },
+        {
+            "title": "Antoine Augusti",
+            "email": "antoine.augusti@beta.gouv.fr",
+            "organisation": "DINUM",
             "role": "contributor"
         }
     ],
@@ -193,7 +199,7 @@
         {
             "name": "code_insee_commune",
             "description": "Le code INSEE de la commune d'implantation.",
-            "example": "06088, 2B002 (pour une commune corse)",
+            "example": "21231",
             "type": "string",
             "constraints": {
                 "pattern": "^([013-9]\\d|2[AB1-9])\\d{3}$",
@@ -213,7 +219,7 @@
         {
             "name": "nbre_pdc",
             "description": "Le nombre de points de recharge sur la station.",
-            "example": "1, 10",
+            "example": "3",
             "type": "integer",
             "constraints": {
                 "required": true,
@@ -374,7 +380,7 @@
         {
             "name": "accessibilite_pmr",
             "description": "Accessibilité du point de recharge aux personnes à mobilité réduite. Dans le cas d'un point de recharge signalisé et réservé PMR, indiquer \"Réservé PMR\". \nDans le cas d'une point de recharge non réservé PMR mais accessible PMR, indiquer \"Accessible mais non réservé PMR\". \nDans le cas d'un point de recharge non accessible PMR, indiquer \"Non accessible\"",
-            "example": false,
+            "example": "Accessible mais non réservé PMR",
             "type": "string",
             "constraints": {
                 "required": true,
