@@ -2,6 +2,8 @@
 
 ## 2.1.0
 
+Evolutions suite aux ateliers publics et retours terrain pour faciliter la production de la donnée :
+
 - Passage en facultatif des champs `siren_amenageur`, `contact_amenageur`, `code_insee_commune`, `raccordement`, `num_pdl`, `date_mise_en_service`
 - Ajout de la valeur `inconnu` pour les champs `gratuit`, `paiement_cb`, `paiement_autre`
 - Ajout d'un nouveau champ `cable_t2_attache` indiquant la présence ou non d'un câble T2 sur le point de recharge
