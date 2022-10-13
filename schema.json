@@ -302,16 +302,11 @@
         },
         {
             "name": "gratuit",
-            "description": "Gratuité de la recharge. Indiquer \"true\" si le point de recharge est gratuit sans condition d'utilisation, \"false\" si faux, \"inconnu\" si l'information n'est pas connue.",
-            "example": "false",
-            "type": "string",
+            "description": "Gratuité de la recharge. Indiquer \"true\" si le point de recharge est gratuit sans condition d'utilisation, \"false\" si faux.",
+            "example": false,
+            "type": "boolean",
             "constraints": {
                 "required": true,
-                "enum": [
-                    "true",
-                    "false",
-                    "inconnu"
-                ]
             }
         },
         {
@@ -325,30 +320,20 @@
         },
         {
             "name": "paiement_cb",
-            "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB). Indiquer \"true\" si vrai, \"false\" si faux, \"inconnu\" si l'information n'est pas connue.",
-            "example": "false",
-            "type": "string",
+            "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB). Indiquer \"true\" si vrai, \"false\" si faux.",
+            "example": false,
+            "type": "boolean",
             "constraints": {
-                "required": true,
-                "enum": [
-                    "true",
-                    "false",
-                    "inconnu"
-                ]
+                "required": false,
             }
         },
         {
             "name": "paiement_autre",
-            "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux, \"inconnu\" si l'information n'est pas connue.",
-            "example": "false",
-            "type": "string",
+            "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
+            "example": false,
+            "type": "boolean",
             "constraints": {
-                "required": true,
-                "enum": [
-                    "true",
-                    "false",
-                    "inconnu"
-                ]
+                "required": false,
             }
         },
         {
