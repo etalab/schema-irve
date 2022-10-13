@@ -483,7 +483,6 @@
             "type": "boolean",
             "constraints": {
                 "required": false,
-                ]
             }
         }
 
