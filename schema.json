@@ -145,7 +145,7 @@
         },
         {
             "name": "id_station_itinerance",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"P\" pour \"pool\" qui veut dire Station en anglais. Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68P68021001",
             "type": "string",
             "constraints": {
@@ -228,7 +228,7 @@
         },
         {
             "name": "id_pdc_itinerance",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"E\" pour l'équivalent du point de recharge en anglais (EVSE - Electric Vehicule Supply Equipment). Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68E680210015",
             "type": "string",
             "constraints": {
