@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://github.com/etalab/schema-irve/raw/v2.0.3/schema.json",
+    "path": "https://github.com/etalab/schema-irve/raw/v2.1.0/schema.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://github.com/etalab/schema-irve/raw/v2.0.3/exemple-valide.csv"
+            "path": "https://github.com/etalab/schema-irve/raw/v2.1.0/exemple-valide.csv"
         }
     ],
     "sources": [
@@ -31,8 +31,8 @@
         }
     ],
     "created": "2018-06-29",
-    "lastModified": "2022-08-26",
-    "version": "2.0.3",
+    "lastModified": "2022-10-10",
+    "version": "2.1.0",
     "contributors": [
         {
             "title": "Alexandre Bulté",
@@ -92,7 +92,7 @@
             "example": "130025265",
             "type": "string",
             "constraints": {
-                "required": true,
+                "required": false,
                 "pattern": "^\\d{9}$"
             }
         },
@@ -103,7 +103,7 @@
             "type": "string",
             "format": "email",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -145,7 +145,7 @@
         },
         {
             "name": "id_station_itinerance",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68P68021001",
             "type": "string",
             "constraints": {
@@ -203,7 +203,7 @@
             "type": "string",
             "constraints": {
                 "pattern": "^([013-9]\\d|2[AB1-9])\\d{3}$",
-                "required": true
+                "required": false
             }
         },
         {
@@ -228,8 +228,8 @@
         },
         {
             "name": "id_pdc_itinerance",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
-            "example": "FRA68P680210015",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "example": "FRA68E680210015",
             "type": "string",
             "constraints": {
                 "required": true,
@@ -302,11 +302,11 @@
         },
         {
             "name": "gratuit",
-            "description": "Gratuité de la recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
+            "description": "Gratuité de la recharge. Indiquer \"true\" si le point de recharge est gratuit sans condition d'utilisation, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -324,16 +324,16 @@
             "example": false,
             "type": "boolean",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
             "name": "paiement_autre",
-            "description": "Possibilité de paiement par un autre moyen (qui peut être préciser dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
+            "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -416,7 +416,7 @@
             "example": "Direct",
             "type": "string",
             "constraints": {
-                "required": true,
+                "required": false,
                 "enum": [
                     "Direct",
                     "Indirect"
@@ -429,7 +429,7 @@
             "example": "12345678912345",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -439,7 +439,7 @@
             "type": "date",
             "format": "%Y-%m-%d",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -459,6 +459,15 @@
             "format": "%Y-%m-%d",
             "constraints": {
                 "required": true
+            }
+        },
+        {
+            "name": "cable_t2_attache",
+            "description": "Champ destiné à préciser si un câble T2 est attaché au point de recharge ou non. Indiquer \"true\" si vrai, \"false\" si faux",
+            "example": "false",
+            "type": "boolean",
+            "constraints": {
+                "required": false
             }
         }
     ],
