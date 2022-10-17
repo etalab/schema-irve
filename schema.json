@@ -306,7 +306,7 @@
             "example": false,
             "type": "boolean",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
