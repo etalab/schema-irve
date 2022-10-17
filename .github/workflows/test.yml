@@ -11,7 +11,7 @@ jobs:
     - name: Installation Python 3.10
       uses: actions/setup-python@v1
       with:
-        python-version: '3.10.8'
+        python-version: '3.10'
     - name: Cache pip
       uses: actions/cache@v1
       with:
