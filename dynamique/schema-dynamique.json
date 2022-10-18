@@ -69,38 +69,60 @@
             "description": "TODO",
             "example": "TODO",
             "type": "string",
-            // TODO: déclarer énuméré ici
+            "constraints": {
+                "required": true
+                // TODO: déclarer énuméré ici
+            }
         },
         {
             "name": "occupation_pdc",
             "description": "TODO",
             "example": "TODO",
-            "type": "string"
-            // TODO: déclarer énuméré ici
+            "type": "string",
+            "constraints": {
+                "required": true
+                // TODO: déclarer énuméré ici
+            }
         },
         {
-            "name": "horodatage"
-            // TODO: format ISO en contrainte
+            "name": "horodatage",
+            "constraints": {
+                "required": true
+                // TODO: déclarer énuméré ici
+                // TODO: format ISO en contrainte
+            }
         },
         {
             "name": "etat_prise_type_2",
-            "type": "string"
-            // TODO: énuméré
+            "type": "string",
+            "constraints": {
+                "required": true
+                // TODO: énuméré
+            }
         },
         {
             "name": "etat_prise_type_combo_ccs",
-            "type": "string"
-            // TODO: énuméré
+            "type": "string",
+            "constraints": {
+                "required": true
+                // TODO: énuméré
+            }
         },
         {
             "name": "etat_prise_type_chademo",
-            "type": "string"
-            // TODO: énuméré
+            "type": "string",
+            "constraints": {
+                "required": true
+                // TODO: énuméré
+            }
         },
         {
             "name": "etat_prise_type_ef",
-            "type": "string"
-            // TODO: énuméré
+            "type": "string",
+            "constraints": {
+                "required": true
+                // TODO: énuméré
+            }
         }
     ],
     "missingValues": [
