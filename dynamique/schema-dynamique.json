@@ -65,15 +65,6 @@
             }
         },
         {
-            "name": "id_pdc_local",
-            "description": "TODO",
-            "example": "TODO",
-            "type": "string",
-            "constraints": {
-                // obligatoire si id_pdc_itinerance n'est pas fourni
-            },
-        },
-        {
             "name": "etat_pdc",
             "description": "TODO",
             "example": "TODO",
