@@ -84,8 +84,13 @@
             "example": "TODO",
             "type": "string",
             "constraints": {
-                "required": true
-                // TODO: déclarer énuméré ici
+                "required": true,
+                "enum": [
+                    "libre",
+                    "occupe",
+                    "reserve",
+                    "inconnu"
+                ]
             }
         },
         {
