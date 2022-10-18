@@ -61,7 +61,7 @@
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{4,33}$|Non concerné))+$"
+                "pattern": "^FR[A-Z0-9]{4,33}$"
             }
         },
         {
