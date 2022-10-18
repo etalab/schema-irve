@@ -118,8 +118,12 @@
             "name": "etat_prise_type_combo_ccs",
             "type": "string",
             "constraints": {
-                "required": true
-                // TODO: énuméré
+                "required": false,
+                "enum": [
+                    "fonctionnel",
+                    "hors_service",
+                    "inconnu"
+                ]
             }
         },
         {
