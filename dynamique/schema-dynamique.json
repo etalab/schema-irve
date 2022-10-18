@@ -39,6 +39,18 @@
             "email": "validation@data.gouv.fr",
             "organisation": "Etalab",
             "role": "author"
+        },
+        {
+            "title": "Christina Laumond",
+            "email": "christina.laumond@beta.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "author"
+        },
+        {
+            "title": "Thibaut Barrère",
+            "email": "thibaut.barrere@beta.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "author"
         }
     ],
     "fields": [

@@ -74,6 +74,18 @@
             "email": "antoine.augusti@beta.gouv.fr",
             "organisation": "DINUM",
             "role": "contributor"
+        },
+        {
+            "title": "Christina Laumond",
+            "email": "christina.laumond@beta.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "contributor"
+        },
+        {
+            "title": "Thibaut Barrère",
+            "email": "thibaut.barrere@beta.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "contributor"
         }
     ],
     "fields": [
