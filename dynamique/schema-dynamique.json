@@ -56,12 +56,12 @@
     "fields": [
         {
             "name": "id_pdc_itinerance",
-            "description": "TODO",
-            "example": "TODO",
+            "description": "L'identifiant du point de recharge, tel qu'apparaissant dans le schéma statique. Doit permettre de faire le lien entre le dynamique et le statique.",
+            "example": "FRA68E680210015",
             "type": "string",
             "constraints": {
-                // TODO: ajouter format nécessaire
-                "required": true
+                "required": true,
+                "pattern": "(?:(?:^|,)(^FR[A-Z0-9]{4,33}$|Non concerné))+$"
             }
         },
         {
