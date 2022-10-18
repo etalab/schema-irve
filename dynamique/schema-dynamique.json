@@ -130,8 +130,12 @@
             "name": "etat_prise_type_chademo",
             "type": "string",
             "constraints": {
-                "required": true
-                // TODO: énuméré
+                "required": false,
+                "enum": [
+                    "fonctionnel",
+                    "hors_service",
+                    "inconnu"
+                ]
             }
         },
         {
