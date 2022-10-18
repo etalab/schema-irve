@@ -142,8 +142,12 @@
             "name": "etat_prise_type_ef",
             "type": "string",
             "constraints": {
-                "required": true
-                // TODO: énuméré
+                "required": false,
+                "enum": [
+                    "fonctionnel",
+                    "hors_service",
+                    "inconnu"
+                ]
             }
         }
     ],
