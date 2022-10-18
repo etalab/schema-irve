@@ -70,8 +70,12 @@
             "example": "TODO",
             "type": "string",
             "constraints": {
-                "required": true
-                // TODO: déclarer énuméré ici
+                "required": true,
+                "enum": [
+                    "en_service",
+                    "hors_service",
+                    "inconnu"
+                ]
             }
         },
         {
