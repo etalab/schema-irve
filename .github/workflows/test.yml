@@ -23,7 +23,6 @@ jobs:
     - name: Installation des dépendances
       run: pip install -r requirements.txt
     - name: Vérification du schéma statique et des fichiers d'exemples associés
-      working-directory: statique
       run: |
-        frictionless validate --type schema schema.json
-        frictionless validate --schema schema.json exemple-valide.csv
+        frictionless validate --type schema statique/schema-statique.json
+        frictionless validate --schema statique/schema-statique.json statique/exemple-valide-statique.csv
