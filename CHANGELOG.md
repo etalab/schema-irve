@@ -1,5 +1,9 @@
 # Changements
 
+## Dév (2.2.0)
+
+- Introduction d'une partie dynamique - TODO: à décrire davantage.
+
 ## 2.1.0
 
 Evolutions suite aux ateliers publics et retours terrain pour faciliter la production de la donnée :
