@@ -95,10 +95,11 @@
         },
         {
             "name": "horodatage",
+            "description": "TODO",
+            "example": "TODO",
+            "type": "datetime",
             "constraints": {
                 "required": true
-                // TODO: déclarer énuméré ici
-                // TODO: format ISO en contrainte
             }
         },
         {
