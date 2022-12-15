@@ -22,7 +22,11 @@ jobs:
           ${{ runner.os }}-
     - name: Installation des dépendances
       run: pip install -r requirements.txt
-    - name: Vérification du schéma et des fichiers d'exemples
+    - name: Vérification du schéma statique et des fichiers d'exemples associés
       run: |
-        frictionless validate --type schema schema.json
-        frictionless validate --schema schema.json exemple-valide.csv
+        frictionless validate --type schema statique/schema-statique.json
+        frictionless validate --schema statique/schema-statique.json statique/exemple-valide-statique.csv
+    - name: Vérification du schéma dynamique et des fichiers d'exemples associés
+      run: |
+        frictionless validate --type schema dynamique/schema-dynamique.json
+        frictionless validate --schema dynamique/schema-dynamique.json dynamique/exemple-valide-dynamique.csv
