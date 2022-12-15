@@ -1,7 +1,7 @@
 {
     "name": "datapackage-irve",
     "title": "Infrastructures de recharges pour véhicules électriques",
-    "description": "data package d'exemple pour les IRVE (statique et dynamique)",
+    "description": "data package contenant 2 schémas : IRVE statique et IRVE dynamique",
     "id": "datapackage-irve",
     "resources": [
         {
