@@ -1,6 +1,6 @@
 {
     "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
-    "name": "irve-dynamique",
+    "name": "schema-irve-dynamique",
     "title": "IRVE dynamique",
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
