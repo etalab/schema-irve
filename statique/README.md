@@ -16,11 +16,9 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 ## Création d'un fichier de données conforme
 
-Les données collectées doivent respecter un formalisme particulier (schéma de données) décrit sur [la section documentation](https://schema.data.gouv.fr/etalab/schema-irve/latest/documentation.html) de cette page.
-
-Les données sont à remplir au format CSV, encodage UTF-8.
-
-Plusieurs solutions existent pour générer ce fichier CSV.
+* Les données collectées doivent respecter un formalisme particulier (schéma de données) décrit sur [la section documentation](https://schema.data.gouv.fr/etalab/schema-irve/latest/documentation.html) de cette page.
+* Les données sont à remplir au format CSV, encodage UTF-8.
+* Plusieurs solutions existent pour générer ce fichier CSV.
 
 ## Utilisation de notre outil d'aide à la saisie
 
@@ -36,7 +34,7 @@ Une fois vos données chargées ou remplies, un formulaire vous proposera de les
 
 ## Consolidation
 
-Etalab réalise une consolidation automatique des jeux de données IRVE conformes déposés sur data.gouv.fr. Le code est [disponible ici](https://github.com/etalab/notebooks/tree/master/irve-v2).Le fichier en résultant est [publié ici sur data.gouv.fr](https://www.data.gouv.fr/fr/datasets/5448d3e0c751df01f85d0572).
+Etalab réalise une consolidation automatique des jeux de données IRVE conformes déposés sur data.gouv.fr. Le code est [disponible ici](https://github.com/etalab/notebooks/tree/master/irve-v2). Le fichier en résultant est [publié ici sur data.gouv.fr](https://www.data.gouv.fr/fr/datasets/5448d3e0c751df01f85d0572).
 Vous pouvez également visualiser son contenu sur une carte en passant par le [Point d’Accès National](https://transport.data.gouv.fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques).
 
 En cas de non consolidation de vos données, la raison principale possible est que vos données contiennent des erreurs et donc ne respectent pas le schéma. Nous vous invitons à les corriger et à utiliser l’[outil de validation Validata](https://validata.fr/table-schema?schema_name=schema-datagouvfr.etalab%2Fschema-irve) pour vérifier la qualité des vos données.   .
@@ -46,6 +44,5 @@ En cas de non consolidation de vos données, la raison principale possible est q
 * [Fichier gabarit à télécharger au format csv](https://www.data.gouv.fr/fr/datasets/fichier-exemple-stations-de-recharge-de-vehicules-electriques/) (proposé par Etalab)
 
 Pour poser une question, commenter, faire un retour d’usage ou contribuer à l’amélioration du modèle de données, vous pouvez :
-
 * adresser un message à contact@transport.beta.gouv.fr
 * ouvrir un ticket sur le [dépôt GitHub du schéma](https://github.com/etalab/schema-irve/issues/new)
