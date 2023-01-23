@@ -1,8 +1,8 @@
 # Infrastructures de recharge pour véhicules électriques
 
-Spécifications des fichiers d'échange relatifs aux données statiques et dynamiques des points de recharge pour véhicules électriques : 
-- Données statiques : la localisation géographique et les caractéristiques techniques des stations et des points de recharge
-- Données dynamiques : état de fonctionnement et disponibilité des points de recharge et de leurs connecteurs
+Il existe deux schémas relatifs aux données des points de recharge pour véhicules électriques :
+- Un schéma pour les **données statiques**. Ces données contiennent la localisation géographique et les caractéristiques techniques des stations et des points de recharge
+- Un schéma pour les **données dynamiques**. Ces données contiennent l'état de fonctionnement et la disponibilité des points de recharge et de leurs connecteurs
 
 ## Contexte
 
@@ -15,5 +15,5 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 ## Voir aussi
 - [Documentation sur les données de points de recharge](https://doc.transport.data.gouv.fr/producteurs/infrastructures-de-recharge-de-vehicules-electriques-irve) 
 - Pour poser une question, commenter, faire un retour d’usage ou contribuer à l’amélioration du modèle de données, vous pouvez :
-    - adresser un message à contact@transport.beta.gouv.fr 
-    ( ouvrir un ticket sur le dépôt GitHub du schéma
+    - adresser un message à [contact@transport.beta.gouv.fr](mailto:contact@transport.beta.gouv.fr)
+    - ouvrir un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new) du schéma
