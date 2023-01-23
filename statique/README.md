@@ -16,7 +16,7 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 ## Création d'un fichier de données conforme
 
-* Les données collectées doivent respecter un formalisme particulier (schéma de données) décrit sur [la section documentation](https://schema.data.gouv.fr/etalab/schema-irve/latest/documentation.html) de cette page.
+* Les données collectées doivent respecter un formalisme particulier (schéma de données) décrit sur [la section documentation](https://schema.data.gouv.fr/etalab/schema-irve-statique/latest/documentation.html) de cette page.
 * Les données sont à remplir au format CSV, encodage UTF-8.
 * Plusieurs solutions existent pour générer ce fichier CSV.
 
@@ -43,5 +43,5 @@ En cas de non consolidation de vos données, la raison principale possible est q
 
 * [Fichier gabarit à télécharger au format csv](https://www.data.gouv.fr/fr/datasets/fichier-exemple-stations-de-recharge-de-vehicules-electriques/) (proposé par Etalab)
 * Pour poser une question, commenter, faire un retour d’usage ou contribuer à l’amélioration du modèle de données, vous pouvez :
-  * adresser un message à contact@transport.beta.gouv.fr
+  * adresser un message à [contact@transport.beta.gouv.fr](mailto:contact@transport.beta.gouv.fr)
   * ouvrir un ticket sur le [dépôt GitHub du schéma](https://github.com/etalab/schema-irve/issues/new)
