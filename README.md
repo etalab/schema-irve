@@ -1,7 +1,7 @@
 # Infrastructures de recharge pour véhicules électriques
 
 Il existe deux schémas relatifs aux données des points de recharge pour véhicules électriques :
-- Un schéma pour les **[données statiques](/)**. Ces données contiennent la localisation géographique et les caractéristiques techniques des stations et des points de recharge
+- Un schéma pour les **données statiques**. Ces données contiennent la localisation géographique et les caractéristiques techniques des stations et des points de recharge
 - Un schéma pour les **données dynamiques**. Ces données contiennent l'état de fonctionnement et la disponibilité des points de recharge et de leurs connecteurs
 
 ## Contexte
