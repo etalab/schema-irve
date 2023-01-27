@@ -25,7 +25,7 @@ jobs:
     - name: Vérification du schéma statique et des fichiers d'exemples associés
       run: |
         frictionless validate --type schema statique/schema-statique.json
-        frictionless validate --schema statique/schema-statique.json statique/exemple-valide-statique.csv
+        frictionless validate datapackage.json
     - name: Vérification du schéma dynamique et des fichiers d'exemples associés
       run: |
         frictionless validate --type schema dynamique/schema-dynamique.json
