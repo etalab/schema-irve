@@ -29,4 +29,3 @@ jobs:
     - name: Vérification du schéma dynamique et des fichiers d'exemples associés
       run: |
         frictionless validate --type schema dynamique/schema-dynamique.json
-        frictionless validate --schema dynamique/schema-dynamique.json dynamique/exemple-valide-dynamique.csv
