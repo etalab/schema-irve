@@ -66,7 +66,7 @@
         },
         {
             "name": "etat_pdc",
-            "description": "etat_pdc caractérise l’état de fonctionnement du point de recharge : est-il en service ou hors service ? En l’absence d’information, etat_pdc sera égal à ‘inconnu’.",
+            "description": "`etat_pdc` caractérise l’état de fonctionnement du point de recharge : est-il en service ou hors service ? En l’absence d’information, etat_pdc sera égal à ‘inconnu’.",
             "example": "en_service",
             "type": "string",
             "constraints": {
