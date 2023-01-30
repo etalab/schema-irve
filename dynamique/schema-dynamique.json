@@ -132,7 +132,7 @@
         },
         {
             "name": "etat_prise_type_chademo",
-            "description": "etat_prise_type_chademo indique l’état de fonctionnement du connecteur Chademo : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
+            "description": "`etat_prise_type_chademo` indique l’état de fonctionnement du connecteur Chademo : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
             "example": "inconnu",
             "type": "string",
             "constraints": {
