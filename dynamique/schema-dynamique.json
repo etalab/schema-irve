@@ -80,7 +80,7 @@
         },
         {
             "name": "occupation_pdc",
-            "description": "occupation_pdc caractérise l’occupation du point de recharge : est-il libre, occupé ou réservé ? En l’absence d’information, occupation_pdc sera égal à ‘inconnu’.",
+            "description": "`occupation_pdc` caractérise l’occupation du point de recharge : est-il libre, occupé ou réservé ? En l’absence d’information, occupation_pdc sera égal à ‘inconnu’.",
             "example": "occupe",
             "type": "string",
             "constraints": {
