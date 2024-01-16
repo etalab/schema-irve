@@ -31,7 +31,6 @@ Pour faciliter le remplissage des données, Etalab met à disposition un génér
 
 Une fois vos données chargées ou remplies, un formulaire vous proposera de les publier sur data.gouv.fr.
 
-
 ## Consolidation
 
 Etalab réalise une consolidation automatique des jeux de données IRVE conformes déposés sur data.gouv.fr. Le code est [disponible ici](https://github.com/etalab/notebooks/tree/master/irve-v2). Le fichier en résultant est [publié ici sur data.gouv.fr](https://www.data.gouv.fr/fr/datasets/5448d3e0c751df01f85d0572).
