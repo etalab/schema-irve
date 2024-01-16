@@ -2,7 +2,7 @@
 
 ## 2.2.1
 
-- Correctif de liens dans les deux sous-schémas, qui pointaient vers d'anciennes versions de façon incorrecte.
+- Correctif de liens dans les deux sous-schémas, qui pointaient vers d'anciennes versions de façon incorrecte (merci @johanricher https://github.com/etalab/schema-irve/issues/43)
 
 ## 2.2.0
 
