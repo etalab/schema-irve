@@ -8,6 +8,10 @@ on:
 # `act push` or `act push --container-architecture linux/amd64` (Mac M1)
 # 
 # Installation notes at https://github.com/nektos/act
+# 
+# I did early tests to simulate releases but so far didn't manage to extract the GITHUB_REF
+# https://github.com/nektos/act/discussions/2154
+#
 jobs:
   build:
     runs-on: ubuntu-latest
