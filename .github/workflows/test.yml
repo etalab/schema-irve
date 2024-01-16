@@ -3,6 +3,9 @@ name: Vérification du respect des spécifications
 on:
   push:
 
+# NOTE: if you need to debug these things locally, use `act` and medium installation:
+# E.g:
+# `act push` or `act push --container-architecture linux/amd64` (Mac M1)
 jobs:
   build:
     runs-on: ubuntu-latest
