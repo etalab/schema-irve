@@ -6,6 +6,8 @@ on:
 # NOTE: if you need to debug these things locally, use `act` and medium installation:
 # E.g:
 # `act push` or `act push --container-architecture linux/amd64` (Mac M1)
+# 
+# Installation notes at https://github.com/nektos/act
 jobs:
   build:
     runs-on: ubuntu-latest
