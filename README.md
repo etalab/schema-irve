@@ -17,5 +17,5 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 - [Documentation sur les données de points de recharge](https://doc.transport.data.gouv.fr/producteurs/infrastructures-de-recharge-de-vehicules-electriques-irve) 
 - Pour poser une question, commenter, faire un retour d’usage ou contribuer à l’amélioration du modèle de données, vous pouvez :
-    - adresser un message à [contact@transport.beta.gouv.fr](mailto:contact@transport.beta.gouv.fr)
+    - adresser un message à [contact@transport.data.gouv.fr](mailto:contact@transport.data.gouv.fr)
     - ouvrir un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new) du schéma
