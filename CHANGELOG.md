@@ -1,6 +1,11 @@
 # Changements
 
-## Dév (2.2.0)
+## 2.2.1
+
+- Correctif de liens dans les deux sous-schémas, qui pointaient vers d'anciennes versions de façon incorrecte (@johanricher https://github.com/etalab/schema-irve/issues/43)
+- Correctif partiel du lien vers Validata (@AntoineAugusti https://github.com/etalab/schema-irve/issues/39)
+
+## 2.2.0
 
 - Le schéma est transformé en [data package](https://specs.frictionlessdata.io/data-package/) afin d'accueillir en plus du schéma existant (pour les données statiques), un schéma de données pour les données d'IRVE **dynamiques**. Le contenu de chaque schéma est contenu dans les dossiers `statique` et `dynamique`.
 

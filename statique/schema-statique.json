@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://github.com/etalab/schema-irve/raw/v2.1.0/schema.json",
+    "path": "https://github.com/etalab/schema-irve/raw/v2.2.1/schema.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://github.com/etalab/schema-irve/raw/v2.1.0/exemple-valide.csv"
+            "path": "https://github.com/etalab/schema-irve/raw/v2.2.1/exemple-valide.csv"
         }
     ],
     "sources": [
@@ -71,19 +71,19 @@
         },
         {
             "title": "Antoine Augusti",
-            "email": "antoine.augusti@beta.gouv.fr",
+            "email": "antoine.augusti@transport.data.gouv.fr",
             "organisation": "DINUM",
             "role": "contributor"
         },
         {
             "title": "Christina Laumond",
-            "email": "christina.laumond@beta.gouv.fr",
+            "email": "christina.laumond@transport.data.gouv.fr",
             "organisation": "transport.data.gouv.fr",
             "role": "contributor"
         },
         {
             "title": "Thibaut Barrère",
-            "email": "thibaut.barrere@beta.gouv.fr",
+            "email": "thibaut.barrere@transport.data.gouv.fr",
             "organisation": "transport.data.gouv.fr",
             "role": "contributor"
         },

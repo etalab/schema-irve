@@ -3,15 +3,24 @@ name: Vérification du respect des spécifications
 on:
   push:
 
+# NOTE: if you need to debug these things locally, use `act` and medium installation:
+# E.g:
+# `act push` or `act push --container-architecture linux/amd64` (Mac M1)
+# 
+# Installation notes at https://github.com/nektos/act
+# 
+# I did early tests to simulate releases but so far didn't manage to extract the GITHUB_REF
+# https://github.com/nektos/act/discussions/2154
+#
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Installation Python 3.10
-      uses: actions/setup-python@v1
+    - uses: actions/checkout@v4
+    - name: Installation Python 3.12
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+        python-version: '3.12'
     - name: Cache pip
       uses: actions/cache@v1
       with:
