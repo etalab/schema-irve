@@ -1,0 +1,5 @@
+# See useful links for maintenance here:
+# https://github.com/etalab/transport-site/blob/master/.tool-versions
+
+elixir 1.16.1-otp-26
+erlang 26.2.1
