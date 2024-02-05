@@ -17,6 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - uses: erlef/setup-beam@v1
+      with:
+        version-file: .tool-versions
+        version-type: strict
     - name: Installation Python 3.12
       uses: actions/setup-python@v5
       with:
