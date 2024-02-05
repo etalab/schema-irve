@@ -1,5 +1,10 @@
 # Changements
 
+## 2.3.0
+
+- Assouplissement du schéma sur le formatage des identifiants (https://github.com/etalab/schema-irve/pull/52)
+- Correction des liens cassés dans les manifestes JSON (https://github.com/etalab/schema-irve/pull/51)
+
 ## 2.2.1
 
 - Correctif de liens dans les deux sous-schémas, qui pointaient vers d'anciennes versions de façon incorrecte (@johanricher https://github.com/etalab/schema-irve/issues/43)
