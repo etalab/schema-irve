@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.2.1/statique/schema-statique.json",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/statique/schema-statique.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.2.1/statique/exemple-valide-statique.csv"
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/statique/exemple-valide-statique.csv"
         }
     ],
     "sources": [

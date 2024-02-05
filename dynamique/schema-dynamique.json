@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.2.1/dynamique/schema-dynamique.json",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/dynamique/schema-dynamique.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.2.1/dynamique/exemple-valide-dynamique.csv"
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/dynamique/exemple-valide-dynamique.csv"
         }
     ],
     "sources": [
@@ -32,7 +32,7 @@
     ],
     "created": "2022-10-28",
     "lastModified": "2024-01-16",
-    "version": "2.2.1",
+    "version": "2.3.0",
     "contributors": [
         {
             "title": "Geoffrey Aldebert",
