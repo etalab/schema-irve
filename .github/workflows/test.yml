@@ -42,3 +42,6 @@ jobs:
     - name: Vérification du schéma dynamique et des fichiers d'exemples associés
       run: |
         frictionless validate --type schema dynamique/schema-dynamique.json
+    - name: Vérification de l'absence de liens cassés dans les schémas
+      run: |
+        elixir checks.exs
