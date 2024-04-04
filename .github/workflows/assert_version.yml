@@ -1,0 +1,19 @@
+name: Vérification de la cohérence des versions dans tous les champs du schéma
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+
+    - run: python3 .github/workflows/assert_version.py
