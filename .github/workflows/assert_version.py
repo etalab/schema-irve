@@ -2,10 +2,10 @@ import json
 import re
 import os
 
-pattern = r'v?\d+\.\d+\.\d+'
+pattern = r"v?\d+\.\d+\.\d+"
 
 
-def check(obj, version, parents=''):
+def check(obj, version, parents=""):
     """
     This functions recursively parses all fields in the schema looking for
     version names that would not be the same as the one mentionned
@@ -20,54 +20,45 @@ def check(obj, version, parents=''):
     # if field is a list, we check every item
     elif isinstance(obj, list):
         for idx, k in enumerate(obj):
-            errors += check(
-                k,
-                version,
-                parents=parents + f'[{str(idx)}]'
-            )
+            errors += check(k, version, parents=parents + f"[{str(idx)}]")
     # if field is a dict, we check every value
     elif isinstance(obj, dict):
         for k in obj:
             # not checking the fields
-            if k != 'fields':
+            if k != "fields":
                 errors += check(
                     obj[k],
                     version,
-                    parents=parents + '.' + k if parents else k
+                    parents=parents + "." + k if parents else k
                 )
     return errors
 
 
 to_check = []
 
-if 'schema.json' in os.listdir():
-    to_check.append('schema.json')
+if "schema.json" in os.listdir():
+    to_check.append("schema.json")
 
-elif 'datapackage.json' in os.listdir():
-    with open('datapackage.json', 'r') as f:
+elif "datapackage.json" in os.listdir():
+    with open("datapackage.json", "r") as f:
         datapackage = json.load(f)
-    for r in datapackage['resources']:
-        to_check.append(r['schema'])
+    for r in datapackage["resources"]:
+        to_check.append(r["schema"])
 
 else:
-    raise Exception('No required file found')
+    raise Exception("No required file found")
 
-message = ''
 for schema_path in to_check:
-    with open(schema_path, 'r') as f:
+    with open(schema_path, "r") as f:
         schema = json.load(f)
-    homepage = schema['homepage']
-    version = schema['version']
+    version = schema["version"]
 
     errors = check(schema, version)
     if errors:
-        if message:
-            message += '\n\n'
-        message += (
+        message = (
             f"Versions are mismatched within the schema '{schema['name']}', "
             f"expected version '{version}' but:"
         )
         for e in errors:
             message += f"\n- {e[0]} has version '{e[1]}'"
-if message:
-    raise Exception(message)
+        raise Exception(message)
