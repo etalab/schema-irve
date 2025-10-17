@@ -23,6 +23,10 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 Pour le reste des définitions (opérateur, aménageur, etc.) les publicateurs pourront se rapporter au [décret n° 2021-546 du 4 mai 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043475363) en cas de besoin.
 
+## Lien avec les données dynamiques
+
+Un fichier statique décrit des caractéristiques des points de charge et de leurs stations amenées à peu évoluer. Les informations temps réel quand à la disponibilité de ces points de charge sont à publier dans un fichier séparé au format [IRVE dynamique](https://schema.data.gouv.fr/etalab/schema-irve-dynamique/).
+
 ## Création d'un fichier de données conforme
 
 * Les données collectées doivent respecter un formalisme particulier (schéma de données) décrit sur [la section documentation](https://schema.data.gouv.fr/etalab/schema-irve-statique/latest/documentation.html) de cette page.

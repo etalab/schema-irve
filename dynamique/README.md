@@ -10,9 +10,9 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 - [Définition et structure des identifiants attribués par l'Association Française pour l'Itinérance de la Recharge Électrique des Véhicules (AFIREV)](https://afirev.fr/fr/informations-generales/)
 
-## Lien avec le schéma statique
+## Lien avec les données statiques
 
-Chaque ligne du fichier correspond à un point de recharge et contient un identifiant `id_pdc_itinerance` qui se réfère à une ligne correspondante dans un fichier publié au [schéma IRVE statique](https://schema.data.gouv.fr/etalab/schema-irve-statique/). Un fichier au schéma IRVE dynamique ne contient que des informations temps réel concernant la disponibilité et l’état de fonctionnement des points de recharge, pour accéder aux caractéristiques complètes de ceux-ci, de leurs stations, opérateurs, localisation, etc, il convient de se référer au fichier IRVE statique correspondant.
+Chaque ligne du fichier correspond à un point de recharge et contient un identifiant `id_pdc_itinerance` qui se réfère à une entrée dans un fichier publié au [schéma IRVE statique](https://schema.data.gouv.fr/etalab/schema-irve-statique/). Un fichier au schéma IRVE dynamique ne contient que des informations temps réel concernant la disponibilité et l’état de fonctionnement des points de recharge. Pour accéder aux caractéristiques complètes des points de charge, de leurs stations, opérateurs, localisation, etc, il convient de se référer au fichier IRVE statique correspondant.
 
 ## Création d'un fichier de données conforme
 
