@@ -14,6 +14,15 @@ Dans le but de constituer un répertoire national de données relatif à l’off
   * [Fichier de consolidation des stations de recharge de véhicules électriques sur data.gouv.fr](https://www.data.gouv.fr/fr/datasets/fichier-exemple-stations-de-recharge-de-vehicules-electriques/)
   * [Définition et structure des identifiants attribués par l'Association Française pour l'Itinérance de la Recharge Electrique des Véhicules \(AFIREV\)](https://afirev.fr/fr/informations-generales/)
 
+## Définition des objets et représentation
+
+* Les fichiers publiés au schéma listent des points de charge, « une interface associée à un emplacement de stationnement qui permet de recharger un seul véhicule électrique à la fois ». Chaque ligne du fichier représente donc un point de charge.
+* Un point de charge peut présenter plusieurs prises (exemple : une prise domestique E/F et une prise Type 2), mais une seule de ces prises peut être utilisée à la fois. Les types de prises disponibles sur un point de charge sont décrites par des colonnes booléennes.
+* Les points de charge sont regroupés en stations, « une zone comportant une borne de recharge associée à un ou des emplacements de stationnement ou un ensemble de bornes de recharge associées à des emplacements de stationnement, exploitée par un ou plusieurs opérateurs ». Une station comportant plusieurs points de charge fait donc l’objet de plusieurs lignes (une ligne par point de charge) dans le fichier, avec les informations la concernant (identifiant, nom…) dupliquées sur chaque ligne.
+* Les stations comprenent une ou plusieurs bornes. Une borne est « un appareil fixe raccordé à un point d'alimentation électrique, comprenant un ou plusieurs points de recharge et pouvant intégrer notamment des dispositifs de communication, de comptage, de contrôle ou de paiement ». Une borne peut donc comprendre plusieurs points de charge, c’est à dire que plusieurs véhicules peuvent se charger en même temps à la même borne. Les bornes ne sont pas modélisées dans le présent schéma.
+
+Pour le reste des définitions (opérateur, aménageur, etc.) les publicateurs pourront se rapporter au [décret n° 2021-546 du 4 mai 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043475363) en cas de besoin.
+
 ## Création d'un fichier de données conforme
 
 * Les données collectées doivent respecter un formalisme particulier (schéma de données) décrit sur [la section documentation](https://schema.data.gouv.fr/etalab/schema-irve-statique/latest/documentation.html) de cette page.
