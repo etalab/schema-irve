@@ -8,7 +8,7 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 ## Documents de cadrage technique
 
-- [Définition et structure des identifiants attribués par l'Association Française pour l'Itinérance de la Recharge Électrique des Véhicules (AFIREV)](http://www.afirev.fr/fr/informations-generales/)
+- [Définition et structure des identifiants attribués par l'Association Française pour l'Itinérance de la Recharge Électrique des Véhicules (AFIREV)](https://afirev.fr/fr/informations-generales/)
 
 ## Création d'un fichier de données conforme
 

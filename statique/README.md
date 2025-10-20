@@ -12,7 +12,7 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 **Documents de cadrage technique**
   * [Fichier de consolidation des stations de recharge de véhicules électriques sur data.gouv.fr](https://www.data.gouv.fr/fr/datasets/fichier-exemple-stations-de-recharge-de-vehicules-electriques/)
-  * [Définition et structure des identifiants attribués par l'Association Française pour l'Itinérance de la Recharge Electrique des Véhicules \(AFIREV\)](http://www.afirev.fr/fr/informations-generales/)
+  * [Définition et structure des identifiants attribués par l'Association Française pour l'Itinérance de la Recharge Electrique des Véhicules \(AFIREV\)](https://afirev.fr/fr/informations-generales/)
 
 ## Création d'un fichier de données conforme
 
