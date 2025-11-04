@@ -12,7 +12,7 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 ## Lien avec les données statiques
 
-Chaque ligne du fichier correspond à un point de recharge et contient un identifiant `id_pdc_itinerance` qui se réfère à une entrée dans un fichier publié au [schéma IRVE statique](https://schema.data.gouv.fr/etalab/schema-irve-statique/). Un fichier au schéma IRVE dynamique ne contient que des informations temps réel concernant la disponibilité et l’état de fonctionnement des points de recharge. Pour accéder aux caractéristiques complètes des points de charge, de leurs stations, opérateurs, localisation, etc, il convient de se référer au fichier IRVE statique correspondant.
+Chaque ligne du fichier correspond à un point de recharge et contient un identifiant `id_pdc_itinerance` qui se réfère à une entrée dans un fichier publié au [schéma IRVE statique](https://schema.data.gouv.fr/etalab/schema-irve-statique/). Un fichier au schéma IRVE dynamique ne contient que des informations temps réel concernant la disponibilité et l’état de fonctionnement des points de recharge. Pour accéder aux caractéristiques complètes des points de recharge, de leurs stations, opérateurs, localisation, etc, il convient de se référer au fichier IRVE statique correspondant.
 
 ## Création d'un fichier de données conforme
 

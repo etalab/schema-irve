@@ -16,16 +16,16 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 ## Définition des objets et représentation
 
-* Les fichiers publiés au schéma listent des points de charge, « une interface associée à un emplacement de stationnement qui permet de recharger un seul véhicule électrique à la fois ». Chaque ligne du fichier représente donc un point de charge.
-* Un point de charge peut présenter plusieurs prises (exemple : une prise domestique E/F et une prise Type 2), mais une seule de ces prises peut être utilisée à la fois. Les types de prises disponibles sur un point de charge sont décrites par des colonnes booléennes.
-* Les points de charge sont regroupés en stations, « une zone comportant une borne de recharge associée à un ou des emplacements de stationnement ou un ensemble de bornes de recharge associées à des emplacements de stationnement, exploitée par un ou plusieurs opérateurs ». Une station comportant plusieurs points de charge fait donc l’objet de plusieurs lignes (une ligne par point de charge) dans le fichier, avec les informations la concernant (identifiant, nom…) dupliquées sur chaque ligne.
-* Les stations comprenent une ou plusieurs bornes. Une borne est « un appareil fixe raccordé à un point d'alimentation électrique, comprenant un ou plusieurs points de recharge et pouvant intégrer notamment des dispositifs de communication, de comptage, de contrôle ou de paiement ». Une borne peut donc comprendre plusieurs points de charge, c’est à dire que plusieurs véhicules peuvent se charger en même temps à la même borne. Les bornes ne sont pas modélisées dans le présent schéma.
+* Les fichiers publiés au schéma listent des points de recharge, « une interface associée à un emplacement de stationnement qui permet de recharger un seul véhicule électrique à la fois ». Chaque ligne du fichier représente donc un point de recharge.
+* Un point de recharge peut présenter plusieurs prises (exemple : une prise domestique E/F et une prise Type 2), mais une seule de ces prises peut être utilisée à la fois. Les types de prises disponibles sur un point de recharge sont décrites par des colonnes booléennes.
+* Les points de recharge sont regroupés en stations, « une zone comportant une borne de recharge associée à un ou des emplacements de stationnement ou un ensemble de bornes de recharge associées à des emplacements de stationnement, exploitée par un ou plusieurs opérateurs ». Une station comportant plusieurs points de recharge fait donc l’objet de plusieurs lignes (une ligne par point de recharge) dans le fichier, avec les informations la concernant (identifiant, nom…) dupliquées sur chaque ligne.
+* Les stations comprenent une ou plusieurs bornes. Une borne est « un appareil fixe raccordé à un point d'alimentation électrique, comprenant un ou plusieurs points de recharge et pouvant intégrer notamment des dispositifs de communication, de comptage, de contrôle ou de paiement ». Une borne peut donc comprendre plusieurs points de recharge, c’est à dire que plusieurs véhicules peuvent se charger en même temps à la même borne. Les bornes ne sont pas modélisées dans le présent schéma.
 
 Pour le reste des définitions (opérateur, aménageur, etc.) les publicateurs pourront se rapporter au [décret n° 2021-546 du 4 mai 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043475363) en cas de besoin.
 
 ## Lien avec les données dynamiques
 
-Un fichier statique décrit des caractéristiques des points de charge et de leurs stations amenées à peu évoluer. Les informations temps réel quand à la disponibilité de ces points de charge sont à publier dans un fichier séparé au format [IRVE dynamique](https://schema.data.gouv.fr/etalab/schema-irve-dynamique/).
+Un fichier statique décrit des caractéristiques des points de recharge et de leurs stations amenées à peu évoluer. Les informations temps réel quand à la disponibilité de ces points de recharge sont à publier dans un fichier séparé au format [IRVE dynamique](https://schema.data.gouv.fr/etalab/schema-irve-dynamique/).
 
 ## Création d'un fichier de données conforme
 
