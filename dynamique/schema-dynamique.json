@@ -5,11 +5,11 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant l’état temps réel des points de recharge pour véhicules électriques. Chaque ligne du fichier correspond à un point de recharge (PDC) dont les caractéristiques complètes sont décrites dans un fichier au schéma « IRVE statique »",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/dynamique/schema-dynamique.json",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.1/dynamique/schema-dynamique.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/dynamique/exemple-valide-dynamique.csv"
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.1/dynamique/exemple-valide-dynamique.csv"
         }
     ],
     "sources": [
@@ -32,7 +32,7 @@
     ],
     "created": "2022-10-28",
     "lastModified": "2024-01-16",
-    "version": "v2.3.0",
+    "version": "v2.3.1",
     "contributors": [
         {
             "title": "Geoffrey Aldebert",
