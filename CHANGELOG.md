@@ -1,11 +1,5 @@
 # Changements
 
-## 2.3.1
-
-- Clarification des objets listés et de leur définition dans la documentation (https://github.com/etalab/schema-irve/pull/70)
-- Citations croisées entre schémas dans leur documentation (https://github.com/etalab/schema-irve/pull/70)
-- Mises à jour techniques des tests (https://github.com/etalab/schema-irve/pull/71)
-
 ## 2.3.0
 
 - Assouplissement du schéma sur le formatage des identifiants (https://github.com/etalab/schema-irve/pull/52)
