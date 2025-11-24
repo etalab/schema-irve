@@ -98,6 +98,12 @@
             "email": "vincent.degove@transport.data.gouv.fr",
             "organisation": "transport.data.gouv.fr",
             "role": "contributor"
+        },
+        {
+            "title": "Stéphane Pignal",
+            "email": "stephane.pignal@transport.data.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "contributor"
         }
     ],
     "fields": [
