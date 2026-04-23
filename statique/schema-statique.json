@@ -5,11 +5,15 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques. Chaque ligne du fichier correspond à un point de recharge (PDC).",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/statique/schema-statique.json",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique/schema-statique.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v2.3.0/statique/exemple-valide-statique.csv"
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique/exemple-valide-statique.csv"
+        },
+        {
+            "title": "Exemple de fichier IRVE invalide",
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique/exemple-invalide-statique.csv"
         }
     ],
     "sources": [
@@ -31,8 +35,8 @@
         }
     ],
     "created": "2018-06-29",
-    "lastModified": "2022-10-10",
-    "version": "v2.3.0",
+    "lastModified": "2026-04-23",
+    "version": "v3.0.0-rc1",
     "contributors": [
         {
             "title": "Alexandre Bulté",
@@ -104,7 +108,13 @@
             "email": "stephane.pignal@transport.data.gouv.fr",
             "organisation": "transport.data.gouv.fr",
             "role": "contributor"
-        }
+        },
+        {
+            "title": "Aurélien Cadiou",
+            "email": "aurelien.cadiou@transport.data.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "contributor"
+        }        
     ],
     "fields": [
         {
@@ -122,7 +132,7 @@
             "example": "130025265",
             "type": "string",
             "constraints": {
-                "required": false,
+                "required": true,
                 "pattern": "^\\d{9}$"
             }
         },
@@ -175,12 +185,12 @@
         },
         {
             "name": "id_station_itinerance",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
-            "example": "FRA68P68021001",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "example": "FR1F8P68021001",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "(?:(?:^|,)(^[A-Z]{2}[A-Z0-9]{4,33}$|Non concerné))+$"
+                "pattern": "^(FR[A-Z0-9]{3}P[A-Z0-9]+)$"
             }
         },
         {
@@ -228,7 +238,7 @@
         },
         {
             "name": "code_insee_commune",
-            "description": "Le code INSEE de la commune d'implantation.",
+            "description": "Le code INSEE de la commune d'implantation. La liste des codes peut se retrouver sur le site de l'INSEE : https://www.insee.fr/fr/information/2560452",
             "example": "21231",
             "type": "string",
             "constraints": {
@@ -237,13 +247,27 @@
             }
         },
         {
-            "name": "coordonneesXY",
-            "description": "La longitude suivie de la latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lon,lat].",
-            "example": "[7.48710500,48.345345]",
-            "type": "geopoint",
-            "format": "array",
+            "name": "latitude",
+            "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
+            "example": "48.34534",
+            "type": "number",
+            "divisibleBy": 0.00001,
             "constraints": {
-                "required": true
+                "required": true,
+                "minimum": -90,
+                "maximum":90
+            }
+        },
+        {
+            "name": "longitude",
+            "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
+            "example": "48.34534",
+            "type": "number",
+            "divisibleBy": 0.00001,
+            "constraints": {
+                "required": true,
+                "minimum": -180,
+                "maximum":180
             }
         },
         {
@@ -258,12 +282,13 @@
         },
         {
             "name": "id_pdc_itinerance",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV, suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
             "example": "FRA68E680210015",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "(?:(?:^|,)(^[A-Z]{2}[A-Z0-9]{4,33}$|Non concerné))+$"
+                "pattern": "^(FR[A-Z0-9]{3}E[A-Z0-9]+)$",
+                "unique": true
             }
         },
         {
@@ -278,11 +303,13 @@
         {
             "name": "puissance_nominale",
             "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
-            "example": "22.00",
+            "example": "22.000",
             "type": "number",
+            "divisibleBy": 0.001,
             "constraints": {
                 "required": true,
-                "minimum": 0
+                "minimum": 2.3,
+                "maximum":1000
             }
         },
         {
@@ -498,6 +525,20 @@
             "type": "boolean",
             "constraints": {
                 "required": false
+            }
+        }
+    ],
+     "custom_checks":[
+        {
+            "name":"siren",
+            "params":{
+                "column":"siren_amenageur"
+            }
+        },
+        {
+            "name":"opening-hours-value",
+            "params":{
+                "column":"horaires"
             }
         }
     ],
