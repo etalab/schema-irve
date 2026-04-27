@@ -131,6 +131,7 @@
             "description": "Le numero SIREN de l'aménageur issue de la base SIRENE des entreprises. Vous pouvez récupérer cet identifiant sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "130025265",
             "type": "string",
+            "x-v3-change": "Rendu obligatoire (était facultatif depuis la v2.1.0)",
             "constraints": {
                 "required": true,
                 "pattern": "^\\d{9}$"
