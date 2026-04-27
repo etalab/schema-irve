@@ -26,11 +26,20 @@ jobs:
 
     - name: Installation des dépendances Python
       run: |
-        frictionless validate --type schema statique/schema-statique.json
-        frictionless validate datapackage.json
-    - name: Vérification du schéma dynamique et des fichiers d'exemples associés
+        pip install uv
+        uv sync
+
+    - name: Vérification du schéma statique
       run: |
-        frictionless validate --type schema dynamique/schema-dynamique.json
-    - name: Vérification de l'absence de liens cassés dans les schémas
+        uv run frictionless validate --type schema statique/schema-statique.json
+        uv run frictionless validate datapackage.json
+
+    - name: Vérification du schéma dynamique
       run: |
-        elixir checks.exs
+        uv run frictionless validate --type schema dynamique/schema-dynamique.json
+
+    - name: Vérification de l'absence de liens cassés
+      run: elixir checks.exs
+
+    - name: Tests ExUnit
+      run: elixir test/test_helper.exs
