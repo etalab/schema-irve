@@ -316,6 +316,7 @@
             "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
             "example": "7.36",
             "type": "number",
+            "x-v3-change": "Minimum passé de 0 à 2.3 kW, maximum ajouté à 1000 kW",
             "constraints": {
                 "required": true,
                 "minimum": 2.3,
