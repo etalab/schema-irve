@@ -247,6 +247,18 @@
             }
         },
         {
+            "name": "coordonneesXY",
+            "description": "La longitude suivie de la latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lon,lat].",
+            "example": "[7.48710500,48.345345]",
+            "type": "geopoint",
+            "format": "array",
+            "x-deprecated": true,
+            "x-deprecation-message": "Ce champ est remplacé par les champs 'latitude' et 'longitude' à partir de la v3. Il sera supprimé dans une version ultérieure.",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "latitude",
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
