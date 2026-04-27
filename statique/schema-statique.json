@@ -251,7 +251,6 @@
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
             "type": "number",
-            "divisibleBy": 0.00001,
             "constraints": {
                 "required": true,
                 "minimum": -90,
@@ -263,7 +262,6 @@
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
             "type": "number",
-            "divisibleBy": 0.00001,
             "constraints": {
                 "required": true,
                 "minimum": -180,
@@ -305,7 +303,6 @@
             "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
             "example": "22.000",
             "type": "number",
-            "divisibleBy": 0.001,
             "constraints": {
                 "required": true,
                 "minimum": 2.3,
