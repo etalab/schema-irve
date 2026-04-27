@@ -260,7 +260,7 @@
         {
             "name": "longitude",
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
-            "example": "48.34534",
+            "example": "7.48710",
             "type": "number",
             "constraints": {
                 "required": true,
