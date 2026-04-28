@@ -131,6 +131,7 @@
             "description": "Le numero SIREN de l'aménageur issue de la base SIRENE des entreprises. Vous pouvez récupérer cet identifiant sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "130025265",
             "type": "string",
+            "x-v3-change": "Rendu obligatoire (était facultatif depuis la v2.1.0)",
             "constraints": {
                 "required": true,
                 "pattern": "^\\d{9}$"
@@ -185,9 +186,10 @@
         },
         {
             "name": "id_station_itinerance",
-            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *. Si la station n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *.",
             "example": "FR1F8P68021001",
             "type": "string",
+            "x-v3-change": "\"Non concerné\" retiré, pattern resserré au format FR[A-Z0-9]{3}P",
             "constraints": {
                 "required": true,
                 "pattern": "^(FR[A-Z0-9]{3}P[A-Z0-9]+)$"
@@ -247,11 +249,23 @@
             }
         },
         {
+            "name": "coordonneesXY",
+            "description": "La longitude suivie de la latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84 au format [lon,lat].",
+            "example": "[7.48710500,48.345345]",
+            "type": "geopoint",
+            "format": "array",
+            "x-deprecated": true,
+            "x-deprecation-message": "Ce champ est remplacé par les champs 'latitude' et 'longitude' à partir de la v3. Il sera supprimé dans une version ultérieure.",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "latitude",
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
             "type": "number",
-            "divisibleBy": 0.00001,
+            "x-v3-new": true,
             "constraints": {
                 "required": true,
                 "minimum": -90,
@@ -261,9 +275,9 @@
         {
             "name": "longitude",
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
-            "example": "48.34534",
+            "example": "7.48710",
             "type": "number",
-            "divisibleBy": 0.00001,
+            "x-v3-new": true,
             "constraints": {
                 "required": true,
                 "minimum": -180,
@@ -282,9 +296,10 @@
         },
         {
             "name": "id_pdc_itinerance",
-            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -. Si le point de recharge n'est pas en itinérance, merci d'indiquer \"Non concerné\".",
+            "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -.",
             "example": "FRA68E680210015",
             "type": "string",
+            "x-v3-change": "\"Non concerné\" retiré, pattern resserré au format FR[A-Z0-9]{3}E, contrainte unique ajoutée",
             "constraints": {
                 "required": true,
                 "pattern": "^(FR[A-Z0-9]{3}E[A-Z0-9]+)$",
@@ -303,9 +318,9 @@
         {
             "name": "puissance_nominale",
             "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
-            "example": "22.000",
+            "example": "7.36",
             "type": "number",
-            "divisibleBy": 0.001,
+            "x-v3-change": "Minimum passé de 0 à 2.3 kW, maximum ajouté à 1000 kW",
             "constraints": {
                 "required": true,
                 "minimum": 2.3,
