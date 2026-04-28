@@ -265,6 +265,7 @@
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
             "type": "number",
+            "x-v3-new": true,
             "constraints": {
                 "required": true,
                 "minimum": -90,
@@ -276,6 +277,7 @@
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "7.48710",
             "type": "number",
+            "x-v3-new": true,
             "constraints": {
                 "required": true,
                 "minimum": -180,
