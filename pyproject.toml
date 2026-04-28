@@ -1,0 +1,11 @@
+[project]
+name = "schema-irve-test-tools"
+version = "0.1.0"
+description = "Outils pour le test du schéma IRVE"
+requires-python = ">=3.14"
+dependencies = [
+    "frictionless>=5.19",
+]
+
+[tool.uv]
+required-version = ">=0.11"
