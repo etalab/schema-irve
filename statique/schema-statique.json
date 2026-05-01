@@ -564,6 +564,12 @@
             }
         },
         {
+            "name":"coherence-coordonnees-station",
+            "params":{
+                "columns":["id_station_itinerance", "latitude", "longitude"]
+            }
+        },
+        {
             "name":"siren-checksum",
             "params":{
                 "column":"siren_amenageur"
