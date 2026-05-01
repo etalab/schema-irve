@@ -570,6 +570,12 @@
             }
         },
         {
+            "name":"code-insee-exists",
+            "params":{
+                "column":"code_insee_commune"
+            }
+        },
+        {
             "name":"coherence-code-insee-coordonnees",
             "params":{
                 "columns":["code_insee_commune", "latitude", "longitude"]
