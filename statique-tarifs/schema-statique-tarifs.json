@@ -25,11 +25,12 @@
     "fields": [
         {
             "name": "tarif_id",
-            "description": "Identifiant du tarif. Permet de faire le lien avec le champ tarif_id du fichier statique. Plusieurs lignes peuvent partager le même tarif_id (une par élément tarifaire).",
-            "example": "FRELCPTARIF001",
+            "description": "Identifiant du tarif. Cet identifiant débute par FR suivi de 3 caractères AFIREV et de T, suivis d'un suffixe libre choisi par le producteur (ex : identifiant OCPI interne). Le préfixe AFIREV garantit l'unicité globale lors de la consolidation nationale. L'unicité du suffixe est de la responsabilité du producteur au sein de son préfixe. Plusieurs lignes peuvent partager le même tarif_id (une par élément tarifaire).",
+            "example": "FRELCTDRV-energy-5",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": true,
+                "pattern": "^FR[A-Z0-9]{3}T\\S+$"
             }
         },
         {
