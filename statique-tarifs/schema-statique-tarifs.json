@@ -15,6 +15,11 @@
             "email": "thibaut.barrere@transport.data.gouv.fr",
             "organisation": "transport.data.gouv.fr",
             "role": "author"
+        },
+        {
+            "title": "Philippe Thomy",
+            "organisation": "loco-labs",
+            "role": "contributor"
         }
     ],
     "fields": [
