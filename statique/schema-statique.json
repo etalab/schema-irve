@@ -546,6 +546,18 @@
     ],
      "custom_checks":[
         {
+            "name":"valid-afirev-trigram",
+            "params":{
+                "column":"id_pdc_itinerance"
+            }
+        },
+        {
+            "name":"valid-afirev-trigram",
+            "params":{
+                "column":"id_station_itinerance"
+            }
+        },
+        {
             "name":"siren-checksum",
             "params":{
                 "column":"siren_amenageur"
