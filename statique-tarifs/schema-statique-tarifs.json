@@ -68,6 +68,16 @@
             }
         },
         {
+            "name": "tax_included",
+            "description": "Indique si les prix incluent les taxes (TTC). Seul YES est accepté : tous les prix doivent être exprimés TTC.",
+            "example": "YES",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "enum": ["YES"]
+            }
+        },
+        {
             "name": "max_price",
             "description": "Prix maximum TTC pour une session de recharge, tous composants confondus (au sens OCPI).",
             "example": "60.00",
