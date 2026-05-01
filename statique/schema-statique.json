@@ -120,11 +120,12 @@
     "fields": [
         {
             "name": "nom_amenageur",
-            "description": "La dénomination sociale du nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr. Ce champs n'est pas obligatoire car il sera automatiquement renseigné lors de la constitution du fichier global de consolidation des IRVE.",
+            "description": "La dénomination sociale du nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
+            "x-v3-change": "Rendu obligatoire",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
