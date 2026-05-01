@@ -252,7 +252,7 @@
             }
         },
         {
-            "name": "latitude",
+            "name": "station_latitude",
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
             "type": "number",
@@ -264,7 +264,7 @@
             }
         },
         {
-            "name": "longitude",
+            "name": "station_longitude",
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "7.48710",
             "type": "number",
@@ -566,7 +566,7 @@
         {
             "name":"coherence-coordonnees-station",
             "params":{
-                "columns":["id_station_itinerance", "latitude", "longitude"]
+                "columns":["id_station_itinerance", "station_latitude", "station_longitude"]
             }
         },
         {
@@ -602,13 +602,13 @@
         {
             "name":"coherence-code-insee-coordonnees",
             "params":{
-                "columns":["code_insee_commune", "latitude", "longitude"]
+                "columns":["code_insee_commune", "station_latitude", "station_longitude"]
             }
         },
         {
             "name":"coherence-adresse-coordonnees",
             "params":{
-                "columns":["adresse_station", "latitude", "longitude"]
+                "columns":["adresse_station", "station_latitude", "station_longitude"]
             }
         }
     ],
