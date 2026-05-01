@@ -178,7 +178,7 @@
         },
         {
             "name": "nom_enseigne",
-            "description": "Le nom commercial du réseau.",
+            "description": "Le nom commercial visible sur les bornes de recharge.",
             "example": "Réseau de recharge ABC",
             "type": "string",
             "constraints": {
