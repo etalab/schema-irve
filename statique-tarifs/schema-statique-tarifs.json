@@ -38,7 +38,7 @@
             }
         },
         {
-            "name": "currency",
+            "name": "devise",
             "description": "Code ISO 4217 de la devise utilisée pour les prix. Seul EUR est supporté, mentionné à des fins de clarté.",
             "example": "EUR",
             "type": "string",
