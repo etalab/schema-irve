@@ -115,6 +115,39 @@
         }
     ],
     "primaryKey": ["tarif_id", "element_index"],
+    "custom_checks": [
+        {
+            "name": "valid-afirev-trigram",
+            "params": {
+                "column": "tarif_id"
+            }
+        },
+        {
+            "name": "json-schema-validation",
+            "params": {
+                "column": "restrictions"
+            }
+        },
+        {
+            "name": "json-schema-validation",
+            "params": {
+                "column": "price_components"
+            }
+        },
+        {
+            "name": "coherence-element-index",
+            "params": {
+                "columns": ["tarif_id", "element_index"]
+            }
+        },
+        {
+            "name": "coherence-tarif-denormalise",
+            "params": {
+                "group_by": "tarif_id",
+                "columns": ["devise", "horodatage_maj_tarif", "type", "tax_included", "max_price"]
+            }
+        }
+    ],
     "missingValues": [
         ""
     ]
