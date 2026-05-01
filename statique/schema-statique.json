@@ -120,7 +120,7 @@
     "fields": [
         {
             "name": "nom_amenageur",
-            "description": "La dénomination sociale du nom de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
+            "description": "La dénomination sociale de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Doit être cohérent avec le numéro SIREN renseigné. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
             "x-v3-change": "Rendu obligatoire",
