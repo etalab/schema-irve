@@ -241,7 +241,7 @@
         },
         {
             "name": "code_insee_commune",
-            "description": "Le code INSEE de la commune d'implantation. La liste des codes peut se retrouver sur le site de l'INSEE : https://www.insee.fr/fr/information/2560452",
+            "description": "Le code INSEE de la commune d'implantation (attention, ce n'est pas le code postal). La liste des codes peut se retrouver sur le site de l'INSEE : https://www.insee.fr/fr/information/2560452",
             "example": "21231",
             "type": "string",
             "constraints": {
