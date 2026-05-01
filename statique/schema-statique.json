@@ -558,6 +558,12 @@
             }
         },
         {
+            "name":"coherence-trigram-station-pdc",
+            "params":{
+                "columns":["id_station_itinerance", "id_pdc_itinerance"]
+            }
+        },
+        {
             "name":"siren-checksum",
             "params":{
                 "column":"siren_amenageur"
