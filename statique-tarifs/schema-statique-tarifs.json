@@ -108,6 +108,7 @@
             }
         }
     ],
+    "primaryKey": ["tarif_id", "element_index"],
     "missingValues": [
         ""
     ]
