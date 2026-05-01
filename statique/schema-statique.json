@@ -545,6 +545,12 @@
             "params":{
                 "column":"horaires"
             }
+        },
+        {
+            "name":"coherence-commune-geo",
+            "params":{
+                "columns":["code_insee_commune", "latitude", "longitude"]
+            }
         }
     ],
     "missingValues": [
