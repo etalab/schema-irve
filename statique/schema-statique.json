@@ -354,6 +354,16 @@
             }
         },
         {
+            "name": "prise_type_mcs",
+            "description": "Disponibilité d'une prise de type MCS (Megawatt Charging System) sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
+            "example": false,
+            "type": "boolean",
+            "x-v3-new": true,
+            "constraints": {
+                "required": true
+            }
+        },
+        {
             "name": "prise_type_autre",
             "description": "Disponibilité d'une prise d'un autre type sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux. Le ou les types de prises sont à préciser dans le champs \"observations\".",
             "example": false,
