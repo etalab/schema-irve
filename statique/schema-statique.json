@@ -580,6 +580,12 @@
             "params":{
                 "columns":["code_insee_commune", "latitude", "longitude"]
             }
+        },
+        {
+            "name":"coherence-adresse-coordonnees",
+            "params":{
+                "columns":["adresse_station", "latitude", "longitude"]
+            }
         }
     ],
     "missingValues": [
