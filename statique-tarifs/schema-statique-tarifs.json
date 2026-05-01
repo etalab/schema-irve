@@ -58,6 +58,16 @@
             }
         },
         {
+            "name": "type",
+            "description": "Type de tarif au sens OCPI.",
+            "example": "AD_HOC_PAYMENT",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "enum": ["REGULAR", "AD_HOC_PAYMENT"]
+            }
+        },
+        {
             "name": "restrictions",
             "description": "Objet JSON décrivant les conditions d'application de cet élément tarifaire (au sens OCPI). Objet vide {} si aucune restriction. Voir le JSON Schema associé.",
             "example": "{\"start_time\":\"06:00\",\"end_time\":\"00:00\",\"min_duration\":0,\"max_duration\":7200}",
