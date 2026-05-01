@@ -68,6 +68,16 @@
             }
         },
         {
+            "name": "max_price",
+            "description": "Prix maximum TTC pour une session de recharge, tous composants confondus (au sens OCPI).",
+            "example": "60.00",
+            "type": "number",
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
             "name": "restrictions",
             "description": "Objet JSON décrivant les conditions d'application de cet élément tarifaire (au sens OCPI). Objet vide {} si aucune restriction. Voir le JSON Schema associé.",
             "example": "{\"start_time\":\"06:00\",\"end_time\":\"00:00\",\"min_duration\":0,\"max_duration\":7200}",
