@@ -628,6 +628,15 @@
             }
         }
     ],
+    "foreignKeys": [
+        {
+            "fields": "tarif_id",
+            "reference": {
+                "resource": "irve-statique-tarifs",
+                "fields": "tarif_id"
+            }
+        }
+    ],
     "missingValues": [
         ""
     ]
