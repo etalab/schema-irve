@@ -116,6 +116,7 @@
             "role": "contributor"
         }        
     ],
+    "primaryKey": "id_pdc_itinerance",
     "fields": [
         {
             "name": "nom_amenageur",
