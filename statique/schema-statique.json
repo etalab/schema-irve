@@ -114,7 +114,7 @@
             "email": "aurelien.cadiou@transport.data.gouv.fr",
             "organisation": "transport.data.gouv.fr",
             "role": "contributor"
-        }        
+        }
     ],
     "primaryKey": "id_pdc_itinerance",
     "fields": [
