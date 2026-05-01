@@ -564,6 +564,12 @@
             }
         },
         {
+            "name":"coherence-nom-siren",
+            "params":{
+                "columns":["nom_amenageur", "siren_amenageur"]
+            }
+        },
+        {
             "name":"coherence-commune-geo",
             "params":{
                 "columns":["code_insee_commune", "latitude", "longitude"]
