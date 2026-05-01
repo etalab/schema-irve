@@ -1,0 +1,84 @@
+{
+    "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+    "name": "schema-irve-statique-tarifs",
+    "title": "IRVE statique - tarifs",
+    "description": "Spécification du fichier d'échange relatif aux tarifs de recharge pour véhicules électriques. Chaque ligne correspond à un élément tarifaire (au sens OCPI). Un tarif peut comporter plusieurs lignes si plusieurs éléments s'appliquent (ex : tranches horaires, paliers de durée). Le lien avec les points de recharge se fait via le champ tarif_id du fichier statique.",
+    "countryCode": "FR",
+    "homepage": "https://github.com/etalab/schema-irve",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique-tarifs/schema-statique-tarifs.json",
+    "created": "2026-05-01",
+    "lastModified": "2026-05-01",
+    "version": "v3.0.0-rc1",
+    "contributors": [
+        {
+            "title": "Thibaut Barrère",
+            "email": "thibaut.barrere@transport.data.gouv.fr",
+            "organisation": "transport.data.gouv.fr",
+            "role": "author"
+        }
+    ],
+    "fields": [
+        {
+            "name": "tarif_id",
+            "description": "Identifiant du tarif. Permet de faire le lien avec le champ tarif_id du fichier statique. Plusieurs lignes peuvent partager le même tarif_id (une par élément tarifaire).",
+            "example": "FRELCPTARIF001",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "element_index",
+            "description": "Index de l'élément tarifaire au sein du tarif (0-based). Permet de conserver l'ordre d'application des éléments (en OCPI, le premier élément dont les restrictions sont satisfaites s'applique). Le couple (tarif_id, element_index) doit être unique.",
+            "example": "0",
+            "type": "integer",
+            "constraints": {
+                "required": true,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "currency",
+            "description": "Code ISO 4217 de la devise utilisée pour les prix. Seul EUR est supporté, mentionné à des fins de clarté.",
+            "example": "EUR",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "enum": ["EUR"]
+            }
+        },
+        {
+            "name": "horodatage_maj_tarif",
+            "description": "Date et heure de dernière mise à jour du tarif, au format ISO 8601 UTC.",
+            "example": "2024-12-17T13:13:31Z",
+            "type": "datetime",
+            "format": "%Y-%m-%dT%H:%M:%SZ",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "restrictions",
+            "description": "Objet JSON décrivant les conditions d'application de cet élément tarifaire (au sens OCPI). Objet vide {} si aucune restriction. Voir le JSON Schema associé.",
+            "example": "{\"start_time\":\"06:00\",\"end_time\":\"00:00\",\"min_duration\":0,\"max_duration\":7200}",
+            "type": "object",
+            "x-json-schema": "restrictions.schema.json",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "price_components",
+            "description": "Liste JSON des composants de prix de cet élément tarifaire (au sens OCPI). Voir le JSON Schema associé.",
+            "example": "[{\"type\":\"ENERGY\",\"price\":0.33334,\"step_size\":1000}]",
+            "type": "array",
+            "x-json-schema": "price-components.schema.json",
+            "constraints": {
+                "required": true
+            }
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}
