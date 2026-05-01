@@ -545,7 +545,13 @@
     ],
      "custom_checks":[
         {
-            "name":"siren",
+            "name":"siren-checksum",
+            "params":{
+                "column":"siren_amenageur"
+            }
+        },
+        {
+            "name":"siren-online",
             "params":{
                 "column":"siren_amenageur"
             }
