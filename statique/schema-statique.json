@@ -179,7 +179,7 @@
         },
         {
             "name": "nom_enseigne",
-            "description": "Le nom commercial visible sur les bornes de recharge.",
+            "description": "Le nom commercial du réseau de recharge, tel qu'il est visible sur les bornes ou affiché pour les usagers. Ce nom peut différer de la dénomination sociale de l'aménageur ou de l'opérateur.",
             "example": "Réseau de recharge ABC",
             "type": "string",
             "constraints": {
