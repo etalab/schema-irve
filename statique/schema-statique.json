@@ -419,6 +419,20 @@
             }
         },
         {
+            "name": "tarif_ids",
+            "description": "Liste des identifiants de tarifs applicables au point de recharge (un par type : ad-hoc, abonné, etc.). Chaque identifiant débute par FR suivi de 3 caractères AFIREV et de T, suivis d'un suffixe libre. Le préfixe AFIREV garantit l'unicité globale lors de la consolidation nationale. Voir le fichier tarifaire détaillé pour la description complète.",
+            "example": "[\"FRELCTDRV-energy-5\"]",
+            "type": "array",
+            "x-v3-new": true,
+            "items": {
+                "type": "string",
+                "pattern": "^FR[A-Z0-9]{3}T\\S+$"
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "condition_acces",
             "description": "Éventuelles conditions d’accès à la station, hors gabarit. Dans le cas d'un accès libre sans contrainte matérielle physique (ex : absence de barrière) ni restriction d'usager (ex : borne accessible pour n'importe quel type et modèle de voiture électrique), indiquer \"Accès libre\". \nDans le cas d'un accès limité / réservé qui nécessite une identification ou passage d'une barrière, indiquer \"Accès réservé\" (ce type d'accès inclut les IRVE sur le réseau autoroutier payant - passage péage).",
             "example": "Accès libre",
@@ -615,6 +629,31 @@
             "name":"coherence-adresse-coordonnees",
             "params":{
                 "columns":["adresse_station", "station_latitude", "station_longitude"]
+            }
+        },
+        {
+            "name":"foreign-key-array",
+            "params":{
+                "column":"tarif_ids",
+                "resource":"irve-statique-tarifs",
+                "reference_column":"tarif_id"
+            }
+        },
+        {
+            "name":"presence-tarif-adhoc",
+            "params":{
+                "column":"tarif_ids",
+                "resource":"irve-statique-tarifs",
+                "type_column":"type",
+                "required_type":"AD_HOC_PAYMENT"
+            }
+        },
+        {
+            "name":"unicite-type-par-tarif",
+            "params":{
+                "column":"tarif_ids",
+                "resource":"irve-statique-tarifs",
+                "type_column":"type"
             }
         }
     ],
