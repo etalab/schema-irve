@@ -1,6 +1,6 @@
 Mix.install([{:ex_json_schema, "~> 0.10"}])
 
-ExUnit.start()
+ExUnit.start(trace: true)
 
 defmodule SchemaIrveTest do
   use ExUnit.Case
