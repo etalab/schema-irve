@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "$comment": "Adapté du travail de Philippe Thomy (loco-labs) et de la spécification OCPI 2.2/2.3",
     "title": "OCPI Tariff Price Components",
     "description": "Liste des composants de prix d'un élément tarifaire. Structure calquée sur l'objet PriceComponent de la spécification OCPI 2.2/2.3 (https://ocpi-protocol.org).",
     "type": "array",
