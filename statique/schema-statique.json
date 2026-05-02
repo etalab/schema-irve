@@ -630,14 +630,13 @@
             "params":{
                 "columns":["adresse_station", "station_latitude", "station_longitude"]
             }
-        }
-    ],
-    "foreignKeys": [
+        },
         {
-            "fields": "tarif_id",
-            "reference": {
-                "resource": "irve-statique-tarifs",
-                "fields": "tarif_id"
+            "name":"foreign-key-array",
+            "params":{
+                "column":"tarif_ids",
+                "resource":"irve-statique-tarifs",
+                "reference_column":"tarif_id"
             }
         }
     ],
