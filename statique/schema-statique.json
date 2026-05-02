@@ -419,15 +419,17 @@
             }
         },
         {
-            "name": "tarif_id",
-            "description": "Identifiant du tarif ad-hoc applicable au point de recharge. Cet identifiant débute par FR suivi de 3 caractères AFIREV et de T, suivis d'un suffixe libre. Le préfixe AFIREV garantit l'unicité globale lors de la consolidation nationale. Voir le fichier tarifaire détaillé pour la description complète.",
-            "example": "FRELCTDRV-energy-5",
-            "type": "string",
+            "name": "tarif_ids",
+            "description": "Liste des identifiants de tarifs applicables au point de recharge (un par type : ad-hoc, abonné, etc.). Chaque identifiant débute par FR suivi de 3 caractères AFIREV et de T, suivis d'un suffixe libre. Le préfixe AFIREV garantit l'unicité globale lors de la consolidation nationale. Voir le fichier tarifaire détaillé pour la description complète.",
+            "example": "[\"FRELCTDRV-energy-5\"]",
+            "type": "array",
             "x-v3-new": true,
-            "x-v3-todo": "Cardinalité 0..1 limitée au tarif ad-hoc. OCPI 2.2+ supporte N tarifs par connecteur (ad-hoc, regular, profiles). Voir si on veut supporter N tarifs par PDC.",
-            "constraints": {
-                "required": false,
+            "items": {
+                "type": "string",
                 "pattern": "^FR[A-Z0-9]{3}T\\S+$"
+            },
+            "constraints": {
+                "required": false
             }
         },
         {
