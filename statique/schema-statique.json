@@ -319,6 +319,17 @@
             }
         },
         {
+            "name": "nb_connecteurs",
+            "description": "Nombre de connecteurs (prises) présents sur le point de recharge, tous types confondus (champ B2 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Les types de connecteurs disponibles sont décrits par les colonnes booléennes prise_type_*, sans détail par connecteur individuel : un point de recharge équipé de deux connecteurs CCS aura par exemple prise_type_combo_ccs à \"true\" et nb_connecteurs à 2. Un connecteur double (par exemple tête combinée CHAdeMO + T2) compte pour 2 connecteurs. Un connecteur partagé entre deux points de recharge est compté sur chacun des deux points. Cette valeur doit être supérieure ou égale au nombre de colonnes prise_type_* valant \"true\".",
+            "example": "2",
+            "type": "integer",
+            "x-v3-new": true,
+            "constraints": {
+                "required": true,
+                "minimum": 1
+            }
+        },
+        {
             "name": "prise_type_ef",
             "description": "Disponibilité d'une prise de type E/F sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
@@ -587,6 +598,13 @@
             "name":"suspect-connecteur-comme-pdc",
             "params":{
                 "columns":["id_station_itinerance", "prise_type_ef", "prise_type_2", "prise_type_combo_ccs", "prise_type_chademo", "prise_type_mcs", "prise_type_autre"]
+            }
+        },
+        {
+            "name":"coherence-nb-connecteurs",
+            "params":{
+                "count_column":"nb_connecteurs",
+                "boolean_columns":["prise_type_ef", "prise_type_2", "prise_type_combo_ccs", "prise_type_chademo", "prise_type_mcs", "prise_type_autre"]
             }
         },
         {
