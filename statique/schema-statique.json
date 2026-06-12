@@ -241,6 +241,17 @@
             }
         },
         {
+            "name": "code_postal",
+            "description": "Le code postal de la station, sur 5 chiffres, sous forme de chaîne de caractères afin de préserver un éventuel zéro initial (champ A12 « Postal code » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Attention, le code postal est distinct du code INSEE de la commune (renseigné dans le champ code_insee_commune).",
+            "example": "01000",
+            "type": "string",
+            "x-v3-new": true,
+            "constraints": {
+                "required": true,
+                "pattern": "^[0-9]{5}$"
+            }
+        },
+        {
             "name": "code_insee_commune",
             "description": "Le code INSEE de la commune d'implantation (attention, ce n'est pas le code postal). La liste des codes peut se retrouver sur le site de l'INSEE : https://www.insee.fr/fr/information/2560452",
             "example": "21231",
@@ -701,6 +712,12 @@
             "name":"code-insee-exists",
             "params":{
                 "column":"code_insee_commune"
+            }
+        },
+        {
+            "name":"coherence-code-postal-code-insee",
+            "params":{
+                "columns":["code_postal", "code_insee_commune"]
             }
         },
         {
