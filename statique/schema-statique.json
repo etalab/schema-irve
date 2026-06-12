@@ -241,6 +241,16 @@
             }
         },
         {
+            "name": "complement_adresse",
+            "description": "Information complémentaire de localisation fine de la station, en texte libre : niveau de parking, position dans l'ouvrage, point de repère, etc. (champ A8 « Additional geographic location information » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Particulièrement utile pour les stations en ouvrage où les coordonnées indiquent le point d'accès depuis la voie publique et non l'emplacement de la borne.",
+            "example": "Parking niveau -2, zone B",
+            "type": "string",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "code_postal",
             "description": "Le code postal de la station, sur 5 chiffres, sous forme de chaîne de caractères afin de préserver un éventuel zéro initial (champ A12 « Postal code » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Attention, le code postal est distinct du code INSEE de la commune (renseigné dans le champ code_insee_commune).",
             "example": "01000",
