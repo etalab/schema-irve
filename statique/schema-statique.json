@@ -385,6 +385,26 @@
             }
         },
         {
+            "name": "courant_ac",
+            "description": "Capacité du point de recharge à délivrer du courant alternatif (AC), via au moins un de ses connecteurs. Avec courant_dc, ce champ couvre le champ B4 « Type of current » de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR (qui ne distingue pas les phases mono/triphasé). Deux colonnes distinctes permettent de décrire les points de recharge multi-standards délivrant les deux types de courant et de rechercher chaque capacité indépendamment. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\". Indiquer \"true\" si vrai, \"false\" si faux.",
+            "example": true,
+            "type": "boolean",
+            "x-v3-new": true,
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "courant_dc",
+            "description": "Capacité du point de recharge à délivrer du courant continu (DC), via au moins un de ses connecteurs. Avec courant_ac, ce champ couvre le champ B4 « Type of current » de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Deux colonnes distinctes permettent de décrire les points de recharge multi-standards délivrant les deux types de courant et de rechercher chaque capacité indépendamment. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\". Indiquer \"true\" si vrai, \"false\" si faux.",
+            "example": false,
+            "type": "boolean",
+            "x-v3-new": true,
+            "constraints": {
+                "required": true
+            }
+        },
+        {
             "name": "plug_and_charge",
             "description": "Disponibilité de la fonctionnalité « Plug & Charge » (norme ISO 15118) sur le point de recharge : authentification automatique du véhicule au branchement du câble, sans badge, application ni carte (champ B8 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Indiquer \"true\" si la fonctionnalité est disponible, \"false\" uniquement si elle est effectivement absente. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
@@ -615,6 +635,12 @@
             "params":{
                 "count_column":"nb_connecteurs",
                 "boolean_columns":["prise_type_ef", "prise_type_2", "prise_type_combo_ccs", "prise_type_chademo", "prise_type_mcs", "prise_type_autre"]
+            }
+        },
+        {
+            "name":"coherence-courant-ac-dc",
+            "params":{
+                "columns":["courant_ac", "courant_dc"]
             }
         },
         {
