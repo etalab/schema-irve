@@ -571,6 +571,16 @@
             }
         },
         {
+            "name": "enr",
+            "description": "Électricité délivrée par la station 100 % d'origine renouvelable, attestée par des garanties d'origine au sens du mécanisme européen (champ B10 de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Il s'agit d'un attribut contractuel de fourniture d'électricité, indépendant d'un éventuel raccordement physique direct à une production renouvelable. Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station. Indiquer \"true\" si vrai, \"false\" uniquement si l'électricité n'est effectivement pas 100 % renouvelable. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
+            "example": false,
+            "type": "boolean",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "date_mise_en_service",
             "description": "Date de mise en service de la station",
             "example": "2021-12-30",
