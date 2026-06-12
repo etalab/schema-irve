@@ -442,6 +442,16 @@
             }
         },
         {
+            "name": "cb_sans_contact",
+            "description": "Possibilité de paiement par carte bancaire sans contact (NFC) (champ A21 « Contactless payment device » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Un même terminal peut accepter carte insérée et sans contact ; ce champ décrit spécifiquement la capacité sans contact. Indiquer \"true\" si vrai, \"false\" uniquement si cette possibilité est effectivement absente. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
+            "example": false,
+            "type": "boolean",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "paiement_autre",
             "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
