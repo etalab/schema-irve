@@ -614,6 +614,50 @@
             }
         },
         {
+            "name": "gabarit_masse_max_t",
+            "description": "Le cas échéant, masse maximale du véhicule, en tonnes, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de masse.",
+            "example": "26",
+            "type": "number",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "gabarit_hauteur_max_m",
+            "description": "Le cas échéant, hauteur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de hauteur.",
+            "example": "2",
+            "type": "number",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "gabarit_longueur_max_m",
+            "description": "Le cas échéant, longueur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de longueur.",
+            "example": "12",
+            "type": "number",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "gabarit_largeur_max_m",
+            "description": "Le cas échéant, largeur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de largeur.",
+            "example": "2.55",
+            "type": "number",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
             "name": "station_deux_roues",
             "description": "La station est-elle réservée aux véhicules à deux roues ? Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
