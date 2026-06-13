@@ -307,6 +307,17 @@
             }
         },
         {
+            "name": "puissance_maximale_station",
+            "description": "Puissance maximale totale, en kW, que la station peut délivrer simultanément à l'ensemble de ses points de recharge (champ B5 « Recharging station maximum power » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Cette valeur peut être inférieure à la somme des puissances nominales des points de recharge : la puissance du raccordement au réseau de distribution ne permet pas toujours de délivrer la pleine puissance sur tous les points en même temps. Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station.",
+            "example": "400",
+            "type": "number",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 2.3
+            }
+        },
+        {
             "name": "id_pdc_itinerance",
             "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi de 3 caractères délivrés par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -.",
             "example": "FRA68E680210015",
