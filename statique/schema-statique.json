@@ -529,6 +529,22 @@
             }
         },
         {
+            "name": "emsp",
+            "description": "Fournisseurs de services de mobilité proposant une recharge sur la base d'un contrat (abonnement), acceptés à la station (champ B7 « Mobility service providers offering contract-based recharging » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, au format JSON (guillemets doubles), des identifiants d'unités d'exploitation de mobilité : codes à 5 caractères (préfixe pays sur 2 lettres — FR pour les unités françaises — suivi de 3 caractères) attribués par l'AVERE et publiés par l'AFIREV. Exemple : [\"FRABC\", \"FRXYZ\"]. Information au niveau de la station.",
+            "example": ["FRABC", "FRXYZ"],
+            "type": "array",
+            "x-v3-new": true,
+            "arrayItem": {
+                "type": "string",
+                "constraints": {
+                    "pattern": "^[A-Z]{2}[A-Z0-9]{3}$"
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "tarification",
             "description": "Toutes informations pouvant être apportées concernant les tarification(s) pratiquée(s).",
             "example": "0,40€ / kwh pour les non abonnés.",
@@ -841,6 +857,12 @@
             "name":"coherence-trigram-station-pdc",
             "params":{
                 "columns":["id_station_itinerance", "id_pdc_itinerance"]
+            }
+        },
+        {
+            "name":"valid-emsp-afirev",
+            "params":{
+                "column":"emsp"
             }
         },
         {
