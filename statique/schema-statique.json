@@ -482,6 +482,26 @@
             }
         },
         {
+            "name": "complement_paiement",
+            "description": "Informations complémentaires en texte libre sur les moyens de paiement et les fournisseurs de service de paiement disponibles sur la station (champ A23 « Additional information about payment providers » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR).",
+            "example": "Paiement via les applications des principaux opérateurs de mobilité",
+            "type": "string",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "abonnement",
+            "description": "Possibilité de payer la recharge dans le cadre d'un contrat ou d'un abonnement souscrit auprès d'un fournisseur de service de mobilité (champ A24 « Contract-based (subscription) payment option » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Indiquer \"true\" si ce mode de paiement est possible, \"false\" uniquement s'il est effectivement impossible. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
+            "example": false,
+            "type": "boolean",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "tarification",
             "description": "Toutes informations pouvant être apportées concernant les tarification(s) pratiquée(s).",
             "example": "0,40€ / kwh pour les non abonnés.",
@@ -549,6 +569,28 @@
                     "Non accessible",
                     "Accessibilité inconnue"
                 ]
+            }
+        },
+        {
+            "name": "nb_places",
+            "description": "Nombre d'emplacements de stationnement équipés pour la recharge sur la station (champ A18 « Number of parking spaces » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station.",
+            "example": "10",
+            "type": "integer",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
+            "name": "nb_places_pmr",
+            "description": "Nombre de places de stationnement accessibles et réservées aux personnes à mobilité réduite (PMR) sur la station (champ A19 « Number of parking spaces for people with disabilities » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station. Laisser vide si l'information n'est pas connue (ne pas indiquer 0 par défaut).",
+            "example": "1",
+            "type": "integer",
+            "x-v3-new": true,
+            "constraints": {
+                "required": false,
+                "minimum": 0
             }
         },
         {
