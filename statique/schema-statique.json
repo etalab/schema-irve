@@ -709,6 +709,51 @@
             }
         },
         {
+            "name": "equipement_afir",
+            "description": "Services et installations proposés à l'usager dans les environs immédiats de la station, parmi les catégories normatives du champ A6 « Installations proposant à l'utilisateur des services associés » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Liste, au format JSON (guillemets doubles), parmi : parking_couvert (parc de stationnement couvert permettant la recharge), parking_eclaire (parc de stationnement éclairé permettant la recharge), restauration (service de restauration), sanitaires, repos (installations de repos). Exemple : [\"sanitaires\", \"restauration\"]. Information au niveau de la station. Compléments éventuels dans equipement_ocpi et equipement_autre.",
+            "example": ["sanitaires", "restauration"],
+            "type": "array",
+            "x-v3-new": true,
+            "arrayItem": {
+                "type": "string",
+                "constraints": {
+                    "enum": ["parking_couvert", "parking_eclaire", "restauration", "sanitaires", "repos"]
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "equipement_ocpi",
+            "description": "Services et installations complémentaires des environs immédiats de la station, exprimés selon l'énumération Facility du standard OCPI 2.2.1. Complète (sans s'y substituer) le socle normatif AFIR porté par equipement_afir ; un même service peut être déclaré dans les deux colonnes. Liste, au format JSON (guillemets doubles), parmi : AIRPORT, BIKE_SHARING, BUS_STOP, CAFE, CARPOOL_PARKING, FUEL_STATION, HOTEL, MALL, METRO_STATION, MUSEUM, NATURE, PARKING_LOT, RECREATION_AREA, RESTAURANT, SPORT, SUPERMARKET, TAXI_STAND, TRAIN_STATION, TRAM_STOP, WIFI. Exemple : [\"HOTEL\", \"WIFI\"]. Information au niveau de la station.",
+            "example": ["HOTEL", "WIFI"],
+            "type": "array",
+            "x-v3-new": true,
+            "arrayItem": {
+                "type": "string",
+                "constraints": {
+                    "enum": ["AIRPORT", "BIKE_SHARING", "BUS_STOP", "CAFE", "CARPOOL_PARKING", "FUEL_STATION", "HOTEL", "MALL", "METRO_STATION", "MUSEUM", "NATURE", "PARKING_LOT", "RECREATION_AREA", "RESTAURANT", "SPORT", "SUPERMARKET", "TAXI_STAND", "TRAIN_STATION", "TRAM_STOP", "WIFI"]
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "equipement_autre",
+            "description": "Autres services ou installations des environs immédiats de la station ne figurant ni dans equipement_afir ni dans equipement_ocpi, en texte libre (couvre la modalité « autre (exprimé en texte libre) » du champ A6 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, au format JSON (guillemets doubles), de chaînes libres. Information au niveau de la station.",
+            "example": [],
+            "type": "array",
+            "x-v3-new": true,
+            "arrayItem": {
+                "type": "string"
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "raccordement",
             "description": "Type de raccordement de la station au réseau de distribution d'électricité : direct (point de livraison exclusivement dédié à la station) ou indirect.",
             "example": "Direct",
