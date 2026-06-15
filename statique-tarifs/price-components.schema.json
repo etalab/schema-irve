@@ -9,8 +9,7 @@
         "type": "object",
         "required": [
             "type",
-            "price",
-            "step_size"
+            "price"
         ],
         "properties": {
             "type": {
@@ -29,7 +28,7 @@
             "step_size": {
                 "type": "integer",
                 "minimum": 1,
-                "description": "Granularité de facturation. Unité selon le type : Wh pour ENERGY, secondes pour TIME/PARKING_TIME, 1 pour FLAT"
+                "description": "Granularité de facturation (Wh pour ENERGY, secondes pour TIME/PARKING_TIME). Optionnel."
             }
         },
         "additionalProperties": false
