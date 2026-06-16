@@ -84,8 +84,18 @@
             }
         },
         {
+            "name": "min_price",
+            "description": "Prix minimum TTC facturé pour une session de recharge.",
+            "example": "0.50",
+            "type": "number",
+            "constraints": {
+                "required": false,
+                "minimum": 0
+            }
+        },
+        {
             "name": "max_price",
-            "description": "Prix maximum TTC pour une session de recharge, tous composants confondus (au sens OCPI).",
+            "description": "Prix maximum TTC facturé pour une session de recharge.",
             "example": "60.00",
             "type": "number",
             "constraints": {
@@ -144,7 +154,14 @@
             "name": "coherence-tarif-denormalise",
             "params": {
                 "group_by": "tarif_id",
-                "columns": ["devise", "horodatage_maj_tarif", "type", "tax_included", "max_price"]
+                "columns": ["devise", "horodatage_maj_tarif", "type", "tax_included", "min_price", "max_price"]
+            }
+        },
+        {
+            "name": "coherence-min-max-price",
+            "params": {
+                "min_column": "min_price",
+                "max_column": "max_price"
             }
         }
     ],
