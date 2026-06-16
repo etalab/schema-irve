@@ -64,6 +64,26 @@
             }
         },
         {
+            "name": "start_date_time",
+            "description": "Date et heure (UTC) à partir de laquelle le tarif s'applique.",
+            "example": "2024-12-01T00:00:00Z",
+            "type": "datetime",
+            "format": "%Y-%m-%dT%H:%M:%SZ",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "end_date_time",
+            "description": "Date et heure (UTC) après laquelle le tarif ne s'applique plus.",
+            "example": "2025-12-01T00:00:00Z",
+            "type": "datetime",
+            "format": "%Y-%m-%dT%H:%M:%SZ",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
             "name": "type",
             "description": "Type de tarif au sens OCPI.",
             "example": "AD_HOC_PAYMENT",
@@ -154,7 +174,7 @@
             "name": "coherence-tarif-denormalise",
             "params": {
                 "group_by": "tarif_id",
-                "columns": ["devise", "horodatage_maj_tarif", "type", "tax_included", "min_price", "max_price"]
+                "columns": ["devise", "horodatage_maj_tarif", "start_date_time", "end_date_time", "type", "tax_included", "min_price", "max_price"]
             }
         },
         {
