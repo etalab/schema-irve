@@ -107,9 +107,10 @@
         },
         {
             "name": "horodatage",
-            "description": "Indique la date et heure de remontée de l’information publiée, formaté selon la norme ISO 8601",
-            "example": "2023-01-30T10:27:50+01:00",
+            "description": "Indique la date et heure de remontée de l’information publiée, au format ISO 8601 UTC.",
+            "example": "2023-01-30T10:27:50Z",
             "type": "datetime",
+            "format": "%Y-%m-%dT%H:%M:%SZ",
             "constraints": {
                 "required": true
             }
