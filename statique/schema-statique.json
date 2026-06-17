@@ -307,10 +307,11 @@
             }
         },
         {
-            "name": "puissance_maximale_station",
+            "name": "puissance_maximale_station_kw",
             "description": "Puissance maximale totale, en kW, que la station peut fournir simultanément à l'ensemble de ses points de recharge (champ B5 « Recharging station maximum power » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Cette valeur peut être inférieure à la somme des puissances nominales des points de recharge : la puissance du raccordement au réseau de distribution ne permet pas toujours de fournir la pleine puissance sur tous les points en même temps. Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station.",
             "example": "400",
             "type": "number",
+            "x-unit": "kW",
             "x-v3-new": true,
             "constraints": {
                 "required": false,
@@ -339,11 +340,12 @@
             }
         },
         {
-            "name": "puissance_nominale",
+            "name": "puissance_nominale_kw",
             "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
             "example": "7.36",
             "type": "number",
-            "x-v3-change": "Minimum passé de 0 à 2.3 kW, maximum ajouté à 1000 kW",
+            "x-unit": "kW",
+            "x-v3-change": "Minimum passé de 0 à 2.3 kW, maximum ajouté à 1000 kW, renommé puissance_nominale_kw (unité dans le nom pour éviter les déclarations en W)",
             "constraints": {
                 "required": true,
                 "minimum": 2.3,
@@ -650,6 +652,7 @@
             "description": "Le cas échéant, masse maximale du véhicule, en tonnes, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de masse.",
             "example": "26",
             "type": "number",
+            "x-unit": "t",
             "x-v3-new": true,
             "constraints": {
                 "required": false,
@@ -661,6 +664,7 @@
             "description": "Le cas échéant, hauteur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de hauteur.",
             "example": "2",
             "type": "number",
+            "x-unit": "m",
             "x-v3-new": true,
             "constraints": {
                 "required": false,
@@ -672,6 +676,7 @@
             "description": "Le cas échéant, longueur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de longueur.",
             "example": "12",
             "type": "number",
+            "x-unit": "m",
             "x-v3-new": true,
             "constraints": {
                 "required": false,
@@ -683,6 +688,7 @@
             "description": "Le cas échéant, largeur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de largeur.",
             "example": "2.55",
             "type": "number",
+            "x-unit": "m",
             "x-v3-new": true,
             "constraints": {
                 "required": false,
