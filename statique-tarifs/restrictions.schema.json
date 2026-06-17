@@ -18,12 +18,12 @@
         "start_date": {
             "type": "string",
             "format": "date",
-            "description": "Date de début de validité (YYYY-MM-DD)"
+            "description": "Date à partir de laquelle cet élément tarifaire s'applique (YYYY-MM-DD, incluse)"
         },
         "end_date": {
             "type": "string",
             "format": "date",
-            "description": "Date de fin de validité (YYYY-MM-DD)"
+            "description": "Date à partir de laquelle cet élément tarifaire ne s'applique plus (YYYY-MM-DD, exclue)"
         },
         "min_kwh": {
             "type": "number",

@@ -183,6 +183,13 @@
                 "min_column": "min_price",
                 "max_column": "max_price"
             }
+        },
+        {
+            "name": "coherence-start-end-date-time",
+            "params": {
+                "start_column": "start_date_time",
+                "end_column": "end_date_time"
+            }
         }
     ],
     "missingValues": [
