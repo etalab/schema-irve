@@ -640,11 +640,12 @@
         },
         {
             "name": "restriction_gabarit",
-            "description": "Toutes informations relatives aux restrictions d’accès liées au gabarit des véhicules.",
+            "description": "Déprécié : utiliser les colonnes gabarit_masse_max_t / gabarit_hauteur_max_m / gabarit_longueur_max_m / gabarit_largeur_max_m (AFIR A17). Champ historique en texte libre décrivant les restrictions d'accès liées au gabarit des véhicules.",
             "example": "Hauteur maximale 2m",
             "type": "string",
+            "x-v3-deprecated": "Remplacé par les 4 colonnes gabarit_*_t/_m (AFIR A17) ; sera supprimé à la release v3.",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
