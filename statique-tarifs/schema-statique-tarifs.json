@@ -7,8 +7,8 @@
     "homepage": "https://github.com/etalab/schema-irve",
     "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique-tarifs/schema-statique-tarifs.json",
     "created": "2026-05-01",
-    "lastModified": "2026-05-01",
-    "version": "v3.0.0-rc1",
+    "lastModified": "2026-06-17",
+    "version": "v3.0.0-rc.1",
     "contributors": [
         {
             "title": "Thibaut Barrère",
