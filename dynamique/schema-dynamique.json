@@ -68,6 +68,7 @@
     "fields": [
         {
             "name": "id_pdc_itinerance",
+            "x-entity": "pdc",
             "description": "L'identifiant du point de recharge, tel qu'apparaissant dans le schéma statique. Doit permettre de faire le lien entre le dynamique et le statique.",
             "example": "FRA68E680210015",
             "type": "string",
@@ -78,6 +79,7 @@
         },
         {
             "name": "etat_pdc",
+            "x-entity": "pdc",
             "description": "`etat_pdc` caractérise l’état de fonctionnement du point de recharge : est-il en service ou hors service ? En l’absence d’information, etat_pdc sera égal à ‘inconnu’.",
             "example": "en_service",
             "type": "string",
@@ -92,6 +94,7 @@
         },
         {
             "name": "occupation_pdc",
+            "x-entity": "pdc",
             "description": "`occupation_pdc` caractérise l’occupation du point de recharge : est-il libre, occupé ou réservé ? En l’absence d’information, occupation_pdc sera égal à ‘inconnu’.",
             "example": "occupe",
             "type": "string",
@@ -107,6 +110,7 @@
         },
         {
             "name": "horodatage",
+            "x-entity": "pdc",
             "description": "Indique la date et heure de remontée de l’information publiée, au format ISO 8601 UTC.",
             "example": "2023-01-30T10:27:50Z",
             "type": "datetime",
@@ -117,6 +121,7 @@
         },
         {
             "name": "etat_prise_type_2",
+            "x-entity": "pdc",
             "description": "`etat_prise_type_2` indique l’état de fonctionnement du connecteur T2 : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
             "example": "fonctionnel",
             "type": "string",
@@ -131,6 +136,7 @@
         },
         {
             "name": "etat_prise_type_combo_ccs",
+            "x-entity": "pdc",
             "description": "`etat_prise_type_combo_ccs` indique l’état de fonctionnement du connecteur Combo CCS : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
             "example": "hors_service",
             "type": "string",
@@ -145,6 +151,7 @@
         },
         {
             "name": "etat_prise_type_chademo",
+            "x-entity": "pdc",
             "description": "`etat_prise_type_chademo` indique l’état de fonctionnement du connecteur Chademo : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
             "example": "inconnu",
             "type": "string",
@@ -159,6 +166,7 @@
         },
         {
             "name": "etat_prise_type_ef",
+            "x-entity": "pdc",
             "description": "`etat_prise_type_ef` indique l’état de fonctionnement du connecteur EF : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
             "example": "fonctionnel",
             "type": "string",
@@ -173,6 +181,7 @@
         },
         {
             "name": "etat_prise_type_mcs",
+            "x-entity": "pdc",
             "description": "`etat_prise_type_mcs` indique l’état de fonctionnement du connecteur MCS (Megawatt Charging System) : est-il fonctionnel ou hors-service ? En l’absence d’information, indiquer ‘inconnu’. En l’absence de connecteur de ce type sur le point de recharge, laisser une chaîne de caractère vide.",
             "example": "fonctionnel",
             "type": "string",
