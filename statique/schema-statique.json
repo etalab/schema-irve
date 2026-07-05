@@ -241,8 +241,8 @@
             }
         },
         {
-            "name": "complement_adresse",
-            "description": "Information complémentaire de localisation fine de la station, en texte libre : niveau de parking, position dans l'ouvrage, point de repère, etc. (champ A8 « Additional geographic location information » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Particulièrement utile pour les stations en ouvrage où les coordonnées indiquent le point d'accès depuis la voie publique et non l'emplacement de la borne.",
+            "name": "complement_localisation",
+            "description": "Information complémentaire de localisation fine de la station, en texte libre : niveau de parking, position dans l'ouvrage, point de repère, etc. (champ A8 « Additional geographic location information » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Particulièrement utile pour les stations en ouvrage : les coordonnées (station_latitude/longitude) indiquent la position exacte de la station, tandis que adresse_station indique le point d'accès depuis la voie publique. Ce champ n'est pas un complément d'adresse postale et ne doit pas être utilisé pour le géocodage.",
             "example": "Parking niveau -2, zone B",
             "type": "string",
             "x-v3-new": true,
