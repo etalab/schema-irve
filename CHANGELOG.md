@@ -1,7 +1,8 @@
 # Changements
 
-## 3.0.0-rc1
-- Evolution de 9 champs prioritaires : nom_amenageur, nom_enseigne, latitude, longitude, code_insee_commune, adresse_station, puissance_nominale, id_pdc_itinerance, id_station_itinerance, prise_type_ef, prise_type_2, prise_type_combo_css, prise_type_chademo, prise_type_autre
+## 3.0.0-rc.1
+
+TODO : sera régénéré depuis les schémas en fonction de la version finale.
 
 ## 2.3.0
 
