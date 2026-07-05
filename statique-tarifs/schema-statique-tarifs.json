@@ -25,8 +25,8 @@
     "fields": [
         {
             "name": "tarif_id",
-            "description": "Identifiant du tarif. Cet identifiant débute par FR suivi de 3 caractères AFIREV et de T, suivis d'un suffixe libre choisi par le producteur (ex : identifiant OCPI interne). Le préfixe AFIREV garantit l'unicité globale lors de la consolidation nationale. L'unicité du suffixe est de la responsabilité du producteur au sein de son préfixe. Plusieurs lignes peuvent partager le même tarif_id (une par élément tarifaire).",
-            "example": "FRELCTDRV-energy-5",
+            "description": "Identifiant du tarif. Cet identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre choisi par le producteur (ex : identifiant OCPI interne). Ce trigramme peut différer de ceux portés par les id_pdc_itinerance des points de charge auxquels le tarif s'applique. Le préfixe garantit l'unicité globale lors de la consolidation nationale et n'a aucun rôle de portée : l'applicabilité d'un tarif aux points de charge est définie par la colonne tarif_ids du fichier statique. L'unicité du suffixe est de la responsabilité du producteur au sein de son préfixe. Plusieurs lignes peuvent partager le même tarif_id (une par élément tarifaire), à condition que leur element_index diffère : le couple (tarif_id, element_index) est unique.",
+            "example": "FRABCT001",
             "type": "string",
             "constraints": {
                 "required": true,
