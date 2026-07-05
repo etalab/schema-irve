@@ -55,7 +55,7 @@
         },
         {
             "name": "horodatage_maj_tarif",
-            "description": "Date et heure de dernière mise à jour du tarif, au format ISO 8601 UTC.",
+            "description": "Date et heure de dernière mise à jour du tarif, au format ISO 8601 UTC. Correspond au champ last_updated de l'objet Tariff de la spécification OCPI, avec un format restreint à une forme canonique : suffixe Z obligatoire, pas de fractions de seconde (un DateTime OCPI doit donc être normalisé en conséquence).",
             "example": "2024-12-17T13:13:31Z",
             "type": "datetime",
             "format": "%Y-%m-%dT%H:%M:%SZ",
