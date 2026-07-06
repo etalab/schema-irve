@@ -532,8 +532,8 @@
         },
         {
             "name": "emsp",
-            "description": "Fournisseurs de services de mobilité proposant une recharge sur la base d'un contrat (abonnement), acceptés à la station (champ B7 « Mobility service providers offering contract-based recharging » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, au format JSON (guillemets doubles), des identifiants d'unités d'exploitation de mobilité : codes à 5 caractères (préfixe pays sur 2 lettres — FR pour les unités françaises — suivi de 3 caractères) attribués par l'AVERE et publiés par l'AFIREV. Exemple : [\"FRABC\", \"FRXYZ\"]. Information au niveau de la station.",
-            "example": ["FRABC", "FRXYZ"],
+            "description": "Fournisseurs de services de mobilité proposant une recharge sur la base d'un contrat (abonnement), acceptés à la station. Liste, au format JSON (guillemets doubles), des identifiants d'unités d'exploitation de mobilité : codes à 5 caractères (préfixe pays sur 2 lettres — FR pour les unités françaises — suivi de 3 caractères) attribués par l'AVERE et publiés par l'AFIREV. Ces codes sont tenus au même registre AFIREV que les préfixes d'unités d'exploitation de recharge (ceux des champs id_station_itinerance, id_pdc_itinerance et tarif_ids) : le registre étant un espace de noms unique, un même code peut légitimement désigner un acteur qui est à la fois opérateur de recharge et de mobilité. Exemple : [\"FRMOB\", \"FRXYZ\"]. Information au niveau de la station.",
+            "example": ["FRMOB", "FRXYZ"],
             "type": "array",
             "x-v3-new": true,
             "arrayItem": {
