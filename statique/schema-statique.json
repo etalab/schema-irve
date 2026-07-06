@@ -827,15 +827,6 @@
             "constraints": {
                 "required": true
             }
-        },
-        {
-            "name": "cable_t2_attache",
-            "description": "Champ destiné à préciser si un câble T2 est attaché au point de recharge ou non. Indiquer \"true\" si vrai, \"false\" si faux",
-            "example": "false",
-            "type": "boolean",
-            "constraints": {
-                "required": false
-            }
         }
     ],
      "custom_checks":[
