@@ -819,11 +819,12 @@
             }
         },
         {
-            "name": "date_maj",
-            "description": "Date de mise à jour des données",
-            "example": "2021-12-30",
-            "type": "date",
-            "format": "%Y-%m-%d",
+            "name": "horodatage_maj",
+            "x-entity": "pdc",
+            "description": "Date et heure (UTC) de dernière mise à jour des données de la ligne, c'est-à-dire du point de recharge : chaque pdc d'une même station peut porter un horodatage différent. Un producteur ne disposant que d'une date peut publier T00:00:00Z. Correspond au champ last_updated de l'objet EVSE de la spécification OCPI.",
+            "example": "2024-12-17T13:13:31Z",
+            "type": "datetime",
+            "format": "%Y-%m-%dT%H:%M:%SZ",
             "constraints": {
                 "required": true
             }
