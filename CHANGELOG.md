@@ -1,5 +1,9 @@
 # Changements
 
+## 3.0.0-rc.1
+
+TODO : sera régénéré depuis les schémas en fonction de la version finale.
+
 ## 2.3.0
 
 - Assouplissement du schéma sur le formatage des identifiants (https://github.com/etalab/schema-irve/pull/52)
