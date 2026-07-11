@@ -810,6 +810,7 @@
         },
         {
             "name": "raccordement",
+            "x-entity": "station",
             "description": "Type de raccordement de la station au réseau de distribution d'électricité : direct (point de livraison exclusivement dédié à la station) ou indirect.",
             "example": "Direct",
             "type": "string",
@@ -823,6 +824,7 @@
         },
         {
             "name": "num_pdl",
+            "x-entity": "station",
             "description": "Numéro du point de livraison d'électricité, y compris en cas de raccordement indirect. Dans le cas d'un territoire desservi par ENEDIS, ce numéro doit compoter 14 chiffres.",
             "example": "12345678912345",
             "type": "string",
@@ -843,6 +845,7 @@
         },
         {
             "name": "date_mise_en_service",
+            "x-entity": "station",
             "description": "Date de mise en service de la station",
             "example": "2021-12-30",
             "type": "date",
