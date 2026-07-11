@@ -597,6 +597,7 @@
         },
         {
             "name": "condition_acces",
+            "x-entity": "station",
             "description": "Éventuelles conditions d’accès à la station, hors gabarit. Dans le cas d'un accès libre sans contrainte matérielle physique (ex : absence de barrière) ni restriction d'usager (ex : borne accessible pour n'importe quel type et modèle de voiture électrique), indiquer \"Accès libre\". \nDans le cas d'un accès limité / réservé qui nécessite une identification ou passage d'une barrière, indiquer \"Accès réservé\" (ce type d'accès inclut les IRVE sur le réseau autoroutier payant - passage péage).",
             "example": "Accès libre",
             "type": "string",
@@ -619,6 +620,7 @@
         },
         {
             "name": "horaires",
+            "x-entity": "station",
             "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00.",
             "example": "Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00",
             "type": "string",
@@ -644,6 +646,7 @@
         },
         {
             "name": "nb_places",
+            "x-entity": "station",
             "description": "Nombre d'emplacements de stationnement équipés pour la recharge sur la station (champ A18 « Number of parking spaces » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station.",
             "example": "10",
             "type": "integer",
@@ -655,6 +658,7 @@
         },
         {
             "name": "nb_places_pmr",
+            "x-entity": "station",
             "description": "Nombre de places de stationnement accessibles et réservées aux personnes à mobilité réduite (PMR) sur la station (champ A19 « Number of parking spaces for people with disabilities » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station. Laisser vide si l'information n'est pas connue (ne pas indiquer 0 par défaut).",
             "example": "1",
             "type": "integer",
