@@ -120,6 +120,7 @@
     "fields": [
         {
             "name": "nom_amenageur",
+            "x-entity": "station",
             "description": "La dénomination sociale de l'aménageur, c'est à dire de l'entité publique ou privée propriétaire des infrastructures. Doit être cohérent avec le numéro SIREN renseigné. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
@@ -130,6 +131,7 @@
         },
         {
             "name": "siren_amenageur",
+            "x-entity": "station",
             "description": "Le numero SIREN de l'aménageur issue de la base SIRENE des entreprises. Vous pouvez récupérer cet identifiant sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "130025265",
             "type": "string",
@@ -141,6 +143,7 @@
         },
         {
             "name": "contact_amenageur",
+            "x-entity": "station",
             "description": "Adresse courriel de l'aménageur. Favoriser les adresses génériques de contact. Cette adresse sera utilisée par les services de l'Etat en cas d'anomalie ou de besoin de mise à jour des données.",
             "example": "contact@societe-amenageur.com",
             "type": "string",
@@ -151,6 +154,7 @@
         },
         {
             "name": "nom_operateur",
+            "x-entity": "station",
             "description": "La dénomination sociale de l'opérateur. L'opérateur est la personne qui exploite l'infrastructure de recharger pour le compte d'un aménageur dans le cadre d'un contrat ou pour son propre compte s'il est l'aménageur. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
@@ -160,6 +164,7 @@
         },
         {
             "name": "contact_operateur",
+            "x-entity": "station",
             "description": "Adresse courriel de l'opérateur. Favoriser les adresses génériques de contact.",
             "example": "contact@societe-operateur.com",
             "type": "string",
@@ -170,6 +175,7 @@
         },
         {
             "name": "telephone_operateur",
+            "x-entity": "station",
             "description": "Numéro de téléphone permettant de contacter l'opérateur.",
             "example": "0111111111",
             "type": "string",
@@ -179,6 +185,7 @@
         },
         {
             "name": "nom_enseigne",
+            "x-entity": "station",
             "description": "Le nom commercial du réseau de recharge, tel qu'il est visible sur les bornes ou affiché pour les usagers. Ce nom peut différer de la dénomination sociale de l'aménageur ou de l'opérateur.",
             "example": "Réseau de recharge ABC",
             "type": "string",
