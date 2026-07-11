@@ -188,6 +188,7 @@
         },
         {
             "name": "id_station_itinerance",
+            "x-entity": "station",
             "description": "L'identifiant de la station délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi du trigramme de l'unité d'exploitation délivré par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"P\" pour \"pool\" qui veut dire \"station\" en anglais (https://afirev.fr/fr/informations-generales/). Ne pas ajouter les séparateurs *.",
             "example": "FR1F8P68021001",
             "type": "string",
@@ -199,6 +200,7 @@
         },
         {
             "name": "id_station_local",
+            "x-entity": "station",
             "description": "Identifiant de la station utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio. En cas de station qui n'est pas ouverte à l'itinérance, cet identifiant est indispensable.",
             "example": "01F2KMMRZVQ5FQY882PCJQAPQ0",
             "type": "string",
@@ -208,6 +210,7 @@
         },
         {
             "name": "nom_station",
+            "x-entity": "station",
             "description": "Le nom de la station.",
             "example": "Picpus, Belleville, Villiers",
             "type": "string",
@@ -217,6 +220,7 @@
         },
         {
             "name": "implantation_station",
+            "x-entity": "station",
             "description": "Le type d'implantation de la station. \nPour une station sur voirie, sélectionner \"Voirie\". \nPour un parking public, (en ouvrage, en enclos, etc.), sélectionner \"Parking public\". Ces parkings sont généralement en gestion directe ou déléguée de la collectivité territoriale. \nPour un parking privé à usage public / parking ouvert (ex: zone commerciale), sélectionner \"Parking privé à usage public\". \nPour un parking réservé à la clientèle, aux usagers, sélectionnez \"Parking privé réservé à la clientèle\" (il s'agit d'un choix de l'aménageur public ou privé sur l'utilisation de son parking. Ex: hôtel, commerce, éventuellement certains bâtiments publics). \nPour une station dédiée à la recharge rapide dont la durée d'utilisation est généralement limitée à la recharge principalement rapide et dont la première fonction de la station est la recharge et non le stationnement, sélectionner \"Station dédiée à la recharge rapide\" (ex : aires de service sur axes routiers, stations services, etc.).",
             "example": "Parking public",
             "type": "string",
@@ -233,6 +237,7 @@
         },
         {
             "name": "adresse_station",
+            "x-entity": "station",
             "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville].",
             "example": "1 avenue de la Paix 75001 Paris",
             "type": "string",
@@ -242,6 +247,7 @@
         },
         {
             "name": "complement_localisation",
+            "x-entity": "station",
             "description": "Information complémentaire de localisation fine de la station, en texte libre : niveau de parking, position dans l'ouvrage, point de repère, etc. (champ A8 « Additional geographic location information » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Particulièrement utile pour les stations en ouvrage : les coordonnées (station_latitude/longitude) indiquent la position exacte de la station, tandis que adresse_station indique le point d'accès depuis la voie publique. Ce champ n'est pas un complément d'adresse postale et ne doit pas être utilisé pour le géocodage.",
             "example": "Parking niveau -2, zone B",
             "type": "string",
@@ -252,6 +258,7 @@
         },
         {
             "name": "code_postal",
+            "x-entity": "station",
             "description": "Le code postal de la station, sur 5 chiffres, sous forme de chaîne de caractères afin de préserver un éventuel zéro initial (champ A12 « Postal code » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Attention, le code postal est distinct du code INSEE de la commune (renseigné dans le champ code_insee_commune).",
             "example": "01000",
             "type": "string",
@@ -263,6 +270,7 @@
         },
         {
             "name": "code_insee_commune",
+            "x-entity": "station",
             "description": "Le code INSEE de la commune d'implantation (attention, ce n'est pas le code postal). La liste des codes peut se retrouver sur le site de l'INSEE : https://www.insee.fr/fr/information/2560452",
             "example": "21231",
             "type": "string",
@@ -274,6 +282,7 @@
         },
         {
             "name": "station_latitude",
+            "x-entity": "station",
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "48.34534",
             "type": "number",
@@ -286,6 +295,7 @@
         },
         {
             "name": "station_longitude",
+            "x-entity": "station",
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
             "example": "7.48710",
             "type": "number",
@@ -298,6 +308,7 @@
         },
         {
             "name": "nbre_pdc",
+            "x-entity": "station",
             "description": "Le nombre de points de recharge sur la station.",
             "example": "3",
             "type": "integer",
@@ -308,6 +319,7 @@
         },
         {
             "name": "puissance_maximale_station_kw",
+            "x-entity": "station",
             "description": "Puissance maximale totale, en kW, que la station peut fournir simultanément à l'ensemble de ses points de recharge (champ B5 « Recharging station maximum power » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Cette valeur peut être inférieure à la somme des puissances nominales des points de recharge : la puissance du raccordement au réseau de distribution ne permet pas toujours de fournir la pleine puissance sur tous les points en même temps. Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station.",
             "example": "400",
             "type": "number",
