@@ -558,6 +558,7 @@
         },
         {
             "name": "emsp",
+            "x-entity": "station",
             "description": "Fournisseurs de services de mobilité proposant une recharge sur la base d'un contrat (abonnement), acceptés à la station. Liste, au format JSON (guillemets doubles), des identifiants d'unités d'exploitation de mobilité : codes à 5 caractères (préfixe pays sur 2 lettres — FR pour les unités françaises — suivi de 3 caractères) attribués par l'AVERE et publiés par l'AFIREV. Ces codes sont tenus au même registre AFIREV que les préfixes d'unités d'exploitation de recharge (ceux des champs id_station_itinerance, id_pdc_itinerance et tarif_ids) : le registre étant un espace de noms unique, un même code peut légitimement désigner un acteur qui est à la fois opérateur de recharge et de mobilité. Exemple : [\"FRMOB\", \"FRXYZ\"]. Information au niveau de la station.",
             "example": ["FRMOB", "FRXYZ"],
             "type": "array",
@@ -733,6 +734,7 @@
         },
         {
             "name": "type_vehicule",
+            "x-entity": "station",
             "description": "Catégories de véhicules pouvant utiliser la station, selon les catégories définies à l'article R.311-1 du code de la route — champ A16 « Vehicle-type compatibility » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Liste, exprimée au format JSON (guillemets doubles), des catégories permises parmi : L (véhicules à deux ou trois roues et quadricycles), M1 (transport de personnes, huit places assises au maximum outre celle du conducteur), M2 et M3 (autobus et autocars), N1 (camionnettes), N2 et N3 (camions), autre (toute autre catégorie au sens de l'article R.311-1). Exemple : [\"M1\", \"L\"]. Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station.",
             "example": ["M1", "L"],
             "type": "array",
@@ -749,6 +751,7 @@
         },
         {
             "name": "presence_borniste",
+            "x-entity": "station",
             "description": "Présence sur le site de la station de personnel pouvant assister l'usager dans sa recharge (« borniste »), de façon permanente ou aux horaires d'ouverture (champ A4 « Service support » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station. Indiquer \"true\" si du personnel est présent, \"false\" uniquement si l'absence de personnel est avérée. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
             "type": "boolean",
@@ -759,6 +762,7 @@
         },
         {
             "name": "equipement_afir",
+            "x-entity": "station",
             "description": "Services et installations proposés à l'usager dans les environs immédiats de la station, parmi les catégories normatives du champ A6 « Installations proposant à l'utilisateur des services associés » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Liste, au format JSON (guillemets doubles), parmi : parking_couvert (parc de stationnement couvert permettant la recharge), parking_eclaire (parc de stationnement éclairé permettant la recharge), restauration (service de restauration), sanitaires, repos (installations de repos). Exemple : [\"sanitaires\", \"restauration\"]. Information au niveau de la station. Compléments éventuels dans equipement_ocpi et equipement_autre.",
             "example": ["sanitaires", "restauration"],
             "type": "array",
@@ -775,6 +779,7 @@
         },
         {
             "name": "equipement_ocpi",
+            "x-entity": "station",
             "description": "Services et installations complémentaires des environs immédiats de la station, exprimés selon l'énumération Facility du standard OCPI 2.2.1. Complète (sans s'y substituer) le socle normatif AFIR porté par equipement_afir ; un même service peut être déclaré dans les deux colonnes. Liste, au format JSON (guillemets doubles), parmi : AIRPORT, BIKE_SHARING, BUS_STOP, CAFE, CARPOOL_PARKING, FUEL_STATION, HOTEL, MALL, METRO_STATION, MUSEUM, NATURE, PARKING_LOT, RECREATION_AREA, RESTAURANT, SPORT, SUPERMARKET, TAXI_STAND, TRAIN_STATION, TRAM_STOP, WIFI. Exemple : [\"HOTEL\", \"WIFI\"]. Information au niveau de la station.",
             "example": ["HOTEL", "WIFI"],
             "type": "array",
@@ -791,6 +796,7 @@
         },
         {
             "name": "equipement_autre",
+            "x-entity": "station",
             "description": "Autres services ou installations des environs immédiats de la station ne figurant ni dans equipement_afir ni dans equipement_ocpi, en texte libre (couvre la modalité « autre (exprimé en texte libre) » du champ A6 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, au format JSON (guillemets doubles), de chaînes libres. Information au niveau de la station.",
             "example": [],
             "type": "array",
@@ -826,6 +832,7 @@
         },
         {
             "name": "enr",
+            "x-entity": "station",
             "description": "Électricité délivrée par la station 100 % d'origine renouvelable, attestée par des garanties d'origine au sens du mécanisme européen (champ B10 de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Il s'agit d'un attribut contractuel de fourniture d'électricité, indépendant d'un éventuel raccordement physique direct à une production renouvelable. Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station. Indiquer \"true\" si vrai, \"false\" uniquement si l'électricité n'est effectivement pas 100 % renouvelable. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
             "type": "boolean",
