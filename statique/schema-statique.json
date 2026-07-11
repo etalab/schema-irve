@@ -499,6 +499,7 @@
         },
         {
             "name": "gratuit",
+            "x-entity": "pdc",
             "description": "Gratuité de la recharge. Indiquer \"true\" si le point de recharge est gratuit sans condition d'utilisation, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -582,6 +583,7 @@
         },
         {
             "name": "tarification",
+            "x-entity": "pdc",
             "description": "Toutes informations pouvant être apportées concernant les tarification(s) pratiquée(s).",
             "example": "0,40€ / kwh pour les non abonnés.",
             "type": "string",
@@ -591,6 +593,7 @@
         },
         {
             "name": "tarif_ids",
+            "x-entity": "pdc",
             "description": "Liste des identifiants de tarifs applicables au point de recharge (un par type : ad-hoc, abonné, etc.). Chaque identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre. Le préfixe garantit l'unicité globale lors de la consolidation nationale. Voir le fichier tarifaire détaillé pour la description complète.",
             "example": "[\"FRABCT001\"]",
             "type": "array",
@@ -619,6 +622,7 @@
         },
         {
             "name": "reservation",
+            "x-entity": "pdc",
             "description": "Possibilité de réservation à l'avance d'un point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -639,6 +643,7 @@
         },
         {
             "name": "accessibilite_pmr",
+            "x-entity": "pdc",
             "description": "Accessibilité du point de recharge aux personnes à mobilité réduite. Dans le cas d'un point de recharge signalisé et réservé PMR, indiquer \"Réservé PMR\". \nDans le cas d'une point de recharge non réservé PMR mais accessible PMR, indiquer \"Accessible mais non réservé PMR\". \nDans le cas d'un point de recharge non accessible PMR, indiquer \"Non accessible\"",
             "example": "Accessible mais non réservé PMR",
             "type": "string",
@@ -863,6 +868,7 @@
         },
         {
             "name": "observations",
+            "x-entity": "pdc",
             "description": "Champ destiné à préciser les modalités d'accès à la recharge, l'accessibilité, le tarif, les horaires d'ouverture, ...",
             "example": "Recharge uniquement disponible pendant les horaires d'ouverture du Centre Commercial XY",
             "type": "string",
