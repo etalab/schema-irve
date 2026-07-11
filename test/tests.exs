@@ -5,6 +5,14 @@ ExUnit.start(trace: true)
 defmodule SchemaIrveTest do
   use ExUnit.Case
 
+  @schemas [
+    "statique/schema-statique.json",
+    "dynamique/schema-dynamique.json",
+    "statique-tarifs/schema-statique-tarifs.json"
+  ]
+
+  @entities ["pdc", "station", "tarif", "tarif_element"]
+
   defp read_json!(path), do: path |> File.read!() |> JSON.decode!()
 
   defp tarif_field_example!(name) do
@@ -17,16 +25,19 @@ defmodule SchemaIrveTest do
 
   defp resolve_schema!(path), do: read_json!(path) |> ExJsonSchema.Schema.resolve()
 
-  test "statique JSON is valid" do
-    read_json!("statique/schema-statique.json")
-  end
+  for path <- @schemas do
+    @path path
 
-  test "dynamique JSON is valid" do
-    read_json!("dynamique/schema-dynamique.json")
-  end
+    test "#{path} JSON is valid" do
+      read_json!(@path)
+    end
 
-  test "statique-tarifs JSON is valid" do
-    read_json!("statique-tarifs/schema-statique-tarifs.json")
+    test "#{path}: every field carries a valid x-entity" do
+      for field <- read_json!(@path) |> Map.fetch!("fields") do
+        assert field["x-entity"] in @entities,
+               "champ #{field["name"]} sans x-entity valide (trouvé : #{inspect(field["x-entity"])})"
+      end
+    end
   end
 
   test "restrictions is a valid JSON Schema" do
