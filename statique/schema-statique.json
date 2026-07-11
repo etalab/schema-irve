@@ -320,6 +320,7 @@
         },
         {
             "name": "id_pdc_itinerance",
+            "x-entity": "pdc",
             "description": "L'identifiant du point de recharge délivré selon les modalités définies à l'article 10 du décret n° 2017-26 du 12 janvier 2017. Cet ID débute par FR suivi du trigramme de l'unité d'exploitation délivré par l'AFIREV (déclaré et présent dans la liste officielle : https://afirev.fr/prefixes/consulter-l-annuaire/), suivi de \"E\" pour l'équivalent du point de recharge en anglais EVSE - Electric Vehicule Supply Equipment (https://afirev.fr/fr/informations-generales/). Ne pas mettre de séparateur * ou -.",
             "example": "FRA68E680210015",
             "type": "string",
@@ -332,6 +333,7 @@
         },
         {
             "name": "id_pdc_local",
+            "x-entity": "pdc",
             "description": "Identifiant du point de recharge utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio. En cas de point de recharge qui n'est pas ouvert à l'itinérance, cet identifiant est indispensable.",
             "example": "01F2KNFARDSJG7KEH1YHG4033M",
             "type": "string",
@@ -341,6 +343,7 @@
         },
         {
             "name": "puissance_nominale_kw",
+            "x-entity": "pdc",
             "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
             "example": "7.36",
             "type": "number",
@@ -354,6 +357,7 @@
         },
         {
             "name": "nb_connecteurs",
+            "x-entity": "pdc",
             "description": "Nombre de connecteurs (prises) présents sur le point de recharge, tous types confondus (champ B2 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Les types de connecteurs disponibles sont décrits par les colonnes booléennes prise_type_*, sans détail par connecteur individuel : un point de recharge équipé de deux connecteurs CCS aura par exemple prise_type_combo_ccs à \"true\" et nb_connecteurs à 2. Un connecteur double (par exemple tête combinée CHAdeMO + T2) compte pour 2 connecteurs. Un connecteur partagé entre deux points de recharge est compté sur chacun des deux points. Cette valeur doit être supérieure ou égale au nombre de colonnes prise_type_* valant \"true\".",
             "example": "2",
             "type": "integer",
@@ -365,6 +369,7 @@
         },
         {
             "name": "prise_type_ef",
+            "x-entity": "pdc",
             "description": "Disponibilité d'une prise de type E/F sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -374,6 +379,7 @@
         },
         {
             "name": "prise_type_2",
+            "x-entity": "pdc",
             "description": "Disponibilité d'une prise de type 2 sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -383,6 +389,7 @@
         },
         {
             "name": "prise_type_combo_ccs",
+            "x-entity": "pdc",
             "description": "Disponibilité d'une prise de type Combo / CCS sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -392,6 +399,7 @@
         },
         {
             "name": "prise_type_chademo",
+            "x-entity": "pdc",
             "description": "Disponibilité d'une prise de type Chademo sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -401,6 +409,7 @@
         },
         {
             "name": "prise_type_mcs",
+            "x-entity": "pdc",
             "description": "Disponibilité d'une prise de type MCS (Megawatt Charging System) sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -411,6 +420,7 @@
         },
         {
             "name": "prise_type_autre",
+            "x-entity": "pdc",
             "description": "Disponibilité d'une prise d'un autre type sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux. Le ou les types de prises sont à préciser dans le champs \"observations\".",
             "example": false,
             "type": "boolean",
@@ -420,6 +430,7 @@
         },
         {
             "name": "courant_ac",
+            "x-entity": "pdc",
             "description": "Capacité du point de recharge à délivrer du courant alternatif (AC), via au moins un de ses connecteurs. Avec courant_dc, ce champ couvre le champ B4 « Type of current » de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR (qui ne distingue pas les phases mono/triphasé). Deux colonnes distinctes permettent de décrire les points de recharge multi-standards délivrant les deux types de courant et de rechercher chaque capacité indépendamment. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": true,
             "type": "boolean",
@@ -430,6 +441,7 @@
         },
         {
             "name": "courant_dc",
+            "x-entity": "pdc",
             "description": "Capacité du point de recharge à délivrer du courant continu (DC), via au moins un de ses connecteurs. Avec courant_ac, ce champ couvre le champ B4 « Type of current » de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Deux colonnes distinctes permettent de décrire les points de recharge multi-standards délivrant les deux types de courant et de rechercher chaque capacité indépendamment. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -440,6 +452,7 @@
         },
         {
             "name": "plug_and_charge",
+            "x-entity": "pdc",
             "description": "Disponibilité de la fonctionnalité « Plug & Charge » (norme ISO 15118) sur le point de recharge : authentification automatique du véhicule au branchement du câble, sans badge, application ni carte (champ B8 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Indiquer \"true\" si la fonctionnalité est disponible, \"false\" uniquement si elle est effectivement absente. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
             "type": "boolean",
@@ -450,6 +463,7 @@
         },
         {
             "name": "recharge_intelligente",
+            "x-entity": "pdc",
             "description": "Services de recharge intelligente disponibles sur le point de recharge (champ B9 « Smart recharging services » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, exprimée au format JSON (guillemets doubles), des services parmi : remote (suivi et contrôle de la recharge à distance), config (configuration des préférences de l'utilisateur pour l'optimisation de la puissance), v2g (recharge bidirectionnelle), autre (autre service de recharge intelligente). Exemple : [\"remote\", \"v2g\"]. Information au niveau du point de recharge.",
             "example": ["remote", "v2g"],
             "type": "array",
