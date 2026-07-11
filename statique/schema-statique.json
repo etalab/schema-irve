@@ -509,6 +509,7 @@
         },
         {
             "name": "paiement_acte",
+            "x-entity": "pdc",
             "description": "Possibilité de paiement à l'acte (sans identification ni abonnement). Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -518,6 +519,7 @@
         },
         {
             "name": "paiement_cb",
+            "x-entity": "pdc",
             "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB). Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -527,6 +529,7 @@
         },
         {
             "name": "cb_sans_contact",
+            "x-entity": "pdc",
             "description": "Possibilité de paiement par carte bancaire sans contact (NFC) (champ A21 « Contactless payment device » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Un même terminal peut accepter carte insérée et sans contact ; ce champ décrit spécifiquement la capacité sans contact. Indiquer \"true\" si vrai, \"false\" uniquement si cette possibilité est effectivement absente. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
             "type": "boolean",
@@ -537,6 +540,7 @@
         },
         {
             "name": "paiement_autre",
+            "x-entity": "pdc",
             "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -546,6 +550,7 @@
         },
         {
             "name": "complement_paiement",
+            "x-entity": "station",
             "description": "Informations complémentaires en texte libre sur les moyens de paiement et les fournisseurs de service de paiement disponibles sur la station (champ A23 « Additional information about payment providers » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR).",
             "example": "Paiement via les applications des principaux opérateurs de mobilité",
             "type": "string",
@@ -556,6 +561,7 @@
         },
         {
             "name": "abonnement",
+            "x-entity": "pdc",
             "description": "Possibilité de payer la recharge dans le cadre d'un contrat ou d'un abonnement souscrit auprès d'un fournisseur de service de mobilité (champ A24 « Contract-based (subscription) payment option » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Indiquer \"true\" si ce mode de paiement est possible, \"false\" uniquement s'il est effectivement impossible. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
             "type": "boolean",
