@@ -92,12 +92,12 @@
         {
             "name": "type",
             "x-entity": "tarif",
-            "description": "Type de tarif au sens OCPI.",
+            "description": "Type de tarif au sens OCPI. Seul AD_HOC_PAYMENT est accepté : ce fichier ne déclare que les prix de la recharge ad hoc (sans contrat préalable). Les tarifs OCPI d'autres types, en particulier REGULAR (tarifs liés à un contrat ou un abonnement), sont interdits dans ce fichier : le prix payé par un client sous contrat est fixé par son fournisseur de service de mobilité et ne relève pas de cette publication. Colonne conservée à des fins de clarté.",
             "example": "AD_HOC_PAYMENT",
             "type": "string",
             "constraints": {
                 "required": true,
-                "enum": ["REGULAR", "AD_HOC_PAYMENT"]
+                "enum": ["AD_HOC_PAYMENT"]
             }
         },
         {
