@@ -225,7 +225,7 @@
         {
             "name": "adresse_station",
             "x-entity": "station",
-            "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville].",
+            "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville]. Elle localise l'accès depuis la voie publique ; la position exacte de la station est portée par station_latitude et station_longitude.",
             "example": "1 avenue de la Paix 75001 Paris",
             "type": "string",
             "constraints": {
@@ -235,7 +235,7 @@
         {
             "name": "complement_localisation",
             "x-entity": "station",
-            "description": "Information complémentaire de localisation fine de la station, en texte libre : niveau de parking, position dans l'ouvrage, point de repère, etc. (champ A8 « Additional geographic location information » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Particulièrement utile pour les stations en ouvrage : les coordonnées (station_latitude/longitude) indiquent la position exacte de la station, tandis que adresse_station indique le point d'accès depuis la voie publique. Ce champ n'est pas un complément d'adresse postale et ne doit pas être utilisé pour le géocodage.",
+            "description": "Information complémentaire de localisation fine de la station, en texte libre : niveau de parking, position dans l'ouvrage, point de repère, etc. (champ A8 « Additional geographic location information » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Particulièrement utile en parking souterrain ou centre commercial. Ce champ n'est pas un complément d'adresse postale et ne doit pas être utilisé pour le géocodage.",
             "example": "Parking niveau -2, zone B",
             "type": "string",
             "constraints": {
@@ -267,7 +267,7 @@
         {
             "name": "station_latitude",
             "x-entity": "station",
-            "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
+            "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84. Position exacte de la station, qui peut différer de l'accès voie publique (adresse_station).",
             "example": "48.34534",
             "type": "number",
             "constraints": {
@@ -279,7 +279,7 @@
         {
             "name": "station_longitude",
             "x-entity": "station",
-            "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84.",
+            "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84. Position exacte de la station, qui peut différer de l'accès voie publique (adresse_station).",
             "example": "7.48710",
             "type": "number",
             "constraints": {
