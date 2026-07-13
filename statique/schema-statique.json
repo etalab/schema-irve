@@ -223,23 +223,6 @@
             }
         },
         {
-            "name": "implantation_station",
-            "x-entity": "station",
-            "description": "Le type d'implantation de la station. \nPour une station sur voirie, sélectionner \"Voirie\". \nPour un parking public, (en ouvrage, en enclos, etc.), sélectionner \"Parking public\". Ces parkings sont généralement en gestion directe ou déléguée de la collectivité territoriale. \nPour un parking privé à usage public / parking ouvert (ex: zone commerciale), sélectionner \"Parking privé à usage public\". \nPour un parking réservé à la clientèle, aux usagers, sélectionnez \"Parking privé réservé à la clientèle\" (il s'agit d'un choix de l'aménageur public ou privé sur l'utilisation de son parking. Ex: hôtel, commerce, éventuellement certains bâtiments publics). \nPour une station dédiée à la recharge rapide dont la durée d'utilisation est généralement limitée à la recharge principalement rapide et dont la première fonction de la station est la recharge et non le stationnement, sélectionner \"Station dédiée à la recharge rapide\" (ex : aires de service sur axes routiers, stations services, etc.).",
-            "example": "Parking public",
-            "type": "string",
-            "constraints": {
-                "required": true,
-                "enum": [
-                    "Voirie",
-                    "Parking public",
-                    "Parking privé à usage public",
-                    "Parking privé réservé à la clientèle",
-                    "Station dédiée à la recharge rapide"
-                ]
-            }
-        },
-        {
             "name": "adresse_station",
             "x-entity": "station",
             "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville].",
