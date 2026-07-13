@@ -174,11 +174,11 @@
         {
             "name": "telephone_operateur",
             "x-entity": "station",
-            "description": "Numéro de téléphone permettant de contacter l'opérateur.",
+            "description": "Numéro de téléphone de l'assistance offerte aux utilisateurs de la station (assistance téléphonique joignable pendant les heures d'ouverture, au titre de l'obligation d'assistance du service de recharge).",
             "example": "0111111111",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
