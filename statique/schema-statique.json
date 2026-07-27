@@ -562,7 +562,7 @@
         {
             "name": "tarif_ids",
             "x-entity": "pdc",
-            "description": "Liste des identifiants de tarifs applicables au point de recharge (un par type : ad-hoc, abonné, etc.). Chaque identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre. Le préfixe garantit l'unicité globale lors de la consolidation nationale. Voir le fichier tarifaire détaillé pour la description complète.",
+            "description": "Liste des identifiants de tarifs applicables au point de recharge. Plusieurs tarifs peuvent être déclarés si leurs périodes de validité ne se chevauchent pas (start_date_time, end_date_time), ce qui permet d'annoncer un tarif à venir ; à un instant donné, un seul tarif s'applique. L'ordre de la liste ne porte aucune priorité. Chaque identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre. Voir le fichier tarifaire détaillé pour la description complète.",
             "example": "[\"FRABCT001\"]",
             "type": "array",
             "arrayItem": {
