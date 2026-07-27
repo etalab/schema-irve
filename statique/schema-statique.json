@@ -565,9 +565,11 @@
             "description": "Liste des identifiants de tarifs applicables au point de recharge (un par type : ad-hoc, abonné, etc.). Chaque identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre. Le préfixe garantit l'unicité globale lors de la consolidation nationale. Voir le fichier tarifaire détaillé pour la description complète.",
             "example": "[\"FRABCT001\"]",
             "type": "array",
-            "items": {
+            "arrayItem": {
                 "type": "string",
-                "pattern": "^FR[A-Z0-9]{3}T\\S+$"
+                "constraints": {
+                    "pattern": "^FR[A-Z0-9]{3}T\\S+$"
+                }
             },
             "constraints": {
                 "required": false
