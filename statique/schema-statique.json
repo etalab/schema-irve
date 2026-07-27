@@ -602,12 +602,12 @@
         {
             "name": "horaires",
             "x-entity": "station",
-            "description": "Amplitude d’ouverture de la station. Si ouverte sans interruption indiquer « 24/7» sinon indiquer les horaires sous cette forme : Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00.",
+            "description": "Amplitude d’ouverture de la station, dans un sous-ensemble de la syntaxe OSM opening_hours (https://wiki.openstreetmap.org/wiki/Key:opening_hours) : 24/7, ou des règles séparées par un point-virgule associant des jours en anglais abrégés (Mo-Fr, Mo,We,Fr) à des plages HH:MM-HH:MM. Les constructions avancées (jours fériés, fermetures, mois, heures solaires, commentaires, règles de repli) ne sont pas acceptées.",
             "example": "Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00",
             "type": "string",
             "constraints": {
                 "required": true,
-                "pattern": "(.*?)((\\d{1,2}:\\d{2})-(\\d{1,2}:\\d{2})|24/7)"
+                "pattern": "^(.*?)((\\d{1,2}:\\d{2})-(\\d{1,2}:\\d{2})|24/7)$"
             }
         },
         {

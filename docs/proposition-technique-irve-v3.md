@@ -117,7 +117,7 @@ Liste des contrôles :
 | `suspect-connecteur-comme-pdc` | Détecte les connecteurs déclarés à tort comme des PDC distincts (~5,6 % du consolidé, soit ~8 800 PDC en trop) |
 | `siren-checksum` | Vérifie la clé de contrôle du numéro SIREN (algorithme de Luhn) |
 | `siren-online` | Vérifie l'existence du SIREN dans la base SIRENE |
-| `opening-hours-value` | Valide la syntaxe des horaires d'ouverture |
+| `opening-hours-value` | Valide les horaires d'ouverture par parsing du sous-ensemble OSM `opening_hours` accepté (le pattern du schéma ne fait qu'un contrôle de forme minimal) |
 | `coherence-nom-siren` | Cohérence entre la dénomination sociale et le numéro SIREN |
 | `code-insee-exists` | Vérifie l'existence du code INSEE dans le COG (Code Officiel Géographique) |
 | `coherence-code-insee-coordonnees` | Le code INSEE doit correspondre aux coordonnées géographiques |
