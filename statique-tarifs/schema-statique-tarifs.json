@@ -70,7 +70,7 @@
         {
             "name": "start_date_time",
             "x-entity": "tarif",
-            "description": "Date et heure (UTC) à partir de laquelle le tarif s'applique.",
+            "description": "Date et heure (UTC) à partir de laquelle le tarif s'applique (incluse). Absente, le tarif s'applique depuis toujours.",
             "example": "2024-12-01T00:00:00Z",
             "type": "datetime",
             "format": "%Y-%m-%dT%H:%M:%SZ",
@@ -81,7 +81,7 @@
         {
             "name": "end_date_time",
             "x-entity": "tarif",
-            "description": "Date et heure (UTC) après laquelle le tarif ne s'applique plus.",
+            "description": "Date et heure (UTC) à partir de laquelle le tarif ne s'applique plus (exclue). Absente, le tarif s'applique jusqu'à nouvel ordre.",
             "example": "2025-12-01T00:00:00Z",
             "type": "datetime",
             "format": "%Y-%m-%dT%H:%M:%SZ",
