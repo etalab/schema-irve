@@ -13,7 +13,23 @@ defmodule SchemaIrveTest do
 
   @entities ["pdc", "station", "tarif", "tarif_element"]
 
+  # table schema standard properties, plus `arrayItem` frictionless extension.
+  @field_keys ~w(name type format title description example constraints rdfType missingValues arrayItem)
+  @constraint_keys ~w(required unique minLength maxLength minimum maximum pattern enum)
+
   defp read_json!(path), do: path |> File.read!() |> JSON.decode!()
+
+  defp assert_known_keys!(descriptor, allowed, context) do
+    for key <- Map.keys(descriptor), not String.starts_with?(key, "x-") do
+      assert key in allowed,
+             "#{context}: unknown property #{inspect(key)}, silently ignored by validators"
+    end
+  end
+
+  defp assert_known_field_keys!(descriptor, context) do
+    assert_known_keys!(descriptor, @field_keys, context)
+    assert_known_keys!(Map.get(descriptor, "constraints", %{}), @constraint_keys, "#{context} constraints")
+  end
 
   defp tarif_field_example!(name) do
     read_json!("statique-tarifs/schema-statique-tarifs.json")
@@ -30,6 +46,16 @@ defmodule SchemaIrveTest do
 
     test "#{path} JSON is valid" do
       read_json!(@path)
+    end
+
+    test "#{path}: every field only declares known properties" do
+      for field <- read_json!(@path) |> Map.fetch!("fields") do
+        assert_known_field_keys!(field, "field #{field["name"]}")
+
+        if item = field["arrayItem"] do
+          assert_known_field_keys!(item, "field #{field["name"]} arrayItem")
+        end
+      end
     end
 
     test "#{path}: every field carries a valid x-entity" do
