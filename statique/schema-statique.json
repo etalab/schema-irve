@@ -954,17 +954,14 @@
             "name":"presence-tarif-adhoc",
             "params":{
                 "column":"tarif_ids",
-                "resource":"irve-statique-tarifs",
-                "type_column":"type",
-                "required_type":"AD_HOC_PAYMENT"
+                "resource":"irve-statique-tarifs"
             }
         },
         {
-            "name":"unicite-type-par-tarif",
+            "name":"unicite-tarif-applicable",
             "params":{
                 "column":"tarif_ids",
-                "resource":"irve-statique-tarifs",
-                "type_column":"type"
+                "resource":"irve-statique-tarifs"
             }
         }
     ],
