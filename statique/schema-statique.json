@@ -466,7 +466,7 @@
         {
             "name": "gratuit",
             "x-entity": "pdc",
-            "description": "Gratuité de la recharge. Indiquer \"true\" si le point de recharge est gratuit sans condition d'utilisation, \"false\" si faux.",
+            "description": "Gratuité de la recharge. Indiquer \"true\" uniquement si la recharge est gratuite en permanence, sans condition d'accès ni de durée. Dans tous les autres cas — gratuité partielle, conditionnelle, ou limitée dans le temps — indiquer \"false\" et décrire les conditions dans le fichier tarifaire (voir tarif_ids).",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -962,6 +962,12 @@
             "params":{
                 "column":"tarif_ids",
                 "resource":"irve-statique-tarifs"
+            }
+        },
+        {
+            "name":"coherence-gratuit-tarifs",
+            "params":{
+                "columns":["gratuit", "tarif_ids"]
             }
         }
     ],
