@@ -593,7 +593,7 @@
         {
             "name": "accessibilite_pmr",
             "x-entity": "pdc",
-            "description": "Accessibilité du point de recharge aux personnes à mobilité réduite. Dans le cas d'un point de recharge signalisé et réservé PMR, indiquer \"Réservé PMR\". \nDans le cas d'une point de recharge non réservé PMR mais accessible PMR, indiquer \"Accessible mais non réservé PMR\". \nDans le cas d'un point de recharge non accessible PMR, indiquer \"Non accessible\"",
+            "description": "Accessibilité du point de recharge aux personnes à mobilité réduite. Dans le cas d'un point de recharge signalisé et réservé PMR, indiquer \"Réservé PMR\". \nDans le cas d'une point de recharge non réservé PMR mais accessible PMR, indiquer \"Accessible mais non réservé PMR\". \nDans le cas d'un point de recharge non accessible PMR, indiquer \"Non accessible\". \nEn dernier recours, si l'information n'est pas connue, indiquer \"Accessibilité inconnue\" ; cette valeur est destinée à disparaître, elle ne doit pas être utilisée par défaut.",
             "example": "Accessible mais non réservé PMR",
             "type": "string",
             "constraints": {
