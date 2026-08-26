@@ -474,16 +474,6 @@
             }
         },
         {
-            "name": "paiement_acte",
-            "x-entity": "pdc",
-            "description": "Possibilité de paiement à l'acte (sans identification ni abonnement). Indiquer \"true\" si vrai, \"false\" si faux.",
-            "example": false,
-            "type": "boolean",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
             "name": "paiement_cb",
             "x-entity": "pdc",
             "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB). Indiquer \"true\" si vrai, \"false\" si faux.",
