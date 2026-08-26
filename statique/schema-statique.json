@@ -540,16 +540,6 @@
             }
         },
         {
-            "name": "tarification",
-            "x-entity": "pdc",
-            "description": "Toutes informations pouvant être apportées concernant les tarification(s) pratiquée(s).",
-            "example": "0,40€ / kwh pour les non abonnés.",
-            "type": "string",
-            "constraints": {
-                "required": false
-            }
-        },
-        {
             "name": "tarif_ids",
             "x-entity": "pdc",
             "description": "Liste des identifiants de tarifs applicables au point de recharge. Plusieurs tarifs peuvent être déclarés si leurs périodes de validité ne se chevauchent pas (start_date_time, end_date_time), ce qui permet d'annoncer un tarif à venir ; à un instant donné, un seul tarif s'applique. L'ordre de la liste ne porte aucune priorité. Chaque identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre. Voir le fichier tarifaire détaillé pour la description complète.",
