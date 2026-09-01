@@ -293,6 +293,7 @@
         {
             "name": "nbre_pdc",
             "x-entity": "station",
+            "x-afir": "A3",
             "description": "Le nombre de points de recharge sur la station.",
             "example": "3",
             "type": "integer",
