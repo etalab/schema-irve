@@ -153,6 +153,7 @@
         {
             "name": "nom_operateur",
             "x-entity": "station",
+            "x-afir": "A1",
             "description": "La dénomination sociale de l'opérateur. L'opérateur est la personne qui exploite l'infrastructure de recharger pour le compte d'un aménageur dans le cadre d'un contrat ou pour son propre compte s'il est l'aménageur. Vous pouvez accéder à cette dénomination exacte sur le site annuaire-entreprises.data.gouv.fr.",
             "example": "Société X, Entité Y",
             "type": "string",
