@@ -17,7 +17,30 @@ defmodule SchemaIrveTest do
   @field_keys ~w(name type format title description example constraints rdfType missingValues arrayItem)
   @constraint_keys ~w(required unique minLength maxLength minimum maximum pattern enum)
 
+  @telephone_cases [
+    {"+33 0199000000", :valid, "France, leading zero kept"},
+    {"+33 0199000000-12", :valid, "extension after a hyphen"},
+    {"+352 25363640", :valid, "country without trunk prefix (Luxembourg)"},
+    {"+1 2125550100", :valid, "1-digit country code"},
+    {"0199000000", :invalid, "missing country code"},
+    {"0033 0199000000", :invalid, "country code without +"},
+    {"+330199000000", :invalid, "missing space after country code"},
+    {"+33 01 99 00 00 00", :invalid, "spaces inside the number"},
+    {"+33 01-99-00-00-00", :invalid, "hyphens inside the number"},
+    {"+33 (0)199000000", :invalid, "parentheses"},
+    {"+33 0199000000 -12", :invalid, "extension not attached to the number"},
+    {"tel:+33-1-99-00-00-00", :invalid, "tel: URI (RFC 3966)"},
+    {"+33 0199000000 ", :invalid, "trailing space"},
+    {"+33 ٠١٩٩٠٠٠٠٠٠", :invalid, "non-ASCII digits"},
+    {"", :invalid, "empty"}
+  ]
+
   defp read_json!(path), do: path |> File.read!() |> JSON.decode!()
+
+  defp field!(path, name) do
+    read_json!(path) |> Map.fetch!("fields") |> Enum.find(&(&1["name"] == name)) ||
+      raise "field #{name} not found in #{path}"
+  end
 
   defp assert_known_keys!(descriptor, allowed, context) do
     for key <- Map.keys(descriptor), not String.starts_with?(key, "x-") do
@@ -63,6 +86,49 @@ defmodule SchemaIrveTest do
         assert field["x-entity"] in @entities,
                "champ #{field["name"]} sans x-entity valide (trouvé : #{inspect(field["x-entity"])})"
       end
+    end
+  end
+
+  defp frictionless_verdicts!(schema, fixture, field, values) do
+    [header, row | _] = fixture |> File.read!() |> String.split("\n", trim: true)
+    example = field!(schema, field)["example"]
+
+    rows =
+      for {value, i} <- Enum.with_index(values) do
+        row
+        |> String.replace(",#{example},", ",#{value},")
+        |> String.replace("FRA68E680210015", "FRA68E6802100#{15 + i}")
+      end
+
+    csv = "test/tmp-#{System.unique_integer([:positive])}.csv"
+    File.write!(csv, Enum.join([header | rows], "\n") <> "\n")
+    {output, _} = System.cmd("uv", ~w(run frictionless validate --schema #{schema} --json #{csv}))
+    File.rm!(csv)
+
+    errors = output |> JSON.decode!() |> get_in(["tasks", Access.at(0), "errors"])
+    refute Enum.find(errors, &is_nil(&1["rowNumber"]))
+
+    for i <- 2..(length(values) + 1) do
+      if Enum.any?(errors, &(&1["rowNumber"] == i and &1["fieldName"] == field)), do: :invalid, else: :valid
+    end
+  end
+
+  test "telephone_operateur pattern (AFIR A5) evaluated by frictionless" do
+    values = Enum.map(@telephone_cases, &elem(&1, 0))
+    verdicts = frictionless_verdicts!("statique/schema-statique.json", "statique/exemple-valide-statique.csv", "telephone_operateur", values)
+
+    for {{value, expected, reason}, actual} <- Enum.zip(@telephone_cases, verdicts) do
+      assert actual == expected, "#{inspect(value)} (#{reason})"
+    end
+  end
+
+  for {value, expected, reason} <- @telephone_cases do
+    @value value
+    @expected expected
+
+    test "telephone_operateur pattern (AFIR A5) evaluated by Elixir Regex: #{inspect(value)} is #{expected} (#{reason})" do
+      pattern = field!("statique/schema-statique.json", "telephone_operateur")["constraints"]["pattern"]
+      assert Regex.match?(~r/#{pattern}/, @value) == (@expected == :valid)
     end
   end
 

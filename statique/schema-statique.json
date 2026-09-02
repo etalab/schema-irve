@@ -176,11 +176,12 @@
             "name": "telephone_operateur",
             "x-entity": "station",
             "x-afir": "A5",
-            "description": "Numéro de téléphone de l'assistance offerte aux utilisateurs de la station (assistance téléphonique joignable pendant les heures d'ouverture, au titre de l'obligation d'assistance du service de recharge).",
-            "example": "0111111111",
+            "description": "Numéro de téléphone de l'assistance offerte aux utilisateurs de la station (assistance téléphonique joignable pendant les heures d'ouverture, au titre de l'obligation d'assistance du service de recharge). Format imposé par la colonne « Format » du champ A5 de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 : indicatif pays précédé de « + », un espace, puis le numéro complet en un seul bloc (indicatif régional inclus s'il existe, zéro de départ conservé) ; un numéro d'extension éventuel est ajouté après un tiret, immédiatement après le numéro complet ; aucun autre tiret, espace ou parenthèse. Exemples : \"+33 0199000000\", avec extension \"+33 0199000000-12\".",
+            "example": "+33 0199000000",
             "type": "string",
             "constraints": {
-                "required": true
+                "required": true,
+                "pattern": "^\\+[1-9][0-9]{0,2} [0-9]{4,15}(-[0-9]{1,8})?$"
             }
         },
         {
