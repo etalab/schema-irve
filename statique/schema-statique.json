@@ -271,6 +271,7 @@
         {
             "name": "station_latitude",
             "x-entity": "station",
+            "x-afir": "A7",
             "description": "La latitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84. Position exacte de la station, qui peut différer de l'accès voie publique (adresse_station).",
             "example": "48.34534",
             "type": "number",
@@ -283,6 +284,7 @@
         {
             "name": "station_longitude",
             "x-entity": "station",
+            "x-afir": "A7",
             "description": "La longitude en degrés décimaux (point comme séparateur décimal) de la localisation de la station exprimée dans le système de coordonnées WGS84. Position exacte de la station, qui peut différer de l'accès voie publique (adresse_station).",
             "example": "7.48710",
             "type": "number",
