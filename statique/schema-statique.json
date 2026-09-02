@@ -721,7 +721,8 @@
         {
             "name": "equipement_afir",
             "x-entity": "station",
-            "description": "Services et installations proposés à l'usager dans les environs immédiats de la station, parmi les catégories normatives du champ A6 « Installations proposant à l'utilisateur des services associés » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Liste, au format JSON (guillemets doubles), parmi : parking_couvert (parc de stationnement couvert permettant la recharge), parking_eclaire (parc de stationnement éclairé permettant la recharge), restauration (service de restauration), sanitaires, repos (installations de repos). Exemple : [\"sanitaires\", \"restauration\"]. Information au niveau de la station. Compléments éventuels dans equipement_ocpi et equipement_autre.",
+            "x-afir": "A6",
+            "description": "Services et installations proposés à l'usager dans les environs immédiats de la station, parmi les catégories normatives du champ A6 « Installations proposant à l'utilisateur des services associés » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Liste, au format JSON (guillemets doubles), parmi : parking_couvert (parc de stationnement couvert permettant la recharge), parking_eclaire (parc de stationnement éclairé permettant la recharge), restauration (service de restauration), sanitaires, repos (installations de repos). Exemple : [\"sanitaires\", \"restauration\"]. Information au niveau de la station. Le règlement impose de déclarer chaque installation (oui/non) : la liste fournie vaut déclaration complète, toute catégorie absente de la liste est déclarée absente de la station. Une station sans aucune de ces installations déclare la liste vide []. Champ obligatoire : une cellule vide n'est pas acceptée. Compléments éventuels dans equipement_ocpi et equipement_autre.",
             "example": ["sanitaires", "restauration"],
             "type": "array",
             "arrayItem": {
@@ -731,7 +732,7 @@
                 }
             },
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
@@ -753,6 +754,7 @@
         {
             "name": "equipement_autre",
             "x-entity": "station",
+            "x-afir": "A6",
             "description": "Autres services ou installations des environs immédiats de la station ne figurant ni dans equipement_afir ni dans equipement_ocpi, en texte libre (couvre la modalité « autre (exprimé en texte libre) » du champ A6 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, au format JSON (guillemets doubles), de chaînes libres. Information au niveau de la station.",
             "example": [],
             "type": "array",
