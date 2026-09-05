@@ -117,7 +117,8 @@
         }
     ],
     "x-afir-derived": {
-        "A9": "Pays de la station : aucune colonne dédiée. Le schéma est national (countryCode FR) et la valeur est déductible de station_latitude et station_longitude ou de code_insee_commune."
+        "A9": "Pays de la station : aucune colonne dédiée. Le schéma est national (countryCode FR) et la valeur est déductible de station_latitude et station_longitude ou de code_insee_commune.",
+        "A10": "Région de la station au niveau NUTS-1 : aucune colonne dédiée. La valeur est déductible de code_insee_commune, la région administrative française correspondant exactement au niveau NUTS-1 (14 codes, FR1 et FRB à FRM, FRY pour les DOM)."
     },
     "primaryKey": "id_pdc_itinerance",
     "fields": [
