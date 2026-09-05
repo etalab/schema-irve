@@ -234,6 +234,7 @@
         {
             "name": "adresse_station",
             "x-entity": "station",
+            "x-afir": "A13",
             "description": "L'adresse complète de la station : [numéro] [rue] [code postal] [ville]. Elle localise l'accès depuis la voie publique ; la position exacte de la station est portée par station_latitude et station_longitude.",
             "example": "1 avenue de la Paix 75001 Paris",
             "type": "string",
