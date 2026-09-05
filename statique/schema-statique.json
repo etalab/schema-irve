@@ -255,6 +255,7 @@
         {
             "name": "code_postal",
             "x-entity": "station",
+            "x-afir": "A12",
             "description": "Le code postal de la station, sur 5 chiffres, sous forme de chaîne de caractères afin de préserver un éventuel zéro initial (champ A12 « Postal code » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Attention, le code postal est distinct du code INSEE de la commune (renseigné dans le champ code_insee_commune).",
             "example": "01000",
             "type": "string",
