@@ -116,6 +116,9 @@
             "role": "contributor"
         }
     ],
+    "x-afir-derived": {
+        "A9": "Pays de la station : aucune colonne dédiée. Le schéma est national (countryCode FR) et la valeur est déductible de station_latitude et station_longitude ou de code_insee_commune."
+    },
     "primaryKey": "id_pdc_itinerance",
     "fields": [
         {
