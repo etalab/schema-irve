@@ -119,7 +119,8 @@
     "x-afir-derived": {
         "A9": "Pays de la station : aucune colonne dédiée. Le schéma est national (countryCode FR) et la valeur est déductible de station_latitude et station_longitude ou de code_insee_commune.",
         "A10": "Région de la station au niveau NUTS-1 : aucune colonne dédiée. La valeur est déductible de code_insee_commune, la région administrative française correspondant exactement au niveau NUTS-1 (14 codes, FR1 et FRB à FRM, FRY pour les DOM).",
-        "A11": "Ville ou localité de la station : aucune colonne dédiée. Le nom de la commune est déductible de code_insee_commune via le code officiel géographique de l'INSEE."
+        "A11": "Ville ou localité de la station : aucune colonne dédiée. Le nom de la commune est déductible de code_insee_commune via le code officiel géographique de l'INSEE.",
+        "A15": "Fuseau horaire de la station : aucune colonne dédiée. La zone est déductible de code_insee_commune (Europe/Paris en métropole, un fuseau distinct outre-mer). Elle s'exprime comme un nom de zone IANA et non comme un décalage fixe, le décalage dépendant de l'instant considéré du fait de l'heure d'été."
     },
     "x-todo": [
         "Vérifier la concordance avec le projet de guide DGEC sur les approches de localisation : le guide place les coordonnées au point d'accès sur la voie publique et l'adresse sur une entrée de la Base Adresse Nationale, nos descriptions de station_latitude, station_longitude, adresse_station et complement_localisation retiennent l'inverse."
@@ -600,7 +601,8 @@
         {
             "name": "horaires",
             "x-entity": "station",
-            "description": "Amplitude d’ouverture de la station, dans un sous-ensemble de la syntaxe OSM opening_hours (https://wiki.openstreetmap.org/wiki/Key:opening_hours) : 24/7, ou des règles séparées par un point-virgule associant des jours en anglais abrégés (Mo-Fr, Mo,We,Fr) à des plages HH:MM-HH:MM. Les constructions avancées (jours fériés, fermetures, mois, heures solaires, commentaires, règles de repli) ne sont pas acceptées.",
+            "x-afir": "A14",
+            "description": "Amplitude d’ouverture de la station, dans un sous-ensemble de la syntaxe OSM opening_hours (https://wiki.openstreetmap.org/wiki/Key:opening_hours) : 24/7, ou des règles séparées par un point-virgule associant des jours en anglais abrégés (Mo-Fr, Mo,We,Fr) à des plages HH:MM-HH:MM. Les constructions avancées (jours fériés, fermetures, mois, heures solaires, commentaires, règles de repli) ne sont pas acceptées. Les jours et plages horaires s'entendent en heure locale de la station : Europe/Paris en métropole, fuseau local outre-mer.",
             "example": "Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00",
             "type": "string",
             "constraints": {
