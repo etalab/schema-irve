@@ -123,7 +123,8 @@
         "A15": "Fuseau horaire de la station : aucune colonne dédiée. La zone est déductible de code_insee_commune (Europe/Paris en métropole, un fuseau distinct outre-mer). Elle s'exprime comme un nom de zone IANA et non comme un décalage fixe, le décalage dépendant de l'instant considéré du fait de l'heure d'été."
     },
     "x-todo": [
-        "Vérifier la concordance avec le projet de guide DGEC sur les approches de localisation : le guide place les coordonnées au point d'accès sur la voie publique et l'adresse sur une entrée de la Base Adresse Nationale, nos descriptions de station_latitude, station_longitude, adresse_station et complement_localisation retiennent l'inverse."
+        "Vérifier la concordance avec le projet de guide DGEC sur les approches de localisation : le guide place les coordonnées au point d'accès sur la voie publique et l'adresse sur une entrée de la Base Adresse Nationale, nos descriptions de station_latitude, station_longitude, adresse_station et complement_localisation retiennent l'inverse.",
+        "Arbitrer avec la DGEC comment distinguer « aucune limitation » de « information inconnue » : une cellule vide des champs gabarit_masse_max_t, gabarit_hauteur_max_m, gabarit_longueur_max_m et gabarit_largeur_max_m confond les deux sens, alors que presence_borniste tranche l'inverse (vide = inconnu)."
     ],
     "primaryKey": "id_pdc_itinerance",
     "fields": [
@@ -661,6 +662,7 @@
         {
             "name": "gabarit_masse_max_t",
             "x-entity": "station",
+            "x-afir": "A17",
             "description": "Le cas échéant, masse maximale du véhicule, en tonnes, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de masse.",
             "example": "26",
             "type": "number",
@@ -673,6 +675,7 @@
         {
             "name": "gabarit_hauteur_max_m",
             "x-entity": "station",
+            "x-afir": "A17",
             "description": "Le cas échéant, hauteur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de hauteur.",
             "example": "2",
             "type": "number",
@@ -685,6 +688,7 @@
         {
             "name": "gabarit_longueur_max_m",
             "x-entity": "station",
+            "x-afir": "A17",
             "description": "Le cas échéant, longueur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de longueur.",
             "example": "12",
             "type": "number",
@@ -697,6 +701,7 @@
         {
             "name": "gabarit_largeur_max_m",
             "x-entity": "station",
+            "x-afir": "A17",
             "description": "Le cas échéant, largeur maximale du véhicule, en mètres, autorisée à accéder à la station (remorque comprise). L'une des spécifications du champ A17 « Vehicle specifications permitted » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Information au niveau de la station. Laisser vide en l'absence de limitation de largeur.",
             "example": "2.55",
             "type": "number",
