@@ -124,7 +124,8 @@
     },
     "x-todo": [
         "Vérifier la concordance avec le projet de guide DGEC sur les approches de localisation : le guide place les coordonnées au point d'accès sur la voie publique et l'adresse sur une entrée de la Base Adresse Nationale, nos descriptions de station_latitude, station_longitude, adresse_station et complement_localisation retiennent l'inverse.",
-        "Arbitrer avec la DGEC comment distinguer « aucune limitation » de « information inconnue » : une cellule vide des champs gabarit_masse_max_t, gabarit_hauteur_max_m, gabarit_longueur_max_m et gabarit_largeur_max_m confond les deux sens, alors que presence_borniste tranche l'inverse (vide = inconnu)."
+        "Arbitrer avec la DGEC comment distinguer « aucune limitation » de « information inconnue » : une cellule vide des champs gabarit_masse_max_t, gabarit_hauteur_max_m, gabarit_longueur_max_m et gabarit_largeur_max_m confond les deux sens, alors que presence_borniste tranche l'inverse (vide = inconnu).",
+        "Arbitrer avec la DGEC le sens de nb_places_pmr : le règlement dit « places réservées aux personnes handicapées » à l'article 20 §2 et dans l'intitulé de l'entrée A19, mais « places dotées de points de recharge accessibles » dans sa description, qui fait foi au titre de l'article 3 §1 b). Sur la consolidation nationale, les deux lectures diffèrent d'un facteur douze."
     ],
     "primaryKey": "id_pdc_itinerance",
     "fields": [
@@ -642,6 +643,7 @@
         {
             "name": "nb_places_pmr",
             "x-entity": "station",
+            "x-afir": "A19",
             "description": "Nombre de places de stationnement accessibles et réservées aux personnes à mobilité réduite (PMR) sur la station (champ A19 « Number of parking spaces for people with disabilities » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Information au niveau de la station : la valeur est identique pour tous les points de recharge d'une même station. Laisser vide si l'information n'est pas connue (ne pas indiquer 0 par défaut).",
             "example": "1",
             "type": "integer",
