@@ -497,7 +497,8 @@
         {
             "name": "paiement_cb",
             "x-entity": "pdc",
-            "description": "Possibilité de paiement par carte bancaire (présence d'un terminal de paiement avec une CB). Indiquer \"true\" si vrai, \"false\" si faux.",
+            "x-afir": "A20",
+            "description": "Possibilité de payer par carte bancaire insérée dans le terminal. Indiquer \"true\" si ce moyen est présent, \"false\" uniquement s'il est effectivement absent. Laisser vide si l'information n'est pas connue. Le paiement sans contact est décrit par cb_sans_contact.",
             "example": false,
             "type": "boolean",
             "constraints": {
