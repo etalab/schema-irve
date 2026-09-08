@@ -125,7 +125,8 @@
     "x-todo": [
         "Vérifier la concordance avec le projet de guide DGEC sur les approches de localisation : le guide place les coordonnées au point d'accès sur la voie publique et l'adresse sur une entrée de la Base Adresse Nationale, nos descriptions de station_latitude, station_longitude, adresse_station et complement_localisation retiennent l'inverse.",
         "Arbitrer avec la DGEC comment distinguer « aucune limitation » de « information inconnue » : une cellule vide des champs gabarit_masse_max_t, gabarit_hauteur_max_m, gabarit_longueur_max_m et gabarit_largeur_max_m confond les deux sens, alors que presence_borniste tranche l'inverse (vide = inconnu).",
-        "Arbitrer avec la DGEC le sens de nb_places_pmr : le règlement dit « places réservées aux personnes handicapées » à l'article 20 §2 et dans l'intitulé de l'entrée A19, mais « places dotées de points de recharge accessibles » dans sa description, qui fait foi au titre de l'article 3 §1 b). Sur la consolidation nationale, les deux lectures diffèrent d'un facteur douze."
+        "Arbitrer avec la DGEC le sens de nb_places_pmr : le règlement dit « places réservées aux personnes handicapées » à l'article 20 §2 et dans l'intitulé de l'entrée A19, mais « places dotées de points de recharge accessibles » dans sa description, qui fait foi au titre de l'article 3 §1 b). Sur la consolidation nationale, les deux lectures diffèrent d'un facteur douze.",
+        "Confirmer les trois sens retenus sur paiement_ad_hoc, champ nouveau qu'aucun producteur ne remplit encore : une option absente de la liste est déclarée absente, [] signifie qu'aucune de ces options n'est acceptée, une cellule vide que l'information n'est pas connue."
     ],
     "primaryKey": "id_pdc_itinerance",
     "fields": [
@@ -522,6 +523,37 @@
             "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "paiement_ad_hoc",
+            "x-entity": "pdc",
+            "x-afir": "A22",
+            "description": "Options de paiement à l'acte acceptées au point de recharge, hors carte bancaire. Liste, au format JSON (guillemets doubles), parmi : qr_dynamique (code QR généré pour la recharge en cours), site_web (paiement sur un site web, par exemple depuis un code QR fixe), liquide (espèces). La liste vaut déclaration complète : [] signifie qu'aucune de ces options n'est acceptée, une cellule vide que l'information n'est pas connue. Autres options dans paiement_ad_hoc_autre, paiement par carte dans paiement_cb et cb_sans_contact.",
+            "example": ["qr_dynamique", "site_web"],
+            "type": "array",
+            "arrayItem": {
+                "type": "string",
+                "constraints": {
+                    "enum": ["qr_dynamique", "site_web", "liquide"]
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "paiement_ad_hoc_autre",
+            "x-entity": "pdc",
+            "x-afir": "A22",
+            "description": "Autres options de paiement à l'acte, absentes de paiement_ad_hoc. Liste, au format JSON (guillemets doubles), de chaînes libres.",
+            "example": [],
+            "type": "array",
+            "arrayItem": {
+                "type": "string"
+            },
             "constraints": {
                 "required": false
             }
