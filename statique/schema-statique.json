@@ -575,7 +575,8 @@
         {
             "name": "abonnement",
             "x-entity": "pdc",
-            "description": "Possibilité de payer la recharge dans le cadre d'un contrat ou d'un abonnement souscrit auprès d'un fournisseur de service de mobilité (champ A24 « Contract-based (subscription) payment option » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Indiquer \"true\" si ce mode de paiement est possible, \"false\" uniquement s'il est effectivement impossible. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
+            "x-afir": "A24",
+            "description": "Possibilité de payer la recharge dans le cadre d'un contrat ou d'un abonnement souscrit auprès d'un fournisseur de services de mobilité. Indiquer \"true\" si ce mode de paiement est possible, \"false\" uniquement s'il est effectivement impossible. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut). Les fournisseurs acceptés sont listés par emsp.",
             "example": false,
             "type": "boolean",
             "constraints": {
