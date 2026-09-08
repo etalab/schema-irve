@@ -560,10 +560,14 @@
         },
         {
             "name": "complement_paiement",
-            "x-entity": "station",
-            "description": "Informations complémentaires en texte libre sur les moyens de paiement et les fournisseurs de service de paiement disponibles sur la station (champ A23 « Additional information about payment providers » de la Table A de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR).",
-            "example": "Paiement via les applications des principaux opérateurs de mobilité",
-            "type": "string",
+            "x-entity": "pdc",
+            "x-afir": "A23",
+            "description": "Informations complémentaires au sujet des prestataires de services de paiement acceptés pour le paiement à l'acte : nom d'un prestataire, ou précision utile à son sujet. Liste, au format JSON (guillemets doubles), de chaînes libres. Les options de paiement elles-mêmes sont décrites par paiement_ad_hoc, les fournisseurs de services de mobilité par emsp.",
+            "example": ["Prestataire X", "Prestataire Y"],
+            "type": "array",
+            "arrayItem": {
+                "type": "string"
+            },
             "constraints": {
                 "required": false
             }
