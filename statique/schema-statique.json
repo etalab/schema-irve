@@ -221,7 +221,7 @@
         {
             "name": "id_station_local",
             "x-entity": "station",
-            "description": "Identifiant de la station utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio. En cas de station qui n'est pas ouverte à l'itinérance, cet identifiant est indispensable.",
+            "description": "Identifiant de la station dans les systèmes du producteur de données. Sert de clé de rapprochement entre le fichier publié et ces systèmes. Laisser vide plutôt que d'y recopier id_station_itinerance.",
             "example": "01F2KMMRZVQ5FQY882PCJQAPQ0",
             "type": "string",
             "constraints": {
@@ -349,7 +349,7 @@
         {
             "name": "id_pdc_local",
             "x-entity": "pdc",
-            "description": "Identifiant du point de recharge utilisé localement. Si vous n'avez pas d'identifiant unique et que vous souhaitez en récupérer un, vous pouvez vous rendre sur https://heidi.app.etalab.studio. En cas de point de recharge qui n'est pas ouvert à l'itinérance, cet identifiant est indispensable.",
+            "description": "Identifiant du point de recharge dans les systèmes du producteur de données. Sert de clé de rapprochement entre le fichier publié et ces systèmes. Laisser vide plutôt que d'y recopier id_pdc_itinerance.",
             "example": "01F2KNFARDSJG7KEH1YHG4033M",
             "type": "string",
             "constraints": {
