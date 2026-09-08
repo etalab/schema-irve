@@ -372,7 +372,8 @@
         {
             "name": "nb_connecteurs",
             "x-entity": "pdc",
-            "description": "Nombre de connecteurs (prises) présents sur le point de recharge, tous types confondus (champ B2 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Les types de connecteurs disponibles sont décrits par les colonnes booléennes prise_type_*, sans détail par connecteur individuel : un point de recharge équipé de deux connecteurs CCS aura par exemple prise_type_combo_ccs à \"true\" et nb_connecteurs à 2. Un connecteur double (par exemple tête combinée CHAdeMO + T2) compte pour 2 connecteurs. Un connecteur partagé entre deux points de recharge est compté sur chacun des deux points. Cette valeur doit être supérieure ou égale au nombre de colonnes prise_type_* valant \"true\".",
+            "x-afir": "B2",
+            "description": "Nombre de connecteurs (prises) présents sur le point de recharge, tous types confondus. Un point de recharge peut porter plusieurs connecteurs, mais un seul peut être utilisé à la fois : deux connecteurs utilisables simultanément constituent deux points de recharge distincts. Les types de connecteurs disponibles sont décrits par les colonnes booléennes prise_type_*, sans détail par connecteur individuel : un point de recharge équipé de deux connecteurs CCS aura par exemple prise_type_combo_ccs à \"true\" et nb_connecteurs à 2. Un connecteur double (par exemple tête combinée CHAdeMO + T2) compte pour 2 connecteurs. Un connecteur partagé entre deux points de recharge est compté sur chacun des deux points. Cette valeur doit être supérieure ou égale au nombre de colonnes prise_type_* valant \"true\".",
             "example": "2",
             "type": "integer",
             "constraints": {
