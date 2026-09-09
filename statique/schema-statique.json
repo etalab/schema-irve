@@ -477,7 +477,8 @@
         {
             "name": "plug_and_charge",
             "x-entity": "pdc",
-            "description": "Disponibilité de la fonctionnalité « Plug & Charge » (norme ISO 15118) sur le point de recharge : authentification automatique du véhicule au branchement du câble, sans badge, application ni carte (champ B8 de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Indiquer \"true\" si la fonctionnalité est disponible, \"false\" uniquement si elle est effectivement absente. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
+            "x-afir": "B8",
+            "description": "Disponibilité de la fonctionnalité « Plug & Charge » sur le point de recharge : authentification automatique du véhicule au branchement du câble, sans badge, application ni carte. Indiquer \"true\" si la fonctionnalité est disponible, \"false\" uniquement si elle est effectivement absente. Laisser vide si l'information n'est pas connue (ne pas indiquer \"false\" par défaut).",
             "example": false,
             "type": "boolean",
             "constraints": {
