@@ -488,14 +488,29 @@
         {
             "name": "recharge_intelligente",
             "x-entity": "pdc",
-            "description": "Services de recharge intelligente disponibles sur le point de recharge (champ B9 « Smart recharging services » de la Table B de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR). Liste, exprimée au format JSON (guillemets doubles), des services parmi : remote (suivi et contrôle de la recharge à distance), config (configuration des préférences de l'utilisateur pour l'optimisation de la puissance), v2g (recharge bidirectionnelle), autre (autre service de recharge intelligente). Exemple : [\"remote\", \"v2g\"]. Information au niveau du point de recharge.",
-            "example": ["remote", "v2g"],
+            "x-afir": "B9",
+            "description": "Services de recharge intelligente disponibles sur le point de recharge. Liste, au format JSON (guillemets doubles), des services parmi : remote (suivi et contrôle de la recharge à distance), preferences (configuration des préférences de l'utilisateur pour l'optimisation de la puissance), bidirectionnel (recharge bidirectionnelle). Les autres services sont décrits par recharge_intelligente_autre.",
+            "example": ["remote", "bidirectionnel"],
             "type": "array",
             "arrayItem": {
                 "type": "string",
                 "constraints": {
-                    "enum": ["remote", "config", "v2g", "autre"]
+                    "enum": ["remote", "preferences", "bidirectionnel"]
                 }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "recharge_intelligente_autre",
+            "x-entity": "pdc",
+            "x-afir": "B9",
+            "description": "Autres services de recharge intelligente disponibles sur le point de recharge et ne figurant pas dans recharge_intelligente. Liste, au format JSON (guillemets doubles), de chaînes libres nommant chaque service.",
+            "example": [],
+            "type": "array",
+            "arrayItem": {
+                "type": "string"
             },
             "constraints": {
                 "required": false
