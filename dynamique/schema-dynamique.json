@@ -96,7 +96,8 @@
         {
             "name": "occupation_pdc",
             "x-entity": "pdc",
-            "description": "`occupation_pdc` caractérise l’occupation du point de recharge : est-il libre, occupé ou réservé ? En l’absence d’information, occupation_pdc sera égal à ‘inconnu’.",
+            "x-afir": "F2",
+            "description": "`occupation_pdc` caractérise l’occupation du point de recharge : est-il libre, occupé ou réservé ? Ce champ ne décrit que l’occupation : un point non occupé est ‘libre’ même en dehors des horaires d’ouverture de la station ou lorsque etat_pdc vaut ‘hors_service’. En l’absence d’information, occupation_pdc sera égal à ‘inconnu’.",
             "example": "occupe",
             "type": "string",
             "constraints": {
