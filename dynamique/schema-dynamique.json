@@ -80,7 +80,8 @@
         {
             "name": "etat_pdc",
             "x-entity": "pdc",
-            "description": "`etat_pdc` caractérise l’état de fonctionnement du point de recharge : est-il en service ou hors service ? En l’absence d’information, etat_pdc sera égal à ‘inconnu’.",
+            "x-afir": "F1",
+            "description": "`etat_pdc` caractérise l’état de fonctionnement du point de recharge : est-il en service ou hors service ? Indiquer ‘hors_service’ uniquement en cas de problème technique ou de travaux de maintenance : un point reste ‘en_service’ en dehors des horaires d’ouverture de la station, décrits par le champ horaires du fichier statique. En l’absence d’information, etat_pdc sera égal à ‘inconnu’.",
             "example": "en_service",
             "type": "string",
             "constraints": {
