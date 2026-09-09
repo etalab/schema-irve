@@ -373,7 +373,7 @@
             "name": "nb_connecteurs",
             "x-entity": "pdc",
             "x-afir": "B2",
-            "description": "Nombre de connecteurs (prises) présents sur le point de recharge, tous types confondus. Un point de recharge peut porter plusieurs connecteurs, mais un seul peut être utilisé à la fois : deux connecteurs utilisables simultanément constituent deux points de recharge distincts. Les types de connecteurs disponibles sont décrits par les colonnes booléennes prise_type_*, sans détail par connecteur individuel : un point de recharge équipé de deux connecteurs CCS aura par exemple prise_type_combo_ccs à \"true\" et nb_connecteurs à 2. Un connecteur double (par exemple tête combinée CHAdeMO + T2) compte pour 2 connecteurs. Un connecteur partagé entre deux points de recharge est compté sur chacun des deux points. Cette valeur doit être supérieure ou égale au nombre de colonnes prise_type_* valant \"true\".",
+            "description": "Nombre de connecteurs (prises) présents sur le point de recharge, tous types confondus. Un point de recharge peut porter plusieurs connecteurs, mais un seul peut être utilisé à la fois : deux connecteurs utilisables simultanément constituent deux points de recharge distincts. Les types de connecteurs disponibles sont décrits par les colonnes prise_type_*, sans détail par connecteur individuel : un point de recharge équipé de deux connecteurs CCS aura par exemple prise_type_combo_ccs à \"true\" et nb_connecteurs à 2. Un connecteur double (par exemple tête combinée CHAdeMO + T2) compte pour 2 connecteurs. Un connecteur partagé entre deux points de recharge est compté sur chacun des deux points. Cette valeur doit être supérieure ou égale au nombre de types déclarés, c'est-à-dire aux colonnes prise_type_* valant \"true\" augmentées des éléments de prise_type_autre.",
             "example": "2",
             "type": "integer",
             "constraints": {
@@ -384,6 +384,7 @@
         {
             "name": "prise_type_ef",
             "x-entity": "pdc",
+            "x-afir": "B3",
             "description": "Disponibilité d'une prise de type E/F sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -394,7 +395,8 @@
         {
             "name": "prise_type_2",
             "x-entity": "pdc",
-            "description": "Disponibilité d'une prise de type 2 sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
+            "x-afir": "B3",
+            "description": "Disponibilité d'une prise de type 2, appelée « catégorie 2 » par le règlement, sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
             "constraints": {
@@ -404,6 +406,7 @@
         {
             "name": "prise_type_combo_ccs",
             "x-entity": "pdc",
+            "x-afir": "B3",
             "description": "Disponibilité d'une prise de type Combo / CCS sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -414,6 +417,7 @@
         {
             "name": "prise_type_chademo",
             "x-entity": "pdc",
+            "x-afir": "B3",
             "description": "Disponibilité d'une prise de type Chademo sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -424,6 +428,7 @@
         {
             "name": "prise_type_mcs",
             "x-entity": "pdc",
+            "x-afir": "B3",
             "description": "Disponibilité d'une prise de type MCS (Megawatt Charging System) sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux.",
             "example": false,
             "type": "boolean",
@@ -434,9 +439,13 @@
         {
             "name": "prise_type_autre",
             "x-entity": "pdc",
-            "description": "Disponibilité d'une prise d'un autre type sur le point de recharge. Indiquer \"true\" si vrai, \"false\" si faux. Le ou les types de prises sont à préciser dans le champs \"observations\".",
-            "example": false,
-            "type": "boolean",
+            "x-afir": "B3",
+            "description": "Types de prises présents sur le point de recharge et non couverts par les colonnes prise_type_ef, prise_type_2, prise_type_combo_ccs, prise_type_chademo et prise_type_mcs. Liste, au format JSON (guillemets doubles), de chaînes libres nommant chaque type ; il est possible de reprendre les jetons de l'énumération ConnectorType du standard OCPI 2.2.1, par exemple IEC_62196_T3C, IEC_62196_T1, CHAOJI ou GBT_DC. Indiquer une liste vide [] si aucun autre type n'est présent.",
+            "example": ["IEC_62196_T3C"],
+            "type": "array",
+            "arrayItem": {
+                "type": "string"
+            },
             "constraints": {
                 "required": true
             }
@@ -952,7 +961,7 @@
             "name":"coherence-nb-connecteurs",
             "params":{
                 "count_column":"nb_connecteurs",
-                "boolean_columns":["prise_type_ef", "prise_type_2", "prise_type_combo_ccs", "prise_type_chademo", "prise_type_mcs", "prise_type_autre"]
+                "columns":["prise_type_ef", "prise_type_2", "prise_type_combo_ccs", "prise_type_chademo", "prise_type_mcs", "prise_type_autre"]
             }
         },
         {
