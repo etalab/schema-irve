@@ -899,16 +899,6 @@
             }
         },
         {
-            "name": "observations",
-            "x-entity": "pdc",
-            "description": "Champ destiné à préciser les modalités d'accès à la recharge, l'accessibilité, le tarif, les horaires d'ouverture, ...",
-            "example": "Recharge uniquement disponible pendant les horaires d'ouverture du Centre Commercial XY",
-            "type": "string",
-            "constraints": {
-                "required": false
-            }
-        },
-        {
             "name": "horodatage_maj",
             "x-entity": "pdc",
             "description": "Date et heure (UTC) de dernière mise à jour des données de la ligne, c'est-à-dire du point de recharge : chaque pdc d'une même station peut porter un horodatage différent. Un producteur ne disposant que d'une date peut publier T00:00:00Z. Correspond au champ last_updated de l'objet EVSE de la spécification OCPI.",
