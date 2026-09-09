@@ -360,7 +360,8 @@
         {
             "name": "puissance_nominale_kw",
             "x-entity": "pdc",
-            "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule.",
+            "x-afir": "B6",
+            "description": "Puissance maximale en kW que peut recevoir un véhicule connecté au point de recharge, déterminée en prenant en compte les capacités techniques propres du point, la puissance souscrite au réseau de distribution et les caractéristiques de l'installation comme le câblage par exemple, mais sans prendre en compte ni les limitations du connecteur ni celles du véhicule. La puissance totale que la station peut fournir simultanément est décrite par puissance_maximale_station_kw.",
             "example": "7.36",
             "type": "number",
             "x-unit": "kW",
