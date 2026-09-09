@@ -453,7 +453,8 @@
         {
             "name": "courant_ac",
             "x-entity": "pdc",
-            "description": "Capacité du point de recharge à délivrer du courant alternatif (AC), via au moins un de ses connecteurs. Avec courant_dc, ce champ couvre le champ B4 « Type of current » de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR (qui ne distingue pas les phases mono/triphasé). Deux colonnes distinctes permettent de décrire les points de recharge multi-standards délivrant les deux types de courant et de rechercher chaque capacité indépendamment. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\". Indiquer \"true\" si vrai, \"false\" si faux.",
+            "x-afir": "B4",
+            "description": "Capacité du point de recharge à délivrer du courant alternatif (AC), via au moins un de ses connecteurs. Indiquer \"true\" si vrai, \"false\" si faux. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\".",
             "example": true,
             "type": "boolean",
             "constraints": {
@@ -463,7 +464,8 @@
         {
             "name": "courant_dc",
             "x-entity": "pdc",
-            "description": "Capacité du point de recharge à délivrer du courant continu (DC), via au moins un de ses connecteurs. Avec courant_ac, ce champ couvre le champ B4 « Type of current » de l'annexe du règlement d'exécution (UE) 2025/655 pris en application du règlement AFIR. Deux colonnes distinctes permettent de décrire les points de recharge multi-standards délivrant les deux types de courant et de rechercher chaque capacité indépendamment. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\". Indiquer \"true\" si vrai, \"false\" si faux.",
+            "x-afir": "B4",
+            "description": "Capacité du point de recharge à délivrer du courant continu (DC), via au moins un de ses connecteurs. Indiquer \"true\" si vrai, \"false\" si faux. Au moins un des deux champs courant_ac et courant_dc doit valoir \"true\".",
             "example": false,
             "type": "boolean",
             "constraints": {
