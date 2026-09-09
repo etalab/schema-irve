@@ -156,6 +156,7 @@
             }
         }
     ],
+    "x-afir": "F3",
     "primaryKey": ["tarif_id", "element_index"],
     "custom_checks": [
         {
