@@ -549,16 +549,6 @@
             }
         },
         {
-            "name": "paiement_autre",
-            "x-entity": "pdc",
-            "description": "Possibilité de paiement par un autre moyen (qui peut être précisé dans le champs \"observation\". Indiquer \"true\" si vrai, \"false\" si faux.",
-            "example": false,
-            "type": "boolean",
-            "constraints": {
-                "required": false
-            }
-        },
-        {
             "name": "paiement_ad_hoc",
             "x-entity": "pdc",
             "x-afir": "A22",
@@ -721,16 +711,6 @@
             "constraints": {
                 "required": false,
                 "minimum": 0
-            }
-        },
-        {
-            "name": "restriction_gabarit",
-            "x-entity": "station",
-            "description": "Déprécié : utiliser les colonnes gabarit_masse_max_t / gabarit_hauteur_max_m / gabarit_longueur_max_m / gabarit_largeur_max_m (AFIR A17). Champ historique en texte libre décrivant les restrictions d'accès liées au gabarit des véhicules.",
-            "example": "Hauteur maximale 2m",
-            "type": "string",
-            "constraints": {
-                "required": false
             }
         },
         {
