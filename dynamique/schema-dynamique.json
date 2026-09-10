@@ -65,6 +65,9 @@
             "role": "contributor"
         }
     ],
+    "x-todo": [
+        "Arbitrer avec la DGEC le maintien des colonnes etat_prise_type_2, etat_prise_type_combo_ccs, etat_prise_type_chademo, etat_prise_type_ef et etat_prise_type_mcs : le règlement place le statut opérationnel au niveau du point de recharge (entrée F1) et le standard OCPI ne porte aucun statut sur son objet Connector, de sorte que les producteurs n'ont pas de source pour ces colonnes. Sur la consolidation dynamique nationale, 36,5 % des lignes renseignent au moins un connecteur, mais 0,32 % seulement déclarent un connecteur hors service sur un point en service — la seule information que etat_pdc ne porte pas — et elles proviennent de 11 producteurs sur 149. La colonne etat_prise_type_mcs n'a aucun remplissage."
+    ],
     "fields": [
         {
             "name": "id_pdc_itinerance",
