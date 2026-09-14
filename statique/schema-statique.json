@@ -1014,7 +1014,7 @@
             "name":"foreign-key-array",
             "params":{
                 "column":"tarif_ids",
-                "resource":"irve-statique-tarifs",
+                "resource":"irve-tarifs",
                 "reference_column":"tarif_id"
             }
         },
@@ -1022,14 +1022,14 @@
             "name":"presence-tarif-adhoc",
             "params":{
                 "column":"tarif_ids",
-                "resource":"irve-statique-tarifs"
+                "resource":"irve-tarifs"
             }
         },
         {
             "name":"unicite-tarif-applicable",
             "params":{
                 "column":"tarif_ids",
-                "resource":"irve-statique-tarifs"
+                "resource":"irve-tarifs"
             }
         },
         {

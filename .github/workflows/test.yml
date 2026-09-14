@@ -38,9 +38,9 @@ jobs:
       run: |
         uv run frictionless validate --type schema dynamique/schema-dynamique.json
 
-    - name: Vérification du schéma statique-tarifs
+    - name: Vérification du schéma tarifs
       run: |
-        uv run frictionless validate --type schema statique-tarifs/schema-statique-tarifs.json
+        uv run frictionless validate --type schema tarifs/schema-tarifs.json
 
     - name: Vérification de l'absence de liens cassés
       run: elixir checks.exs

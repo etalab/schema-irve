@@ -142,7 +142,7 @@ Ce champ est le pendant dynamique de `prise_type_mcs` introduit dans le schéma 
 
 ---
 
-## 3. Nouveau schéma : tarifs (`schema-statique-tarifs.json`)
+## 3. Nouveau schéma : tarifs (`schema-tarifs.json`)
 
 ### 3.1 Principe
 
@@ -240,7 +240,7 @@ Le fichier `datapackage.json` déclare désormais trois ressources :
 | Ressource | Fichier | Schéma |
 |-------------|---------|--------|
 | `irve-statique` | statique | `schema-statique.json` |
-| `irve-statique-tarifs` | tarifs | `schema-statique-tarifs.json` |
+| `irve-tarifs` | tarifs | `schema-tarifs.json` |
 | `irve-dynamique` | dynamique | `schema-dynamique.json` |
 
 La relation entre statique et tarifs est assurée par le champ `tarif_ids` (foreign key array) avec vérification d'intégrité référentielle.

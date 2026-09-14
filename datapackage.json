@@ -15,13 +15,13 @@
             "documentation": "statique/README.md"
         },
         {
-            "name": "irve-statique-tarifs",
-            "path": "statique-tarifs/exemple-valide-statique-tarifs.csv",
+            "name": "irve-tarifs",
+            "path": "tarifs/exemple-valide-tarifs.csv",
             "profile": "tabular-data-resource",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "statique-tarifs/schema-statique-tarifs.json"
+            "schema": "tarifs/schema-tarifs.json"
         },
         {
             "name": "irve-dynamique",
