@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$comment": "Adapté du travail de Philippe Thomy (loco-labs) et de la spécification OCPI 2.2/2.3",
     "title": "OCPI Tariff Element Restrictions",
-    "description": "Conditions d'application d'un élément tarifaire. Structure calquée sur l'objet TariffRestrictions de la spécification OCPI 2.2/2.3 (https://ocpi-protocol.org).",
+    "description": "Conditions d'application d'un élément tarifaire. Structure calquée sur l'objet TariffRestrictions de la spécification OCPI 2.2/2.3 (https://github.com/ocpi/ocpi/blob/v2.3.0/mod_tariffs.asciidoc). Les heures, dates et jours s'entendent en heure locale de la station.",
     "type": "object",
     "properties": {
         "start_time": {
