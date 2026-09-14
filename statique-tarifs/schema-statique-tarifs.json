@@ -37,7 +37,7 @@
         {
             "name": "element_index",
             "x-entity": "tarif_element",
-            "description": "Index de l'élément tarifaire au sein du tarif (0-based). Permet de conserver l'ordre d'application des éléments (en OCPI, le premier élément dont les restrictions sont satisfaites s'applique). Le couple (tarif_id, element_index) doit être unique.",
+            "description": "Index de l'élément tarifaire au sein du tarif (0-based). Permet de conserver l'ordre d'application des éléments : comme en OCPI, la sélection se fait par type de composant de prix et non par élément entier. Un élément ENERGY et un élément TIME peuvent s'appliquer en même temps, chacun étant le premier de son type dont les restrictions sont satisfaites. Le couple (tarif_id, element_index) doit être unique.",
             "example": "0",
             "type": "integer",
             "constraints": {
