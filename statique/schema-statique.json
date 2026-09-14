@@ -318,7 +318,7 @@
             "type": "integer",
             "constraints": {
                 "required": true,
-                "minimum": 0
+                "minimum": 1
             }
         },
         {
