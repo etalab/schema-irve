@@ -138,6 +138,12 @@ defmodule SchemaIrveTest do
     assert statique == dynamique
   end
 
+  test "tarif_ids has the same pattern as tarif_id in the tarifs schema" do
+    statique = field!("statique/schema-statique.json", "tarif_ids")["arrayItem"]["constraints"]["pattern"]
+    tarifs = field!("tarifs/schema-tarifs.json", "tarif_id")["constraints"]["pattern"]
+    assert statique == tarifs
+  end
+
   test "restrictions is a valid JSON Schema" do
     assert %ExJsonSchema.Schema.Root{} = resolve_schema!("tarifs/restrictions.schema.json")
   end
