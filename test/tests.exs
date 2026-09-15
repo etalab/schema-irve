@@ -132,6 +132,12 @@ defmodule SchemaIrveTest do
     end
   end
 
+  test "id_pdc_itinerance has the same pattern in the statique and dynamique schemas" do
+    statique = field!("statique/schema-statique.json", "id_pdc_itinerance")["constraints"]["pattern"]
+    dynamique = field!("dynamique/schema-dynamique.json", "id_pdc_itinerance")["constraints"]["pattern"]
+    assert statique == dynamique
+  end
+
   test "restrictions is a valid JSON Schema" do
     assert %ExJsonSchema.Schema.Root{} = resolve_schema!("tarifs/restrictions.schema.json")
   end
