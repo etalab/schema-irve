@@ -200,6 +200,16 @@
             }
         }
     ],
+    "primaryKey": "id_pdc_itinerance",
+    "foreignKeys": [
+        {
+            "fields": "id_pdc_itinerance",
+            "reference": {
+                "resource": "irve-statique",
+                "fields": "id_pdc_itinerance"
+            }
+        }
+    ],
     "missingValues": [
         ""
     ]
