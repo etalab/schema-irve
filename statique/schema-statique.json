@@ -122,10 +122,6 @@
         "A11": "Ville ou localité de la station : aucune colonne dédiée. Le nom de la commune est déductible de code_insee_commune via le code officiel géographique de l'INSEE.",
         "A15": "Fuseau horaire de la station : aucune colonne dédiée. La zone est déductible de code_insee_commune (Europe/Paris en métropole, un fuseau distinct outre-mer). Elle s'exprime comme un nom de zone IANA et non comme un décalage fixe, le décalage dépendant de l'instant considéré du fait de l'heure d'été."
     },
-    "x-todo": [
-        "Confirmer les trois sens retenus sur paiement_ad_hoc, champ nouveau qu'aucun producteur ne remplit encore : une option absente de la liste est déclarée absente, [] signifie qu'aucune de ces options n'est acceptée, une cellule vide que l'information n'est pas connue.",
-        "Vérifier avec la DGEC qu'un tarif rattaché au point de recharge suffit, alors qu'il ne peut pas être différencié par connecteur : OCPI rattache le tarif au connecteur, mais le connecteur n'est une entité ni du règlement, qui s'arrête au point de recharge, ni de notre schéma, où il n'apparaît qu'à travers nb_connecteurs et les colonnes prise_type_*."
-    ],
     "primaryKey": "id_pdc_itinerance",
     "fields": [
         {
