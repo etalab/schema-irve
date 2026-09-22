@@ -8,7 +8,7 @@
     "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/tarifs/schema-tarifs.json",
     "created": "2026-05-01",
     "lastModified": "2026-06-17",
-    "version": "v3.0.0-rc.1",
+    "version": "v3.0.0-alpha.1",
     "contributors": [
         {
             "title": "Thibaut Barrère",

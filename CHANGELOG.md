@@ -1,6 +1,6 @@
 # Changements
 
-## 3.0.0-rc.1
+## 3.0.0-alpha.1
 
 TODO : sera régénéré depuis les schémas en fonction de la version finale.
 
