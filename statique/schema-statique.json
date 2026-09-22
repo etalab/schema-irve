@@ -659,6 +659,7 @@
             "name": "horaires",
             "x-entity": "station",
             "x-afir": "A14",
+            "x-todo": "Homogénéiser vers la syntaxe OSM : l'exemple et la fixture séparent les règles par une virgule, la description par un point-virgule.",
             "description": "Amplitude d’ouverture de la station, dans un sous-ensemble de la syntaxe OSM opening_hours (https://wiki.openstreetmap.org/wiki/Key:opening_hours) : 24/7, ou des règles séparées par un point-virgule associant des jours en anglais abrégés (Mo-Fr, Mo,We,Fr) à des plages HH:MM-HH:MM. Les constructions avancées (jours fériés, fermetures, mois, heures solaires, commentaires, règles de repli) ne sont pas acceptées. Les jours et plages horaires s'entendent en heure locale de la station : Europe/Paris en métropole, fuseau local outre-mer.",
             "example": "Mo-Fr 08:00-12:00,Mo-Fr 14:00-18:00,Th 08:00-18:00",
             "type": "string",
