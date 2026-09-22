@@ -164,7 +164,7 @@
             "example": "Société X, Entité Y",
             "type": "string",
             "constraints": {
-                "required": false
+                "required": true
             }
         },
         {
