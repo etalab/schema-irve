@@ -616,6 +616,7 @@
             }
         },
         {
+            "x-comment": "ATTENTION : tarif_ids est techniquement une liste de clés étrangères vers tarif_id (fichier tarifs), mais Table Schema ne permet pas actuellement d'exprimer une clé étrangère sur une colonne de type liste. Ce lien n'est donc pas déclaré en foreignKeys et les validateurs génériques (Frictionless, Validata) ne le vérifient pas. Il sera vérifié par le contrôle personnalisé foreign-key-array (custom_checks) dans le validateur du PAN.",
             "name": "tarif_ids",
             "x-entity": "pdc",
             "description": "Liste des identifiants de tarifs applicables au point de recharge. Plusieurs tarifs peuvent être déclarés si leurs périodes de validité ne se chevauchent pas (start_date_time, end_date_time), ce qui permet d'annoncer un tarif à venir ; à un instant donné, un seul tarif s'applique. L'ordre de la liste ne porte aucune priorité. Chaque identifiant débute par FR suivi du trigramme AFIREV de l'opérateur qui gère la tarification (CPO) et de T, suivis d'un suffixe libre. Voir le fichier tarifaire détaillé pour la description complète.",
@@ -907,6 +908,7 @@
             }
         }
     ],
+     "x-todo-custom-checks": "Contrôles en cours d'affinage : les custom_checks ne sont pas encore alignés sur les champs v3 et ne doivent pas être pris au pied de la lettre. Liste, paramètres et sémantique seront revus en alpha candidate 2.",
      "custom_checks":[
         {
             "name":"valid-afirev-trigram",
@@ -1006,6 +1008,7 @@
             }
         },
         {
+            "x-comment":"Vérifie la liste de clés étrangères tarif_ids -> tarif_id, que Table Schema ne permet pas actuellement d'exprimer en foreignKeys (colonne de type liste). Exécuté par le validateur du PAN, pas par les validateurs génériques.",
             "name":"foreign-key-array",
             "params":{
                 "column":"tarif_ids",
