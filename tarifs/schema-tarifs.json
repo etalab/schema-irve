@@ -5,7 +5,7 @@
     "description": "Spécification du fichier d'échange relatif aux tarifs de recharge pour véhicules électriques. Chaque ligne correspond à un élément tarifaire (au sens OCPI). Un tarif peut comporter plusieurs lignes si plusieurs éléments s'appliquent (ex : tranches horaires, paliers de durée). Le lien avec les points de recharge se fait via le champ tarif_ids du fichier statique.",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/tarifs/schema-tarifs.json",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3.0.0-alpha.1/tarifs/schema-tarifs.json",
     "created": "2026-05-01",
     "lastModified": "2026-10-04",
     "version": "v3.0.0-alpha.1",

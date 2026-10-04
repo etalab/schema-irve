@@ -5,15 +5,15 @@
     "description": "Spécification du fichier d'échange relatif aux données concernant la localisation géographique et les caractéristiques techniques des stations et des points de recharge pour véhicules électriques. Chaque ligne du fichier correspond à un point de recharge (PDC).",
     "countryCode": "FR",
     "homepage": "https://github.com/etalab/schema-irve",
-    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique/schema-statique.json",
+    "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3.0.0-alpha.1/statique/schema-statique.json",
     "resources": [
         {
             "title": "Exemple de fichier IRVE valide",
-            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique/exemple-valide-statique.csv"
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3.0.0-alpha.1/statique/exemple-valide-statique.csv"
         },
         {
             "title": "Exemple de fichier IRVE invalide",
-            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3-wip/statique/exemple-invalide-statique.csv"
+            "path": "https://raw.githubusercontent.com/etalab/schema-irve/v3.0.0-alpha.1/statique/exemple-invalide-statique.csv"
         }
     ],
     "sources": [
