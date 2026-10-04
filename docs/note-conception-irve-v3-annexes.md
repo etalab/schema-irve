@@ -406,7 +406,7 @@ Référence : [annexe du règlement d'exécution (UE) 2025/655](https://eur-lex.
 | B3 | Type de connecteur | point | `prise_type_ef`, `prise_type_2`, `prise_type_combo_ccs`, `prise_type_chademo`, `prise_type_mcs`, `prise_type_autre` |
 | B4 | Type de courant | point | `courant_ac`, `courant_dc` |
 | B5 | Puissance maximale de la station | station | `puissance_maximale_station_kw` |
-| B6 | Puissance maximale du point (le JO écrit « de la station », coquille) | point | `puissance_nominale_kw` |
+| B6 | Puissance maximale du point de recharge (intitulée « de la station » dans l'annexe, mais définie au niveau du point) | point | `puissance_nominale_kw` |
 | B7 | Prestataires de services de mobilité (recharge contractuelle) | station | `emsp` |
 | B8 | Fonction « brancher et charger » | point | `plug_and_charge` |
 | B9 | Services de recharge intelligente | point | `recharge_intelligente`, `recharge_intelligente_autre` |
