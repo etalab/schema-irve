@@ -8,6 +8,8 @@
 
 > **Annexes.** La liste détaillée des champs et la correspondance avec AFIR figurent dans les [annexes](note-conception-irve-v3-annexes.md), générées automatiquement à partir des schémas. Elles sont temporaires : elles remplacent l'affichage des champs sur [schema.data.gouv.fr](https://schema.data.gouv.fr/), qui ne sera disponible que pour la version finale `3.0.0`.
 
+> **Rédaction.** Le contenu de ce document, les choix de conception et leur validation relèvent de l'équipe du PAN, qui en assume la responsabilité. L'IA a été utilisée comme assistant de rédaction et de vérification (mise en forme, cohérence avec les schémas, relecture). Si vous constatez des coquilles, merci de nous remonter l'information pour prise en compte.
+
 ## L'essentiel de cette nouvelle v3
 
 - **Trois fichiers CSV**, décrits par des Table Schema : **statique** (une ligne par point de recharge, enrichi depuis la v2), **dynamique** (état en temps réel, une ligne par point de recharge) et **tarifs** (nouveau : prix de la recharge ad hoc, sur le modèle OCPI).
