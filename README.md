@@ -1,12 +1,13 @@
 # Infrastructures de recharge pour véhicules électriques
 
-Il existe deux schémas relatifs aux données des points de recharge pour véhicules électriques :
+Il existe trois schémas relatifs aux données des points de recharge pour véhicules électriques :
 - Un schéma pour les **données statiques**. Ces données contiennent la localisation géographique et les caractéristiques techniques des stations et des points de recharge
 - Un schéma pour les **données dynamiques**. Ces données contiennent l'état de fonctionnement et la disponibilité des points de recharge et de leurs connecteurs
+- Un schéma pour les **données tarifaires**. Ces données contiennent les prix de la recharge ad hoc applicables aux points de recharge
 
 ## Contexte
 
-Dans le but de constituer un répertoire national de données relatif à l’offre de recharge pour véhicules électriques, ouvert et accessible à tous, les aménageurs d’infrastructures de recharge pour véhicules électriques (IRVE), ou les personnes qu’ils désignent, doivent publier sur la plateforme data.gouv.fr les données pour tout point de recharge en service et ouvert au public. Cette ouverture de données doit être conforme aux schémas de données statique et dynamique en vigueur.
+Dans le but de constituer un répertoire national de données relatif à l’offre de recharge pour véhicules électriques, ouvert et accessible à tous, les aménageurs d’infrastructures de recharge pour véhicules électriques (IRVE), ou les personnes qu’ils désignent, doivent publier sur la plateforme data.gouv.fr les données pour tout point de recharge en service et ouvert au public. Cette ouverture de données doit être conforme aux schémas de données statique, dynamique et tarifs en vigueur.
 
 ## Documents de cadrage juridique
 
