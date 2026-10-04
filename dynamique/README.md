@@ -23,10 +23,6 @@ Les données sont à remplir au format CSV, encodage UTF-8.
 Pour être conformes, les données dynamiques doivent faire référence aux données statiques via la clé commune  `id_pdc_itinerance`. 
 Chaque nouvel état de fonctionnement ou de disponibilité d’un point de recharge (ou d’un de ses connecteurs) doit nécessairement entraîner la mise à jour des données dynamiques. 
  
-## Consolidation
-
-Il n’existe pas de consolidation nationale des flux dynamiques pour l’heure. 
- 
 ## Voir aussi
 
 - [Documentation sur les données dynamiques](https://doc.transport.data.gouv.fr/producteurs/infrastructures-de-recharge-de-vehicules-electriques-irve/donnees-dynamiques)
