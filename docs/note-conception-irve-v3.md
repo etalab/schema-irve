@@ -27,7 +27,7 @@
 2. **Améliorer la qualité du fichier national.** Certaines erreurs reviennent régulièrement dans les données publiées : coordonnées inversées ou saisies au niveau du point plutôt que de la station, connecteurs déclarés comme des points de recharge, identifiants absents ou en double, codes INSEE confondus avec des codes postaux. La v3 vise à les limiter par des noms de champs plus explicites et des contraintes plus strictes.
 3. **Rendre le prix de la recharge lisible.** Le prix ad hoc (F3) est une information très attendue des usagers et encore peu présente dans les données ouvertes.
 4. **Limiter le coût d'adoption** de la v3 pour les producteurs, le PAN et les réutilisateurs.
-5. **Rester validable, consolidable et diffusable à grande échelle.** Le fichier national agrège aujourd'hui plus de 1 800 fichiers, publiés par de nombreux producteurs. La taille des fichiers, la bande passante nécessaire à leur diffusion et le coût de leur consolidation doivent rester maîtrisés (voir 3.1).
+5. **Rester validable, consolidable et diffusable à grande échelle.** Le fichier national agrège aujourd'hui plus de 1 700 fichiers valides, publiés par de nombreux producteurs. La taille des fichiers, la bande passante nécessaire à leur diffusion et le coût de leur consolidation doivent rester maîtrisés (voir 3.1).
 
 **Vers DATEX II.** Le [règlement d'exécution](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32025R0655#art_1) prévoit une diffusion au format DATEX II. La v3 part de la v2, déjà produite à grande échelle (plus de 165 000 points de recharge en statique, une part croissante en dynamique) : c'est le point de départ le plus pragmatique. Une représentation DATEX II semble, sur le papier, dérivable de la v3.
 
