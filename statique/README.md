@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux données statiques concernant l
 A partir du mars 2026, un travail est mené afin de faire évoluer le schéma de données statiques relatif aux infrastructures de recharge pour véhicules électriques (IRVE) vers une nouvelle version.
 Le règlement AFIR (UE 2023/1804) entré en vigueur prescrit l'utilisation d'un nouveau schéma de données pour la déclaration en open data. Ce modèle inscrit à l'article 20.2 du règlement comprend de nouveaux champs porteurs d'informations importantes pour les usagers, qui ne sont pas couverts par le schéma français actuellement en vigueur. 
 La construction et la mise en ligne d'une consolidation complète sur les infrastructures de recharge ouvertes au public en s'appuyant sur ce schéma doit répondre aux interrogations fréquentes sur le manque de lisibilité du service de recharge.
-Si vous avez besoin d'informations, une adresse de contact dédiée a été mise en place dans le cadre de ces travaux : irve@transport.data.gouv.fr
+Si vous avez besoin d'informations, une adresse de contact dédiée a été mise en place dans le cadre de ces travaux : contact@transport.data.gouv.fr
 
 
 ## Contexte
