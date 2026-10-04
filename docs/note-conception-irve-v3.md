@@ -64,7 +64,7 @@ erDiagram
     }
 ```
 
-Le diagramme ne montre que les entités retenues et les clés. L'ensemble des champs, avec leurs types, contraintes et descriptions, est défini dans les schémas [`schema-statique.json`](../statique/schema-statique.json), [`schema-dynamique.json`](../dynamique/schema-dynamique.json) et [`schema-tarifs.json`](../tarifs/schema-tarifs.json), et récapitulé en [annexe A](note-conception-irve-v3-annexes.md#a-champs-des-trois-fichiers).
+Le diagramme ne montre que les entités retenues et les clés. L'ensemble des champs, avec leurs types, contraintes et descriptions, est défini dans les schémas [`schema-statique.json`](../statique/schema-statique.json), [`schema-dynamique.json`](../dynamique/schema-dynamique.json) et [`schema-tarifs.json`](../tarifs/schema-tarifs.json), et récapitulé en [annexes A à C](note-conception-irve-v3-annexes.md#a-champs-du-fichier-statique).
 
 | Fichier | Une ligne correspond à | Clé | Entités décrites |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Le fichier tarifs couvre le prix ad hoc (F3). Il reprend le modèle tarifaire OC
 
 ## 5. Couverture d'AFIR et écarts assumés
 
-Les 37 entrées des tableaux A, B et F ont toutes une correspondance dans la v3 (détail en [annexe B](note-conception-irve-v3-annexes.md#b-correspondance-avec-les-tableaux-a-b-et-f-dafir)).
+Les 37 entrées des tableaux A, B et F ont toutes une correspondance dans la v3 (détail en [annexe D](note-conception-irve-v3-annexes.md#d-correspondance-avec-les-tableaux-a-b-et-f-dafir)).
 
 Écarts de forme assumés par rapport à l'annexe :
 
@@ -138,7 +138,7 @@ Les 37 entrées des tableaux A, B et F ont toutes une correspondance dans la v3 
 
 Au-delà des types, motifs et énumérations, les schémas statique et tarifs déclarent des contrôles métier (`custom_checks`) : trigrammes AFIREV, SIREN, cohérence des coordonnées, du code postal et du code INSEE, connecteurs déclarés comme points, liens vers les tarifs… Les validateurs génériques ne les exécutent pas ; le validateur du PAN les met en œuvre.
 
-> **⚠ Contrôles en cours d'affinage.** Ils ne sont pas encore alignés sur les champs de la v3 et ne doivent pas être pris au pied de la lettre. Leur liste, leurs paramètres et leur sémantique seront revus dans les toutes prochaines versions (liste actuelle en [annexe D](note-conception-irve-v3-annexes.md#d-contrôles-déclarés-custom_checks)).
+> **⚠ Contrôles en cours d'affinage.** Ils ne sont pas encore alignés sur les champs de la v3 et ne doivent pas être pris au pied de la lettre. Leur liste, leurs paramètres et leur sémantique seront revus dans les toutes prochaines versions (liste actuelle en [annexe F](note-conception-irve-v3-annexes.md#f-contrôles-déclarés-custom_checks)).
 
 ---
 
