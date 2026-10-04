@@ -21,7 +21,8 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "tarifs/schema-tarifs.json"
+            "schema": "tarifs/schema-tarifs.json",
+            "documentation": "tarifs/README.md"
         },
         {
             "name": "irve-dynamique",
