@@ -304,7 +304,7 @@
             }
         },
         {
-            "name": "nbre_pdc",
+            "name": "nb_pdc",
             "x-entity": "station",
             "x-afir": "A3",
             "description": "Le nombre de points de recharge sur la station.",
