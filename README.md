@@ -5,7 +5,7 @@ Il existe trois schémas relatifs aux données des points de recharge pour véhi
 - Un schéma pour les **données dynamiques**. Ces données contiennent l'état de fonctionnement et la disponibilité des points de recharge et de leurs connecteurs
 - Un schéma pour les **données tarifaires**. Ces données contiennent les prix de la recharge ad hoc applicables aux points de recharge
 
-La version 3 de ces schémas est publiée en alpha, pour concertation : voir la [note de conception](docs/note-conception-irve-v3.md) et ses [annexes](docs/note-conception-irve-v3-annexes.md).
+La version 3 de ces schémas est publiée en alpha, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, avant une ouverture plus large : voir la [note de conception](docs/note-conception-irve-v3.md) et ses [annexes](docs/note-conception-irve-v3-annexes.md).
 
 ## Contexte
 

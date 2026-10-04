@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux prix de la recharge ad hoc (san
 
 Le règlement AFIR (UE 2023/1804) impose la publication du prix de la recharge ad hoc (entrée F3 du tableau F de l'annexe du [règlement d'exécution (UE) 2025/655](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32025R0655#anx_1)). Ce schéma, nouveau en version 3, porte cette information dans un fichier distinct du fichier statique.
 
-La version 3 du schéma est publiée en alpha, pour concertation. Ses objectifs et ses choix sont expliqués dans la [note de conception](../docs/note-conception-irve-v3.md) ; la liste détaillée des champs figure dans ses [annexes](../docs/note-conception-irve-v3-annexes.md).
+La version 3 du schéma est publiée en alpha, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, avant une ouverture plus large. Ses objectifs et ses choix sont expliqués dans la [note de conception](../docs/note-conception-irve-v3.md) ; la liste détaillée des champs figure dans ses [annexes](../docs/note-conception-irve-v3-annexes.md).
 
 ## Modèle
 

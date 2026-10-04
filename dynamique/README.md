@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux données dynamiques concernant 
 
 Dans le but de constituer un répertoire national de données relatif à l’offre de recharge pour véhicules électriques, ouvert et accessible à tous, les aménageurs d’infrastructures de recharge pour véhicules électriques (IRVE), ou les personnes qu’ils désignent, doivent publier sur la plateforme data.gouv.fr les données pour tout point de recharge en service et ouvert au public. L’ouverture des données dynamiques relatives à l’état de fonctionnement et la disponibilité des points de recharge et de leurs connecteurs s’effectue selon les modalités définies par arrêté et par le règlement AFIR (UE 2023/1804) : son [règlement d'exécution (UE) 2025/655](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32025R0655#art_2) impose une mise à jour des données dynamiques au plus tard une minute après toute modification.
 
-La version 3 du schéma est publiée en alpha, pour concertation. Ses objectifs et ses choix sont expliqués dans la [note de conception](../docs/note-conception-irve-v3.md) ; la liste détaillée des champs figure dans ses [annexes](../docs/note-conception-irve-v3-annexes.md).
+La version 3 du schéma est publiée en alpha, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, avant une ouverture plus large. Ses objectifs et ses choix sont expliqués dans la [note de conception](../docs/note-conception-irve-v3.md) ; la liste détaillée des champs figure dans ses [annexes](../docs/note-conception-irve-v3-annexes.md).
 
 ## Documents de cadrage technique
 
