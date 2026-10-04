@@ -159,6 +159,7 @@
     ],
     "x-afir": "F3",
     "primaryKey": ["tarif_id", "element_index"],
+    "x-todo-custom-checks": "Contrôles en cours d'affinage : les custom_checks ne sont pas encore alignés sur les champs v3 et ne doivent pas être pris au pied de la lettre. Liste, paramètres et sémantique seront revus en alpha candidate 2.",
     "custom_checks": [
         {
             "name": "valid-afirev-trigram",
