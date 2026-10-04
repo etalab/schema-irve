@@ -2,7 +2,7 @@
 
 *Version `v3.0.0-alpha.1` · octobre 2026*
 
-> **Version alpha.** Cette note accompagne une version alpha du schéma. Le schéma est relativement finalisé ; cette note pourra toutefois évoluer et contenir encore des erreurs ou des imprécisions. Vos retours sont les bienvenus, à [irve@transport.data.gouv.fr](mailto:irve@transport.data.gouv.fr) ou par un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new).
+> **Version alpha.** Cette note accompagne une version alpha du schéma. Le schéma est relativement finalisé ; cette note pourra toutefois évoluer et contenir encore des erreurs ou des imprécisions. Vos retours sont les bienvenus, à [contact@transport.data.gouv.fr](mailto:contact@transport.data.gouv.fr) ou par un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new).
 
 > **Statut.** La spécification du schéma IRVE v3 est constituée des fichiers [Table Schema](https://specs.frictionlessdata.io/table-schema/) publiés sur le dépôt [`etalab/schema-irve`](https://github.com/etalab/schema-irve/tree/v3-wip), complétés de deux JSON Schema pour les colonnes `restrictions` et `price_components` du fichier tarifs ([`restrictions.schema.json`](../tarifs/restrictions.schema.json), [`price-components.schema.json`](../tarifs/price-components.schema.json), référencés par la propriété `x-json-schema` du champ). Ce sont ces fichiers qui font foi ; cette note en explique les objectifs et les choix.
 
