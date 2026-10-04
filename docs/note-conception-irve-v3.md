@@ -1,6 +1,6 @@
 # Schéma IRVE v3 : note de conception
 
-*Version `3.0.0-alpha.1` · octobre 2026*
+*Version `v3.0.0-alpha.1` · octobre 2026*
 
 > **Version alpha.** Cette note accompagne une version alpha du schéma. Le schéma est relativement finalisé ; cette note pourra toutefois évoluer et contenir encore des erreurs ou des imprécisions. Vos retours sont les bienvenus, à [irve@transport.data.gouv.fr](mailto:irve@transport.data.gouv.fr) ou par un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new).
 

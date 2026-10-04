@@ -1,6 +1,6 @@
 # Schéma IRVE v3 : annexes
 
-> **Document temporaire.** Cette annexe remplace l'affichage des champs sur [schema.data.gouv.fr](https://schema.data.gouv.fr/), qui ne sera disponible que pour la version finale `3.0.0`.
+> **Document temporaire.** Cette annexe remplace l'affichage des champs sur [schema.data.gouv.fr](https://schema.data.gouv.fr/), qui ne sera disponible que pour la version finale `v3.0.0`.
 
 *Version `v3.0.0-alpha.1`. Généré automatiquement à partir des schémas.*
 
