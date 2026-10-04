@@ -6,7 +6,7 @@
 
 > **Statut.** La spécification du schéma IRVE v3 est constituée des fichiers [Table Schema](https://specs.frictionlessdata.io/table-schema/) publiés sur le dépôt [`etalab/schema-irve`](https://github.com/etalab/schema-irve/tree/v3-wip), complétés de deux JSON Schema pour les colonnes `restrictions` et `price_components` du fichier tarifs ([`restrictions.schema.json`](../tarifs/restrictions.schema.json), [`price-components.schema.json`](../tarifs/price-components.schema.json), référencés par la propriété `x-json-schema` du champ). Ce sont ces fichiers qui font foi ; cette note en explique les objectifs et les choix.
 
-> **Annexes.** La liste détaillée des champs et la correspondance avec AFIR figurent dans les [annexes](note-conception-irve-v3-annexes.md), générées automatiquement à partir des schémas. Elles sont temporaires : elles remplacent l'affichage des champs sur [schema.data.gouv.fr](https://schema.data.gouv.fr/), qui ne sera disponible que pour la version finale `3.0.0`.
+> **Annexes.** La liste détaillée des champs et la correspondance avec AFIR figurent dans les [annexes](note-conception-irve-v3-annexes.md), générées automatiquement à partir des schémas. Elles sont temporaires : elles remplacent l'affichage des champs sur [schema.data.gouv.fr](https://schema.data.gouv.fr/), qui ne sera disponible que pour la version finale `v3.0.0`.
 
 > **Rédaction.** Le contenu de ce document, les choix de conception et leur validation relèvent de l'équipe du PAN, qui en assume la responsabilité. L'IA a été utilisée comme assistant de rédaction et de vérification (mise en forme, cohérence avec les schémas, relecture). Si vous constatez des coquilles, merci de nous remonter l'information pour prise en compte.
 
