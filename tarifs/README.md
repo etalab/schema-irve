@@ -32,5 +32,5 @@ L'identifiant `tarif_id` est délivré selon les modalités de l'AFIREV, de la f
 ## Voir aussi
 
 * Pour poser une question, commenter, faire un retour d’usage ou contribuer à l’amélioration du modèle de données, vous pouvez :
-  * adresser un message à [contact@transport.data.gouv.fr](mailto:contact@transport.data.gouv.fr)
+  * adresser un message à [irve@transport.data.gouv.fr](mailto:irve@transport.data.gouv.fr)
   * ouvrir un ticket sur le [dépôt GitHub du schéma](https://github.com/etalab/schema-irve/issues/new)
