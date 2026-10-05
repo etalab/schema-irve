@@ -2,7 +2,7 @@
 
 ## v3.0.0-alpha.1
 
-Première version alpha de la v3, publiée en alpha, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, avant une ouverture plus large. Le schéma couvre les données exigées par le règlement AFIR (UE 2023/1804) et son règlement d'exécution (UE) 2025/655.
+Première version alpha de la v3, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, et ouverte aux producteurs qui le peuvent, pour l'examiner et proposer des ajustements. Le schéma couvre les données exigées par le règlement AFIR (UE 2023/1804) et son règlement d'exécution (UE) 2025/655.
 
 - Nouveau schéma **tarifs** (`tarifs/schema-tarifs.json`), sur le modèle OCPI, pour le prix de la recharge ad hoc ; le data package compte désormais trois ressources
 - Schéma **statique** : nouveaux champs AFIR (localisation, paiement, accessibilité, gabarits, équipements, énergie…), champs rendus obligatoires, identifiants AFIREV stricts, coordonnées en deux colonnes `station_latitude` / `station_longitude`, listes JSON pour les valeurs multiples, contrôles de cohérence déclarés (`custom_checks`, en cours d'affinage)

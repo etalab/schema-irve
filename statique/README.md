@@ -4,7 +4,7 @@ Spécification du fichier d'échange relatif aux données statiques concernant l
 
 ## Version 3 du schéma
 
-La version 3 du schéma est publiée en alpha, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, avant une ouverture plus large. Elle couvre les données exigées par le règlement AFIR (UE 2023/1804) et son règlement d'exécution (UE) 2025/655, et s'accompagne d'un nouveau schéma pour les tarifs. Ses objectifs et ses choix sont expliqués dans la [note de conception](../docs/note-conception-irve-v3.md) ; la liste détaillée des champs figure dans ses [annexes](../docs/note-conception-irve-v3-annexes.md). Vos retours sont les bienvenus (voir « Voir aussi »).
+La version 3 du schéma est publiée en alpha. Elle couvre les données exigées par le règlement AFIR (UE 2023/1804) et son règlement d'exécution (UE) 2025/655, et s'accompagne d'un nouveau schéma pour les tarifs. Ses objectifs et ses choix sont expliqués dans la [note de conception](../docs/note-conception-irve-v3.md) ; la liste détaillée des champs figure dans ses [annexes](../docs/note-conception-irve-v3-annexes.md). Vos retours sont les bienvenus (voir « Voir aussi »).
 
 
 ## Contexte

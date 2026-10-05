@@ -2,7 +2,7 @@
 
 *Version `v3.0.0-alpha.1` · octobre 2026*
 
-> **Version alpha.** Cette note accompagne une version alpha du schéma. Le schéma est relativement finalisé ; cette note pourra toutefois évoluer et contenir encore des erreurs ou des imprécisions. Vos retours sont les bienvenus, à [contact@transport.data.gouv.fr](mailto:contact@transport.data.gouv.fr) ou par un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new).
+> **Version alpha.** Cette note accompagne la version `v3.0.0-alpha.1` du schéma, d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, et ouverte aux producteurs qui le peuvent, pour l'examiner et proposer des ajustements. Le schéma est relativement finalisé ; cette note pourra toutefois évoluer et contenir encore des erreurs ou des imprécisions. Vos retours sont les bienvenus, à [contact@transport.data.gouv.fr](mailto:contact@transport.data.gouv.fr) ou par un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new).
 
 > **Statut.** La spécification du schéma IRVE v3 est constituée des fichiers [Table Schema](https://specs.frictionlessdata.io/table-schema/) publiés sur le dépôt [`etalab/schema-irve`](https://github.com/etalab/schema-irve/tree/v3.0.0-alpha.1), complétés de deux JSON Schema pour les colonnes `restrictions` et `price_components` du fichier tarifs ([`restrictions.schema.json`](../tarifs/restrictions.schema.json), [`price-components.schema.json`](../tarifs/price-components.schema.json), référencés par la propriété `x-json-schema` du champ). Ce sont ces fichiers qui font foi ; cette note en explique les objectifs et les choix.
 
@@ -147,7 +147,7 @@ Au-delà des types, motifs et énumérations, les schémas statique et tarifs d�
 - **Publication.** Les producteurs publient leurs fichiers sur data.gouv.fr, à une URL stable. Pour les fichiers dynamique et tarifs, cette URL pointe vers un fichier régénéré à chaque modification, sur le modèle des flux dynamiques IRVE existants.
 - **Fréquence** ([article 2](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32025R0655#art_2) du règlement d'exécution) : au plus tard 24 heures après une modification pour le fichier statique, une minute pour les données dynamiques, ce qui inclut le fichier tarifs (le prix ad hoc relève du tableau F). Chaque ligne porte son horodatage de mise à jour, en UTC.
 - **Validation et consolidation.** Le PAN valide chaque fichier contre son schéma et agrège les fichiers valides en consolidations nationales, statique et dynamique, diffusées en CSV et, par exemple, en Parquet.
-- **Versionnement.** Le schéma suit le [versionnement sémantique](https://semver.org/lang/fr/) : la v3 rompt la compatibilité avec la v2. La version `v3.0.0-alpha.1` est d'abord mise à l'épreuve par les outils du PAN (validateur, consolidation) et par Qualicharge, avant une ouverture plus large ; des ajustements restent possibles.
+- **Versionnement.** Le schéma suit le [versionnement sémantique](https://semver.org/lang/fr/) : la v3 rompt la compatibilité avec la v2, tout en ne modifiant que ce qui est nécessaire.
 
 ---
 
