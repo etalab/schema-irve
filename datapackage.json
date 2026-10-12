@@ -1,7 +1,7 @@
 {
     "name": "datapackage-irve",
     "title": "Infrastructures de recharges pour véhicules électriques (IRVE)",
-    "description": "data package contenant 2 schémas : IRVE statique et IRVE dynamique",
+    "description": "data package contenant 3 schémas : IRVE statique, IRVE tarifs et IRVE dynamique",
     "id": "datapackage-irve",
     "resources": [
         {
@@ -13,6 +13,16 @@
             "encoding": "utf-8",
             "schema": "statique/schema-statique.json",
             "documentation": "statique/README.md"
+        },
+        {
+            "name": "irve-tarifs",
+            "path": "tarifs/exemple-valide-tarifs.csv",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "tarifs/schema-tarifs.json",
+            "documentation": "tarifs/README.md"
         },
         {
             "name": "irve-dynamique",

@@ -1,12 +1,15 @@
 # Infrastructures de recharge pour véhicules électriques
 
-Il existe deux schémas relatifs aux données des points de recharge pour véhicules électriques :
+Il existe trois schémas relatifs aux données des points de recharge pour véhicules électriques :
 - Un schéma pour les **données statiques**. Ces données contiennent la localisation géographique et les caractéristiques techniques des stations et des points de recharge
 - Un schéma pour les **données dynamiques**. Ces données contiennent l'état de fonctionnement et la disponibilité des points de recharge et de leurs connecteurs
+- Un schéma pour les **données tarifaires**. Ces données contiennent les prix de la recharge ad hoc applicables aux points de recharge
+
+La version 3 de ces schémas est publiée en alpha : voir la [note de conception](docs/note-conception-irve-v3.md) et ses [annexes](docs/note-conception-irve-v3-annexes.md).
 
 ## Contexte
 
-Dans le but de constituer un répertoire national de données relatif à l’offre de recharge pour véhicules électriques, ouvert et accessible à tous, les aménageurs d’infrastructures de recharge pour véhicules électriques (IRVE), ou les personnes qu’ils désignent, doivent publier sur la plateforme data.gouv.fr les données pour tout point de recharge en service et ouvert au public. Cette ouverture de données doit être conforme aux schémas de données statique et dynamique en vigueur.
+Dans le but de constituer un répertoire national de données relatif à l’offre de recharge pour véhicules électriques, ouvert et accessible à tous, les aménageurs d’infrastructures de recharge pour véhicules électriques (IRVE), ou les personnes qu’ils désignent, doivent publier sur la plateforme data.gouv.fr les données pour tout point de recharge en service et ouvert au public. Cette ouverture de données doit être conforme aux schémas de données statique, dynamique et tarifs en vigueur.
 
 ## Documents de cadrage juridique
 
@@ -17,5 +20,5 @@ Dans le but de constituer un répertoire national de données relatif à l’off
 
 - [Documentation sur les données de points de recharge](https://doc.transport.data.gouv.fr/producteurs/infrastructures-de-recharge-de-vehicules-electriques-irve) 
 - Pour poser une question, commenter, faire un retour d’usage ou contribuer à l’amélioration du modèle de données, vous pouvez :
-    - adresser un message à [contact@transport.data.gouv.fr](mailto:contact@transport.data.gouv.fr)
+    - adresser un message à [irve@transport.data.gouv.fr](mailto:irve@transport.data.gouv.fr)
     - ouvrir un ticket sur le [dépôt GitHub](https://github.com/etalab/schema-irve/issues/new) du schéma

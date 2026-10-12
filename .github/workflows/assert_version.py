@@ -2,7 +2,7 @@ import json
 import re
 import os
 
-pattern = r"v?\d+\.\d+\.\d+"
+pattern = r"v?\d+\.\d+\.\d+(?:-(?:alpha|beta|rc)\.\d+)?"
 
 
 def check(obj, version, parents=""):
